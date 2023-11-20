@@ -1,0 +1,178 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="SFDC_Logout" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:this="clr-namespace:" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <x:Members>
+    <x:Property Name="in_BrowserElement" Type="InArgument(ui:UiElement)" />
+  </x:Members>
+  <this:SFDC_Logout.in_BrowserElement>
+    <InArgument x:TypeArguments="ui:UiElement" />
+  </this:SFDC_Logout.in_BrowserElement>
+  <sap:VirtualizedContainerService.HintSize>1017,641</sap:VirtualizedContainerService.HintSize>
+  <sap2010:WorkflowViewState.IdRef>ActivityBuilder_1</sap2010:WorkflowViewState.IdRef>
+  <TextExpression.NamespacesForImplementation>
+    <scg:List x:TypeArguments="x:String" Capacity="32">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>UiPath.UIAutomationNext.Enums</x:String>
+      <x:String>UiPath.UIAutomationCore.Contracts</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities</x:String>
+      <x:String>System.Activities.DynamicUpdate</x:String>
+      <x:String>UiPath.Platform.ObjectLibrary</x:String>
+      <x:String>UiPath.Shared.Activities</x:String>
+      <x:String>UiPath.UIAutomationNext.Contracts</x:String>
+      <x:String>System.Security</x:String>
+      <x:String>System.ComponentModel</x:String>
+      <x:String>System.Runtime.InteropServices</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>System.Reflection</x:String>
+    </scg:List>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <scg:List x:TypeArguments="AssemblyReference" Capacity="64">
+      <AssemblyReference>Microsoft.Bcl.AsyncInterfaces</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>PresentationCore</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Composition</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.TypeConverter</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Linq</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>System.ObjectModel</AssemblyReference>
+      <AssemblyReference>System.Private.CoreLib</AssemblyReference>
+      <AssemblyReference>System.Reflection.DispatchProxy</AssemblyReference>
+      <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization</AssemblyReference>
+      <AssemblyReference>System.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.ServiceModel.Activities</AssemblyReference>
+      <AssemblyReference>System.ValueTuple</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities.Design</AssemblyReference>
+      <AssemblyReference>UiPath.Platform</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities.Design</AssemblyReference>
+      <AssemblyReference>UiPath.Testing.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext.Activities</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+    </scg:List>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence DisplayName="SFDC_Logout" sap:VirtualizedContainerService.HintSize="924,981" sap2010:WorkflowViewState.IdRef="Sequence_8">
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Always" DisplayName="Use Browser IE: Salesforce - Enterprise Edition" sap:VirtualizedContainerService.HintSize="882,889" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InUiElement="[in_BrowserElement]" InteractionMode="Simulate" OpenMode="Never" ScopeGuid="0e89bb09-c9cb-42f1-bbcb-c3d655101619" Version="V1">
+      <uix:NApplicationCard.Body>
+        <ActivityAction x:TypeArguments="x:Object">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+          </ActivityAction.Argument>
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="848,753" sap2010:WorkflowViewState.IdRef="Sequence_9">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <uix:NCheckState DisplayName="Check App State 'Sales'" sap:VirtualizedContainerService.HintSize="806,661" sap2010:WorkflowViewState.IdRef="NCheckState_1" ScopeIdentifier="0e89bb09-c9cb-42f1-bbcb-c3d655101619" Version="V1">
+              <uix:NCheckState.IfExists>
+                <Sequence DisplayName="Logout Classic" sap:VirtualizedContainerService.HintSize="376,445" sap2010:WorkflowViewState.IdRef="Sequence_10">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click User Dropdown" sap:VirtualizedContainerService.HintSize="334,156" sap2010:WorkflowViewState.IdRef="NClick_1" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="0e89bb09-c9cb-42f1-bbcb-c3d655101619">
+                    <uix:NClick.Target>
+                      <uix:TargetAnchorable BrowserURL="https://uipath-demo.my.salesforce.com/home/home.jsp" DesignTimeRectangle="1460, 23, 124, 24" FriendlyName="'Vikram Parolkar'" FullSelectorArgument="&lt;webctrl id='userNavButton' tableCol='3' tableRow='1' tag='DIV' /&gt;" FuzzySelectorArgument="&lt;webctrl id='userNavButton' type='' tag='DIV' /&gt;" Guid="230ea22e-6734-42ce-b60e-f69ee226d4d8" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAIAAAAAcCAYAAACpmrfzAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAJxSURBVGhD7Za9ilRBEEZ9DN/BlzAzEkz2FQx8CXMTQzEyFUTEcBVB0GSVXQM3ERwxEGRBkGXdSa+cgTN809xxZOauP3QFh66qrltdXf3Nspfm8/lQ9EsJoHNKAJ1TAuicEkDnlAA6pwTQOSWAzikBdE4JoHMmE8Dley+Hqw8PVmJ7T98t4thXHrxe7rPiZ+6fwH6S268+jOZuCzU5Bzvv/K8ymQAc7vPZ12Ush5H8bQG0fva8K90K4P7R58Xl/UWx4hPHX/cXANtHufXseGGzx8rDGBPyiGP7LWTeuqG3Amh7zHrW8Cx74hzi+pAiTz/vjA2ZJ9a0H2vb1zpefDoZrj16u1ILiO3PTka/aZn0fwAO98LtsHMYrPjm+Av0ERWRw0+bHG0HTT3rtI+atD3l+Xxnf1nDs9wD+8fOvvCx7cs725/fs29+9uS57v0Odw5mKyLAvvtmNpo7xqQCyMuwOghoBWDDmaMAGKoxMBdSAA4qH4RHY08RJfaXZJ7fSgogH6X183z2vBMxa2U+4LsHxFJ4mbuJm/vvl3XaczYxqQAcoIPOi4wJwNUHdyj6DoQ1H2JXAbTx3KN2PkR7FrT+JgF4T/OJm589bSuA0x/nw/XHh8ONJ0fD2fl4zjomFQBwAfCCgs8gsHNgGW8FkL4PS+wiBJA1PHedADK33cdOAXi3jKfNPj72tgKAj99Ohy/fz0b3fsXkAnDIOTDIYeQAfTBWB68AAB/IB+pfhAD8DnwUaowJADjPfB8T0ifHO/u41POe4FnEdxHAtkwugOL/ogTQOSWAzikBdE4JoHNKAJ1TAuicEkDnlAA6pwTQNfPhJwp7jLwEfBDiAAAAAElFTkSuQmCC" InformativeScreenshot="fa18ea48be66cc9972c5813f6e0ae8e2.png" ScopeSelectorArgument="&lt;html title='Salesforce - Enterprise Edition' /&gt;" SearchSteps="Selector, FuzzySelector">
+                        <uix:TargetAnchorable.Anchors>
+                          <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                            <uix:Target DesignTimeRectangle="1569, 33, 8, 5" FriendlyName="'DIV userNav-arrow'" FullSelectorArgument="&lt;webctrl id='userNav-arrow' tableCol='3' tableRow='1' tag='DIV' /&gt;" FuzzySelectorArgument="&lt;webctrl id='userNav-arrow' type='' aaname='' tag='DIV' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAAwAAAAJCAYAAAAGuM1UAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAABwSURBVChTY/j27dt/UjD5Gvbee/nfbfXp/+LTD6BgkNjOuy8xNYBw18m7KJpA7P5Td+HyIIzhpNSdl+EaMnddQZEDYQwNH798/e+z9ux///Xn/n/+iioHwlg9fefNx/9P3n/GEAdhrBrwYRI1fPsPAB/1jEYeF4N0AAAAAElFTkSuQmCC" SearchSteps="FuzzySelector, Image" />
+                          </scg:List>
+                        </uix:TargetAnchorable.Anchors>
+                      </uix:TargetAnchorable>
+                    </uix:NClick.Target>
+                  </uix:NClick>
+                  <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Logout'" sap:VirtualizedContainerService.HintSize="334,156" sap2010:WorkflowViewState.IdRef="NClick_2" KeyModifiers="None" MouseButton="Left">
+                    <uix:NClick.Target>
+                      <uix:TargetAnchorable BrowserURL="https://uipath-demo.my.salesforce.com/home/home.jsp" DesignTimeRectangle="1437, 131, 143, 22" ElementType="Text" FriendlyName="'Logout'" FullSelectorArgument="&lt;webctrl aaname='Logout' tableCol='3' tableRow='1' tag='A' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='Logout' type='' check:text='Logout' tag='A' /&gt;" Guid="10f73892-f835-464e-a6a4-d60a8302016c" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAJMAAAAaCAYAAACzWm4FAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAE1SURBVGhD7ZbhacMwGEQzVNMp0m7RbJEM0UzRTOE1mmVUrvXRD+M/pYdswXsgkPRJskGPQ4cGEAKZIAYyQQxkghjIBDGQCWIgE8RAJogRlentfG7vt9s82gZ9X/8B/UEmiNFNpmma2tPx+budXl7n2R801rz2q/9xv8+V35qazhCqa2wskOfVLpfrXIVedJNJF2xJtM6XXZPEMnid1ixry76oZ9Q+9KWLTLr8mkZOKbGWRB5rjdNIuIZM+6SLTJr7q0yfjwcyDcaQyVT3C2TaB5u9mdYu35J43dqbSYnldeoLSbZ2HvQlLpMuuTY/tC2AWk0pobHmtb8mk3BNraaUzvV8lc7fQaj+RGX6L34nOXFgLDaXaZlmNZVgLHaVTDA2yAQxkAliIBPEQCaIgUwQA5kgRGtfkClnX2jMXQEAAAAASUVORK5CYII=" InformativeScreenshot="e80b2f6ceced5d715f8d321b230ec79c.png" ScopeSelectorArgument="&lt;html title='Salesforce - Enterprise Edition' /&gt;" SearchSteps="FuzzySelector, Image" />
+                    </uix:NClick.Target>
+                  </uix:NClick>
+                </Sequence>
+              </uix:NCheckState.IfExists>
+              <uix:NCheckState.IfNotExists>
+                <Sequence DisplayName="Logout Lightning" sap:VirtualizedContainerService.HintSize="376,445" sap2010:WorkflowViewState.IdRef="Sequence_11">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Profile Icon'" sap:VirtualizedContainerService.HintSize="334,156" sap2010:WorkflowViewState.IdRef="NClick_3" KeyModifiers="None" MouseButton="Left">
+                    <uix:NClick.Target>
+                      <uix:TargetAnchorable BrowserURL="https://uipath-demo.lightning.force.com/lightning/page/home?0.source=alohaHeader" DesignTimeRectangle="1859, 86, 32, 30" FriendlyName="'SPAN'" FullSelectorArgument="&lt;webctrl sfl-path='oneOne/lafAppLayoutHost:host/navexDesktopLayoutContainer/oneHeader:header/oneUserProfileCardTrigger:userProfileCardTrigger/auraIf/forceSocialPhoto:profileIcon/forceEntityIcon/uiImage/auraHtml:body' tag='SPAN' /&gt;" FuzzySelectorArgument="&lt;webctrl sfl-path='oneOne/lafAppLayoutHost:host/navexDesktopLayoutContainer/oneHeader:header/oneUserProfileCardTrigger:userProfileCardTrigger/auraIf/forceSocialPhoto:profileIcon/forceEntityIcon/uiImage/auraHtml:body' tag='SPAN' type='' aaname='' /&gt;" Guid="96aa1013-7a77-4eb7-84ce-396e07e87c12" ImageBase64="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" InformativeScreenshot="07729d0d95316ad7c44b9e8f4fb2cf74.png" ScopeSelectorArgument="&lt;html title='Home | Salesforce' /&gt;" SearchSteps="FuzzySelector, Image" />
+                    </uix:NClick.Target>
+                  </uix:NClick>
+                  <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Log Out'" sap:VirtualizedContainerService.HintSize="334,156" sap2010:WorkflowViewState.IdRef="NClick_5" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="0e89bb09-c9cb-42f1-bbcb-c3d655101619">
+                    <uix:NClick.Target>
+                      <uix:TargetAnchorable BrowserURL="https://uipath-demo.lightning.force.com/lightning/page/home?0.source=alohaHeader" DesignTimeRectangle="1670, 199, 47, 17" ElementType="Text" FriendlyName="'Log Out'" FullSelectorArgument="&lt;webctrl sfl-path='uiPanelManager2/uiPanel/oneUserProfileCard/uiOutputURL:logout/auraHtml:link' tag='A' /&gt;" FuzzySelectorArgument="&lt;webctrl sfl-path='uiPanelManager2/uiPanel/oneUserProfileCard/uiOutputURL:logout/auraHtml:link' tag='A' type='' aaname='Log Out' check:text='Log Out' /&gt;" Guid="a3a4e830-6c21-4cde-9b56-cee96f271310" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAADMAAAAVCAYAAADrVNYBAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAFZSURBVFhH7ZRBSsNAGIXFQ3gHPYNH6A16Ay/g2rUrF27rrsuuPYA7N4IgWCiIoHQh3bRQRGT0Cz55iZOkpZ0YSh4Mbf/0f//7ZpLshR1SB9NWdTBtVQfTVuVgLm7espVai/fP0Bs8hf3T+9+1ztzrx3nWj4+rcZjp/CMcnY9zcwR3Mnr5qVRrYxgGaRcJQyhJAXXt6nZWGox6bAYex5eTcPe6zL4T1mfQBwS9ysGiJq0EQ813wndGuypTgcVgPHBMAq2CQT7fVQsTC4BJf/ic1WLG1MpgiiFdmp8UJhZA5rHgVTB1J0NvUph1TwaPGAyiXpyBfE4yGISRN7sZA3lGNEi/y2AIe3D2kJujHtXwxd/D+8Pu811/YPxN4QaEU61opIBcq3ubIYWXH0tzJAGw8GLpP4It9uVgtqWyE06trcNwSoffu85n09oYZpVbpikluc3+SzsEE8IXxVL5RgGFNlcAAAAASUVORK5CYII=" InformativeScreenshot="4661c8bd76aa54f371d4261287a78986.png" ScopeSelectorArgument="&lt;html title='Home | Salesforce' /&gt;" SearchSteps="FuzzySelector, Image">
+                        <uix:TargetAnchorable.Anchors>
+                          <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                            <uix:Target DesignTimeRectangle="1608, 199, 46, 17" ElementType="Text" FriendlyName="'Settings'" FullSelectorArgument="&lt;webctrl sfl-path='uiPanelManager2/uiPanel/oneUserProfileCard/auraHtml:userSettings' tag='A' /&gt;" FuzzySelectorArgument="&lt;webctrl sfl-path='uiPanelManager2/uiPanel/oneUserProfileCard/auraHtml:userSettings' tag='A' type='' aaname='Settings' check:text='Settings' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAADIAAAAVCAYAAAAElr0/AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAGISURBVFhH7ZU9SgRBEIX1EN5Bz+AFBG/gDbyAubGRgZloZmjsAcxMBEFQEJcFxUBMVhARafcb5g3Pmml3xEGaZR80M11df6+qemYpzQkWRErDgkhpWBD5DfbPn9Pm0Si9vn/WkuHxjcjl41ta2b1OyztX1do+fahP8iA5kjy7mdSSVNmR/H+iIQKJ1b3b6ikcX7zMrGKRRLZOxtnEnyYfaW1KlE7RNfRdxto4HE3XfbPnDB1IqbvYrR/cVUWSnpN2nzzR88ngvcuuIaLKupEQq65kCNqnI5EIhfC9JiH6Einpup+I1mVHEbZugGMCqFs86V5XcIDtT0RUBOD2MQ5AJtuuc6FFRMBYRjhQO30h/ysRwBn2LOkJUYYvYkdCWSIoqepdAYShicQE3dYR5Q0RORIIqNnVrPq5MCSRGEf7LiLoOOnWZdfY6Msk8O7/GHeCU5dJlyRIpi8R4HGw968WfhRfvoXsaJUCkvfu5lA0EboTf9I5FEVEd0Ljw9LIzULxo9UXc0IkpS8JiIVmsWq/ZQAAAABJRU5ErkJggg==" SearchSteps="FuzzySelector, Image" />
+                          </scg:List>
+                        </uix:TargetAnchorable.Anchors>
+                      </uix:TargetAnchorable>
+                    </uix:NClick.Target>
+                  </uix:NClick>
+                </Sequence>
+              </uix:NCheckState.IfNotExists>
+              <uix:NCheckState.Target>
+                <uix:TargetAnchorable BrowserURL="https://uipath-demo.my.salesforce.com/home/home.jsp" DesignTimeRectangle="1764, 22, 110, 24" FriendlyName="'Sales'" FullSelectorArgument="&lt;webctrl id='tsidButton' tableCol='3' tableRow='1' tag='DIV' /&gt;" FuzzySelectorArgument="&lt;webctrl id='tsidButton' type='' aaname='Sales' tag='DIV' check:text='Sales' /&gt;" Guid="2f98061b-2180-4072-8fde-4ea6cf862c2b" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAHIAAAAcCAYAAAC9I+tXAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAKpSURBVGhD7ZrPS1RRFMf7L9q0dR/2F7QWqn/Av6CVS2nh0n8giBZujMA2aosgaJGiIcRkqUFDmoEI/mAwM3yS5Nz6vvo+zpx73jhPR+c9Owc+4Mw998m8z5zz3r1vriVJEpzq4yKvCKeK3N7/EcaXN8LdqXfh9rO3ziUy+GIpPKytm140uSIhcHi2HvrG5sL1RzNOj4ELyxMxRX7e/ZZWoHVAp3egSuHGchaJROKtJwvmgZzegw5pyWwRiXbqlVh+UGjSG2gRObqwak50ygdcSXeZSFSj39hUB91iM5FYYlgTinBn+n2QsXd0bOZZIBdhjTk2cmmSicSaxUouAmR82U/Svx/Mr6ZiatvfozwLF1kcOItEnvdOldXYqTiNiywO2msk8rzXR9lW82TifRljK5vZmBb58msjfc3A8TmGeTLO+uUpC08/bf37JHFM1LfMOSQSaSUVRYtCe+UYTz7fQwtGcFyKZC5F61wEWziFyy9F1bjxeDYs7R6kn0PG4s5BOmbNIRciEuhK0tWSV2lSpBYnxcrKxxzmVJ3+P5e2RvL3HCB2Dn+Gm+OnX+4ikd1eelAGAq8pgyef4+1E6mDV6S8DQrbeqnLv+Yfwq9kMxyfNMDC5aOZoIpEXsS0nK0tXWScimdsOzsMca7xqjLxZC0Ov6+aYRu7wZCLvv/poJncKKw7VwvcQPMGUg2ukbI+WSH0sKV0va3isqt/wnAVz+dGNDQHd8thGgZSH4I0R26UUaR1L3jhRJkP+n/8JuU2XicQWnZXslJPcLTrgm+bVQT9obhEJ8PDSmuiUB9zkoINKb5FIlGu3lyJO94Cb2majxRmIRALI9MosH4V+6iHxa2Y5QBXChW6nkrYiCZ574Scg3nIvD5xrnHMIzKtCSUcinfLjIq8ESfgNtOMQWApDeoQAAAAASUVORK5CYII=" InformativeScreenshot="5bfe15001433244fe60b20fb03ea37c3.png" ScopeSelectorArgument="&lt;html title='Salesforce - Enterprise Edition' /&gt;" SearchSteps="FuzzySelector" />
+              </uix:NCheckState.Target>
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+            </uix:NCheckState>
+          </Sequence>
+        </ActivityAction>
+      </uix:NApplicationCard.Body>
+      <uix:NApplicationCard.TargetApp>
+        <uix:TargetApp Area="0, 0, 0, 0" BrowserType="IE" IconBase64="iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAJGSURBVFhH7ZZBSBRRGMdHYolFJCJEJEQkJERCPISHCAlP0qGT5w7RwUNIhESEiAfxGJ46ONIpwmOIiHiQiAiRiOgUb6JTePLQIUQ6TL//25ndt85jXGmc7eDht2/3zbfv+79vvu+9L4jjuKOdnAv4fwUEq+ZCsBp1wmW4BFXN+Wz/hYwAHMkxDs0I431YgHl+TzHe0LNmu6gfrkEfNl1BGJ1KZJOA2q7NAIs9hm8QNzB/GL/CDAzCTZiFDfgMb+ERjEKnu24exwREPfASHMcZDhDzjvHLsfmUXbgHen1d0JugaGWiUxfAw4ssTJjNId99C58GCXwA0/CCNcFG7jawyUYuuQKUbOvgW7AoDCzCdbAiXAEKP+H1/rFoXkG/T8DvxKAMnkHFFXAFlM0+4+IJ7evotQKUFPxQaX2oG5TD3USADf8y/EoelMWTgA8dPiqXI+dBWcxIAPUffXImy2RcAqokRDt2/wO/3Qgw3HJeg7PmKVTSV/AzmSwJ84axzxYAXyqgCvAYFo35zrgEw+m1nZbhMHysGRVIaHS3vMbxCuNzmASVfPNlpAm4hSHGBd0Hob3YuP2MDjj1GDpp865jexqqs5kAdUJSvAd+Bw32YQt2QD3Ce5gDdVRV15mPuoD6hKIRqv+jRGp3+kn9gRJqDIZATvU6vbv1kRHgwiLqZLSbbJXUzo5NGIeK7/+tkC+ATCWR1KjcAXU126BkXYOHoPd7YpjzyBWQghOVqsJ6FVF0vzaT1fO1FOY8WhJwlpwLaLOAuOMveA1Of+TuOKQAAAAASUVORK5CYII=" InformativeScreenshot="9354bf8afd53408f49dd34385218c729.png" Selector="&lt;html title='Salesforce - Enterprise Edition'/&gt;" Url="https://uipath-demo.my.salesforce.com/home/home.jsp" />
+      </uix:NApplicationCard.TargetApp>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+    </uix:NApplicationCard>
+  </Sequence>
+</Activity>

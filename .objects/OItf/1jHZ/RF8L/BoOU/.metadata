@@ -1,0 +1,13 @@
+﻿{
+  "Name": "Admin",
+  "Type": "Element",
+  "TaxonomyType": "Checkbox",
+  "Id": "BoOUAy0sLkywFVM6hDQBsA",
+  "Reference": "XmPyalMSikOXyDwqk_uXgg/BoOUAy0sLkywFVM6hDQBsA",
+  "ParentRef": "XmPyalMSikOXyDwqk_uXgg/RF8LWhCXJUuMYPyacAFFRQ",
+  "Created": "2023-11-13T12:03:37.6750932Z",
+  "Updated": "2023-11-13T12:03:37.6750932Z",
+  "CreatedBy": [
+    "UiPath.Platform, Version=23.10.0.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

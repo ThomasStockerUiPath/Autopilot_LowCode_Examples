@@ -1,0 +1,13 @@
+﻿{
+  "Name": "New Quote",
+  "Type": "Element",
+  "TaxonomyType": "Button",
+  "Id": "PAMo1gkdmUCRamtza7GV7g",
+  "Reference": "XmPyalMSikOXyDwqk_uXgg/PAMo1gkdmUCRamtza7GV7g",
+  "ParentRef": "XmPyalMSikOXyDwqk_uXgg/GlQGKTyMYUafCEiLqor-dA",
+  "Created": "2023-11-13T12:03:39.7689338Z",
+  "Updated": "2023-11-13T12:03:39.7689338Z",
+  "CreatedBy": [
+    "UiPath.Platform, Version=23.10.0.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

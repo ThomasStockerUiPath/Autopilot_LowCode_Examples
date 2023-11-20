@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="I9Y-gbptM0qHsSRXjReaUw" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="https://uibank.uipath.com/loans/apply" DesignTimeRectangle="318, 514, 339, 36" DesignTimeScaleFactor="0.6700000166893005" ElementType="DropDown" FriendlyName="'Select your loan term'" FullSelectorArgument="&lt;webctrl id='term' tag='SELECT' /&gt;" FuzzySelectorArgument="&lt;webctrl id='term' tag='SELECT' type='number' class='form-control uibank-input select-color ng-pristine ng-invalid ng-touched' aaname='' /&gt;" Guid="cca0889a-7a95-44d0-bb87-dbd29c98aabe" ScopeSelectorArgument="&lt;html app='chrome.exe' title='UiBank' /&gt;" SearchSteps="FuzzySelector" Version="V2" Visibility="Interactive">
+      <TargetAnchorable.Anchors>
+        <scg:List x:TypeArguments="ITarget" Capacity="4">
+          <Target DesignTimeRectangle="318, 501, 39, 13" ElementType="Text" FriendlyName="'Loan Term'" FullSelectorArgument="&lt;webctrl aaname='Loan Term' tag='LABEL' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='Loan Term' tag='LABEL' type='' class='uibank-label' check:innerText='Loan Term' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAACsAAAARCAYAAABEvFULAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAGBSURBVEhL7ZLBSwJBFMb9m/w/9tYlCCIIPHmyU+DFg3RpD1286CUDEQKPe8oI9pJdlAgCYRFMEFSQwEM4M1/ftNM6u2hgEriQ8DHPb968+b03m1keZZEW/cP+ldIKewhxlYOwNneRKJ9BVM6NGBfW520jC7YFtehAWpvikhcVV/83ectinnBOzBONJpTfA+Y9rk3IC+07HEgSnEOK6lkDK3BNDG8DbB5yOIV6uYPS65Mb94IAWATM5Rl8mLx35pVMLavmqBXGBRdq8gb1yFy9NhzIEYBJAHWbNXEHqsva41eovh/Gw1YEvB72mof6VeOXoMY9yKQ3N7BRgxZYJMtr64sJ6ntsivGgTkA2eBPmxmM28zV9h3fre0J/PWyFXQV105GeCGG1N2ga7xewHqfVdcNvuOZC1nI/wK4A7TgOK3hgyGdpVyH7U4CJasanf8hzn8W/Pf1M28LqpsespevPODmC7QC7/0oX7PPxAdKizP3JKdKidMKWPbX3isHu9w/4BP2sCCA6YXzpAAAAAElFTkSuQmCC" SearchSteps="FuzzySelector, Image" />
+        </scg:List>
+      </TargetAnchorable.Anchors>
+      <imageRef attrName="InformativeScreenshot" originalValue="a52396d4174f15e8a520199599116466.png" xmlns="">0CTRRNM_as0-AkmJ-PN7iyw</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">SelectItem</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

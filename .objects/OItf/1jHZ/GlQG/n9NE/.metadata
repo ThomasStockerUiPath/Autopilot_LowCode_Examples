@@ -1,0 +1,13 @@
+﻿{
+  "Name": "Quote ID",
+  "Type": "Element",
+  "TaxonomyType": "Input",
+  "Id": "n9NEJb-jzUaiuohyB69cdQ",
+  "Reference": "XmPyalMSikOXyDwqk_uXgg/n9NEJb-jzUaiuohyB69cdQ",
+  "ParentRef": "XmPyalMSikOXyDwqk_uXgg/GlQGKTyMYUafCEiLqor-dA",
+  "Created": "2023-11-13T12:03:39.6360458Z",
+  "Updated": "2023-11-13T12:03:39.6360458Z",
+  "CreatedBy": [
+    "UiPath.Platform, Version=23.10.0.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

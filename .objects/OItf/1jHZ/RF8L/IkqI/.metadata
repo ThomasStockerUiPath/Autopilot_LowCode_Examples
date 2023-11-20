@@ -1,0 +1,13 @@
+﻿{
+  "Name": "Delete User",
+  "Type": "Element",
+  "TaxonomyType": "Button",
+  "Id": "IkqIv2lH20u1JxpI0018SA",
+  "Reference": "XmPyalMSikOXyDwqk_uXgg/IkqIv2lH20u1JxpI0018SA",
+  "ParentRef": "XmPyalMSikOXyDwqk_uXgg/RF8LWhCXJUuMYPyacAFFRQ",
+  "Created": "2023-11-13T12:03:37.969904Z",
+  "Updated": "2023-11-13T12:03:37.969904Z",
+  "CreatedBy": [
+    "UiPath.Platform, Version=23.10.0.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

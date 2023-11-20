@@ -1,0 +1,13 @@
+﻿{
+  "Name": "Settings",
+  "Type": "Element",
+  "TaxonomyType": "None",
+  "Id": "2yJEgCODEEymDZ8LjbrR-Q",
+  "Reference": "XmPyalMSikOXyDwqk_uXgg/2yJEgCODEEymDZ8LjbrR-Q",
+  "ParentRef": "XmPyalMSikOXyDwqk_uXgg/f4__n0jx6k-hehjFNU_cpg",
+  "Created": "2023-11-13T12:03:39.1016479Z",
+  "Updated": "2023-11-13T12:03:39.1016479Z",
+  "CreatedBy": [
+    "UiPath.Platform, Version=23.10.0.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

@@ -1,0 +1,13 @@
+﻿{
+  "Name": "New Account",
+  "Type": "Element",
+  "TaxonomyType": "Button",
+  "Id": "itnW9mAmLUSgkmIeRq1-4w",
+  "Reference": "XmPyalMSikOXyDwqk_uXgg/itnW9mAmLUSgkmIeRq1-4w",
+  "ParentRef": "XmPyalMSikOXyDwqk_uXgg/SSYSyIUNPUahpV7RtXABqg",
+  "Created": "2023-11-13T12:03:38.6573574Z",
+  "Updated": "2023-11-13T12:03:38.6573574Z",
+  "CreatedBy": [
+    "UiPath.Platform, Version=23.10.0.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

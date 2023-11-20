@@ -1,0 +1,13 @@
+﻿{
+  "Name": "Clear",
+  "Type": "Element",
+  "TaxonomyType": "Button",
+  "Id": "7NR9fzWhVUmiPrhnbzhl3Q",
+  "Reference": "XmPyalMSikOXyDwqk_uXgg/7NR9fzWhVUmiPrhnbzhl3Q",
+  "ParentRef": "XmPyalMSikOXyDwqk_uXgg/RF8LWhCXJUuMYPyacAFFRQ",
+  "Created": "2023-11-13T12:03:37.7353419Z",
+  "Updated": "2023-11-13T12:03:37.7353419Z",
+  "CreatedBy": [
+    "UiPath.Platform, Version=23.10.0.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

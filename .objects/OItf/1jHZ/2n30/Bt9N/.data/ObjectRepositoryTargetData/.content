@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="U9FXeBiRA0mFw29bfFVSDA" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" DesignTimeRectangle="203, 100, 71, 23" DesignTimeScaleFactor="1" ElementType="Button" FriendlyName="'Submit'" FullSelectorArgument="&lt;wnd ctrlname='btn_Submit' /&gt;" FuzzySelectorArgument="&lt;wnd ctrlname='btn_Submit' check:text='Submit' /&gt;" Guid="7bf887a3-a8cd-48fb-879b-fe25c8c59a38" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAEsAAAAbCAYAAAA0wHIdAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAFRSURBVGhD7ZZRkoMgDEC5E7fJSfaPq3AVTtFvT5INApqy0ZqW0ulsMvNGDGDNU7AOLS6HyVKEyVLEnSz3czM6eJisB/AQZS3L8u8xWQpMlgKTpWCurBTQO4cu4z2GKIxp5LE+YJL6PsREWRHBkaBUz1dxgPHPuMqzstq8N8ieJ0t7868W+9WyloTBO4QQ6amzfF9UO1+PgAC+Ltv6FnZ5T9cLa9sjxLT302+VeeOETZRFpFZYLqQuyTNZTQDlU6B5EEs/n9tfpz+26w5grixGilCeel/UUbFSXmpL4wbxMVllw6el1Rd1VKyUl9rSuEFMk1WW0X7z25tVpbWvZM5vxfI8X4ZNgtTuj7lvENNk5Q0+bvtV3bC5iLqPAXBZntptfCflqL3laH9c5578PVEyUdb3Y7IUmCwFJkvBZVnGDg+T9QAed7IszsNkKcJkXQ7EX0/V4F2B4wlKAAAAAElFTkSuQmCC" ScopeSelectorArgument="&lt;wnd app='uibankadmin.exe' ctrlname='Login' /&gt;" SearchSteps="Selector, FuzzySelector, Image" Version="V2" Visibility="Interactive">
+      <imageRef attrName="InformativeScreenshot" originalValue="b86eb23b794fbb63b7ef27c0b4e1ef78.png" xmlns="">0bjZSBC5vQUuvmfZG4cQ7WQ</imageRef>
+    </TargetAnchorable>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

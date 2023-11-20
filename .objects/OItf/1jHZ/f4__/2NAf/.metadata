@@ -1,0 +1,13 @@
+﻿{
+  "Name": "Transactions",
+  "Type": "Element",
+  "TaxonomyType": "None",
+  "Id": "2NAfXDe_cEOoEy0tajDgkg",
+  "Reference": "XmPyalMSikOXyDwqk_uXgg/2NAfXDe_cEOoEy0tajDgkg",
+  "ParentRef": "XmPyalMSikOXyDwqk_uXgg/f4__n0jx6k-hehjFNU_cpg",
+  "Created": "2023-11-13T12:03:38.9747543Z",
+  "Updated": "2023-11-13T12:03:38.9747543Z",
+  "CreatedBy": [
+    "UiPath.Platform, Version=23.10.0.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

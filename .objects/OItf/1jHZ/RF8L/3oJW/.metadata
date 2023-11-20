@@ -1,0 +1,13 @@
+﻿{
+  "Name": "&Filter / Refresh",
+  "Type": "Element",
+  "TaxonomyType": "Button",
+  "Id": "3oJW-WrkGU6Cyvbz_WPy2g",
+  "Reference": "XmPyalMSikOXyDwqk_uXgg/3oJW-WrkGU6Cyvbz_WPy2g",
+  "ParentRef": "XmPyalMSikOXyDwqk_uXgg/RF8LWhCXJUuMYPyacAFFRQ",
+  "Created": "2023-11-13T12:03:37.8559293Z",
+  "Updated": "2023-11-13T12:03:37.8559293Z",
+  "CreatedBy": [
+    "UiPath.Platform, Version=23.10.0.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

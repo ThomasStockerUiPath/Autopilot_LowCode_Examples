@@ -1,0 +1,666 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="SFDC_Login" this:SFDC_Login.in_browser="IE" this:SFDC_Login.in_SFDCMode="Lightning" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:ss="clr-namespace:System.Security;assembly=System.Private.CoreLib" xmlns:this="clr-namespace:" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <x:Members>
+    <x:Property Name="aft_delay" Type="InArgument(x:Double)" />
+    <x:Property Name="bef_delay" Type="InArgument(x:Double)" />
+    <x:Property Name="in_browser" Type="InArgument(x:String)" />
+    <x:Property Name="in_SFDCMode" Type="InArgument(x:String)" />
+    <x:Property Name="out_BrowserElement" Type="OutArgument(ui:UiElement)" />
+  </x:Members>
+  <sap:VirtualizedContainerService.HintSize>1017,5730</sap:VirtualizedContainerService.HintSize>
+  <sap2010:WorkflowViewState.IdRef>ActivityBuilder_1</sap2010:WorkflowViewState.IdRef>
+  <TextExpression.NamespacesForImplementation>
+    <scg:List x:TypeArguments="x:String" Capacity="62">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>UiPath.UIAutomationNext.Enums</x:String>
+      <x:String>UiPath.UIAutomationCore.Contracts</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities</x:String>
+      <x:String>System.Activities.DynamicUpdate</x:String>
+      <x:String>UiPath.Platform.ObjectLibrary</x:String>
+      <x:String>UiPath.Shared.Activities</x:String>
+      <x:String>UiPath.UIAutomationNext.Contracts</x:String>
+      <x:String>System.Security</x:String>
+      <x:String>System.ComponentModel</x:String>
+      <x:String>System.Runtime.InteropServices</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>System.Reflection</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities.Models</x:String>
+      <x:String>Microsoft.VisualBasic.CompilerServices</x:String>
+      <x:String>GlobalVariablesNamespace</x:String>
+      <x:String>GlobalConstantsNamespace</x:String>
+    </scg:List>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <scg:List x:TypeArguments="AssemblyReference" Capacity="90">
+      <AssemblyReference>Microsoft.Bcl.AsyncInterfaces</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>PresentationCore</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Composition</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.TypeConverter</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Linq</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>System.ObjectModel</AssemblyReference>
+      <AssemblyReference>System.Private.CoreLib</AssemblyReference>
+      <AssemblyReference>System.Reflection.DispatchProxy</AssemblyReference>
+      <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization</AssemblyReference>
+      <AssemblyReference>System.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.ServiceModel.Activities</AssemblyReference>
+      <AssemblyReference>System.ValueTuple</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities.Design</AssemblyReference>
+      <AssemblyReference>UiPath.Platform</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities.Design</AssemblyReference>
+      <AssemblyReference>UiPath.Testing.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext.Activities</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+    </scg:List>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence DisplayName="SFDC_Login" sap:VirtualizedContainerService.HintSize="884,5665" sap2010:WorkflowViewState.IdRef="Sequence_8">
+    <Sequence.Variables>
+      <Variable x:TypeArguments="x:String" Name="FolderName" />
+      <Variable x:TypeArguments="x:String" Name="username" />
+      <Variable x:TypeArguments="ss:SecureString" Name="password" />
+    </Sequence.Variables>
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <Assign sap2010:Annotation.AnnotationText="***CONFIGURATION REQUIRED***&#xA;Value should be changed in accordance with README.txt" DisplayName="Assign Value to Folder Name" sap:VirtualizedContainerService.HintSize="842,117" sap2010:WorkflowViewState.IdRef="Assign_1">
+      <Assign.To>
+        <OutArgument x:TypeArguments="x:String">[FolderName]</OutArgument>
+      </Assign.To>
+      <Assign.Value>
+        <InArgument x:TypeArguments="x:String">Shared</InArgument>
+      </Assign.Value>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+    </Assign>
+    <Switch x:TypeArguments="x:String" DisplayName="Dynamic Browser Value (Argument)" Expression="[in_browser]" sap:VirtualizedContainerService.HintSize="842,204" sap2010:WorkflowViewState.IdRef="Switch`1_1">
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+      <uix:NApplicationCard x:Key="Chrome" AttachMode="ByInstance" CloseMode="Never" DisplayName="Salesforce (Chrome)" sap:VirtualizedContainerService.HintSize="200,22" sap2010:WorkflowViewState.IdRef="NApplicationCard_3" InteractionMode="Simulate" OpenMode="IfNotOpen" OutUiElement="[out_BrowserElement]" ScopeGuid="26cc7ee2-2d02-4ed8-9dc8-aaa3c644958b" Version="V1" WindowResize="Maximize">
+        <uix:NApplicationCard.Body>
+          <ActivityAction x:TypeArguments="x:Object">
+            <ActivityAction.Argument>
+              <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+            </ActivityAction.Argument>
+            <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="200,84" sap2010:WorkflowViewState.IdRef="Sequence_10">
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+            </Sequence>
+          </ActivityAction>
+        </uix:NApplicationCard.Body>
+        <uix:NApplicationCard.TargetApp>
+          <uix:TargetApp Area="1912, -8, 1936, 1056" BrowserType="Chrome" ContentHash="A-B4ibE78k2ZHaQF3z72EQ" IconBase64="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" InformativeScreenshot="0c037c6608c6ad18f9df1e7f97b85831.png" Reference="onZsbVircEKStCOfXcT3Hw/FfvBcVAUeku7O5y2Ku2B9Q" Selector="&lt;html app='chrome.exe' title='Login | Salesforce'/&gt;" Url="https://uipath-demo.my.salesforce.com/" />
+        </uix:NApplicationCard.TargetApp>
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </uix:NApplicationCard>
+      <uix:NApplicationCard x:Key="IE" AttachMode="ByInstance" CloseMode="Never" DisplayName="Salesforce (IE)" sap:VirtualizedContainerService.HintSize="560,817" sap2010:WorkflowViewState.IdRef="NApplicationCard_2" InteractionMode="Simulate" OpenMode="IfNotOpen" OutUiElement="[out_BrowserElement]" ScopeGuid="135ae867-7fb1-40df-8170-f6ab4b7d35c5" Version="V1" WindowResize="Maximize">
+        <uix:NApplicationCard.Body>
+          <ActivityAction x:TypeArguments="x:Object">
+            <ActivityAction.Argument>
+              <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+            </ActivityAction.Argument>
+            <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="526,561" sap2010:WorkflowViewState.IdRef="Sequence_9">
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+              <If Condition="[in_SFDCMode=&quot;Lightning&quot;]" sap:VirtualizedContainerService.HintSize="484,467" sap2010:WorkflowViewState.IdRef="If_1">
+                <If.Then>
+                  <Sequence DisplayName="IE doesn't support Lightning" sap:VirtualizedContainerService.HintSize="376,279" sap2010:WorkflowViewState.IdRef="Sequence_28">
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                    <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" AutoCloseAfter="00:00:00" DisplayName="WARNING for Tester" sap:VirtualizedContainerService.HintSize="334,84" sap2010:WorkflowViewState.IdRef="MessageBox_1" Text="[&quot;WARNING: IE does not support Lightning Mode. Test Case will continue in Classic and may fail.&quot;]" />
+                    <Assign DisplayName="Change SFDC Mode to Classic" sap:VirtualizedContainerService.HintSize="334,61" sap2010:WorkflowViewState.IdRef="Assign_2">
+                      <Assign.To>
+                        <OutArgument x:TypeArguments="x:String">[in_SFDCMode]</OutArgument>
+                      </Assign.To>
+                      <Assign.Value>
+                        <InArgument x:TypeArguments="x:String">Classic</InArgument>
+                      </Assign.Value>
+                    </Assign>
+                  </Sequence>
+                </If.Then>
+                <If.Else>
+                  <Sequence sap:VirtualizedContainerService.HintSize="242,85" sap2010:WorkflowViewState.IdRef="Sequence_29">
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                  </Sequence>
+                </If.Else>
+              </If>
+            </Sequence>
+          </ActivityAction>
+        </uix:NApplicationCard.Body>
+        <uix:NApplicationCard.TargetApp>
+          <uix:TargetApp Area="0, 78, 1920, 962" BrowserType="IE" ContentHash="Sjt-CcPT6026G4Dixr8fdg" IconBase64="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" InformativeScreenshot="72ac0047eb7e1426cbc3b06c4ddcb1db.png" Reference="onZsbVircEKStCOfXcT3Hw/250c1pUJiEe-P-pCoIj3kA" Selector="&lt;html title='Login | Salesforce'/&gt;" Url="https://uipath-demo.my.salesforce.com/" />
+        </uix:NApplicationCard.TargetApp>
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </uix:NApplicationCard>
+      <uix:NApplicationCard x:Key="Firefox" AttachMode="ByInstance" CloseMode="Never" DisplayName="Salesforce (Firefox)" sap:VirtualizedContainerService.HintSize="434,340" sap2010:WorkflowViewState.IdRef="NApplicationCard_5" InteractionMode="Simulate" OpenMode="IfNotOpen" OutUiElement="[out_BrowserElement]" ScopeGuid="135ae867-7fb1-40df-8170-f6ab4b7d35c5" Version="V1" WindowResize="Maximize">
+        <uix:NApplicationCard.Body>
+          <ActivityAction x:TypeArguments="x:Object">
+            <ActivityAction.Argument>
+              <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+            </ActivityAction.Argument>
+            <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="200,84" sap2010:WorkflowViewState.IdRef="Sequence_16">
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+            </Sequence>
+          </ActivityAction>
+        </uix:NApplicationCard.Body>
+        <uix:NApplicationCard.TargetApp>
+          <uix:TargetApp Area="-1928, -8, 1936, 1056" BrowserType="Firefox" ContentHash="Z-spw4oaakahFjNDfCjlZQ" IconBase64="iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAJGSURBVFhH7ZZBSBRRGMdHYolFJCJEJEQkJERCPISHCAlP0qGT5w7RwUNIhESEiAfxGJ46ONIpwmOIiHiQiAiRiOgUb6JTePLQIUQ6TL//25ndt85jXGmc7eDht2/3zbfv+79vvu+9L4jjuKOdnAv4fwUEq+ZCsBp1wmW4BFXN+Wz/hYwAHMkxDs0I431YgHl+TzHe0LNmu6gfrkEfNl1BGJ1KZJOA2q7NAIs9hm8QNzB/GL/CDAzCTZiFDfgMb+ERjEKnu24exwREPfASHMcZDhDzjvHLsfmUXbgHen1d0JugaGWiUxfAw4ssTJjNId99C58GCXwA0/CCNcFG7jawyUYuuQKUbOvgW7AoDCzCdbAiXAEKP+H1/rFoXkG/T8DvxKAMnkHFFXAFlM0+4+IJ7evotQKUFPxQaX2oG5TD3USADf8y/EoelMWTgA8dPiqXI+dBWcxIAPUffXImy2RcAqokRDt2/wO/3Qgw3HJeg7PmKVTSV/AzmSwJ84axzxYAXyqgCvAYFo35zrgEw+m1nZbhMHysGRVIaHS3vMbxCuNzmASVfPNlpAm4hSHGBd0Hob3YuP2MDjj1GDpp865jexqqs5kAdUJSvAd+Bw32YQt2QD3Ce5gDdVRV15mPuoD6hKIRqv+jRGp3+kn9gRJqDIZATvU6vbv1kRHgwiLqZLSbbJXUzo5NGIeK7/+tkC+ATCWR1KjcAXU126BkXYOHoPd7YpjzyBWQghOVqsJ6FVF0vzaT1fO1FOY8WhJwlpwLaLOAuOMveA1Of+TuOKQAAAAASUVORK5CYII=" InformativeScreenshot="9a1a9861a2493879813554def25002e4.png" Reference="onZsbVircEKStCOfXcT3Hw/S_P60ieO6k22VBZ27xAGxA" Selector="&lt;html app='firefox.exe' title='Login | Salesforce'/&gt;" Url="https://uipath-demo.my.salesforce.com/" />
+        </uix:NApplicationCard.TargetApp>
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </uix:NApplicationCard>
+      <uix:NApplicationCard x:Key="Edge" AttachMode="ByInstance" DisplayName="Use Browser Edge: Login | Salesforce" sap:VirtualizedContainerService.HintSize="434,340" sap2010:WorkflowViewState.IdRef="NApplicationCard_7" InteractionMode="DebuggerApi" OutUiElement="[out_BrowserElement]" ScopeGuid="d7edfd87-4b11-443a-a9d0-53de35815653" Version="V1">
+        <uix:NApplicationCard.Body>
+          <ActivityAction x:TypeArguments="x:Object">
+            <ActivityAction.Argument>
+              <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+            </ActivityAction.Argument>
+            <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="200,84" sap2010:WorkflowViewState.IdRef="Sequence_45">
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+            </Sequence>
+          </ActivityAction>
+        </uix:NApplicationCard.Body>
+        <uix:NApplicationCard.TargetApp>
+          <uix:TargetApp Area="1912, -8, 1936, 1056" BrowserType="Edge" IconBase64="iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAJGSURBVFhH7ZZBSBRRGMdHYolFJCJEJEQkJERCPISHCAlP0qGT5w7RwUNIhESEiAfxGJ46ONIpwmOIiHiQiAiRiOgUb6JTePLQIUQ6TL//25ndt85jXGmc7eDht2/3zbfv+79vvu+9L4jjuKOdnAv4fwUEq+ZCsBp1wmW4BFXN+Wz/hYwAHMkxDs0I431YgHl+TzHe0LNmu6gfrkEfNl1BGJ1KZJOA2q7NAIs9hm8QNzB/GL/CDAzCTZiFDfgMb+ERjEKnu24exwREPfASHMcZDhDzjvHLsfmUXbgHen1d0JugaGWiUxfAw4ssTJjNId99C58GCXwA0/CCNcFG7jawyUYuuQKUbOvgW7AoDCzCdbAiXAEKP+H1/rFoXkG/T8DvxKAMnkHFFXAFlM0+4+IJ7evotQKUFPxQaX2oG5TD3USADf8y/EoelMWTgA8dPiqXI+dBWcxIAPUffXImy2RcAqokRDt2/wO/3Qgw3HJeg7PmKVTSV/AzmSwJ84axzxYAXyqgCvAYFo35zrgEw+m1nZbhMHysGRVIaHS3vMbxCuNzmASVfPNlpAm4hSHGBd0Hob3YuP2MDjj1GDpp865jexqqs5kAdUJSvAd+Bw32YQt2QD3Ce5gDdVRV15mPuoD6hKIRqv+jRGp3+kn9gRJqDIZATvU6vbv1kRHgwiLqZLSbbJXUzo5NGIeK7/+tkC+ATCWR1KjcAXU126BkXYOHoPd7YpjzyBWQghOVqsJ6FVF0vzaT1fO1FOY8WhJwlpwLaLOAuOMveA1Of+TuOKQAAAAASUVORK5CYII=" InformativeScreenshot="d6fb308452bb3bcab0779dcf126dbd33.png" Selector="&lt;html app='msedge.exe' title='Login | Salesforce'/&gt;" Url="https://uipath-demo.my.salesforce.com/" />
+        </uix:NApplicationCard.TargetApp>
+      </uix:NApplicationCard>
+    </Switch>
+    <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Never" DisplayName="Use Browser | Salesforce" sap:VirtualizedContainerService.HintSize="842,3433" sap2010:WorkflowViewState.IdRef="NApplicationCard_4" InUiElement="[out_BrowserElement]" InteractionMode="Simulate" OpenMode="Never" ScopeGuid="135ae867-7fb1-40df-8170-f6ab4b7d35c5" Version="V1">
+      <uix:NApplicationCard.Body>
+        <ActivityAction x:TypeArguments="x:Object">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+          </ActivityAction.Argument>
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="548,3297" sap2010:WorkflowViewState.IdRef="Sequence_15">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <uix:NGoToUrl DisplayName="Go To URL" sap:VirtualizedContainerService.HintSize="506,81" sap2010:WorkflowViewState.IdRef="NGoToUrl_1" Url="https://uipath-demo.my.salesforce.com/" Version="V1" />
+            <uix:NCheckState DisplayName="Check App State 'Log In'" EnableIfNotExists="False" sap:VirtualizedContainerService.HintSize="506,3082" sap2010:WorkflowViewState.IdRef="NCheckState_4" ScopeIdentifier="135ae867-7fb1-40df-8170-f6ab4b7d35c5" Timeout="3" Version="V1">
+              <uix:NCheckState.IfExists>
+                <Sequence DisplayName="Target appears" sap:VirtualizedContainerService.HintSize="462,2866" sap2010:WorkflowViewState.IdRef="Sequence_13">
+                  <Sequence.Variables>
+                    <Variable x:TypeArguments="x:String" Name="InputLabel" />
+                    <Variable x:TypeArguments="x:String" Name="VerificationCode" />
+                  </Sequence.Variables>
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <ui:GetRobotCredential TimeoutMS="{x:Null}" AssetName="SFDC Credentials" CacheStrategy="None" DisplayName="Get Credential" FolderPath="[FolderName]" sap:VirtualizedContainerService.HintSize="420,79" sap2010:WorkflowViewState.IdRef="GetRobotCredential_3" Password="[password]" Username="[username]" />
+                  <uix:NCheckState DisplayName="Check App State 'IMG'" EnableIfNotExists="False" sap:VirtualizedContainerService.HintSize="420,466" sap2010:WorkflowViewState.IdRef="NCheckState_14" ScopeIdentifier="135ae867-7fb1-40df-8170-f6ab4b7d35c5" Timeout="0.5" Version="V1">
+                    <uix:NCheckState.IfExists>
+                      <Sequence DisplayName="Target appears" sap:VirtualizedContainerService.HintSize="376,250" sap2010:WorkflowViewState.IdRef="Sequence_43">
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                        <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'IMG'" sap:VirtualizedContainerService.HintSize="334,156" sap2010:WorkflowViewState.IdRef="NClick_23" InteractionMode="Simulate" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="135ae867-7fb1-40df-8170-f6ab4b7d35c5">
+                          <uix:NClick.Target>
+                            <uix:TargetAnchorable BrowserURL="https://uipath-demo.my.salesforce.com/" DesignTimeRectangle="627, 414, 16, 16" ElementType="Icon" FriendlyName="'IMG'" FullSelectorArgument="&lt;webctrl parentid='clear_link' tag='IMG' /&gt;" FuzzySelectorArgument="&lt;webctrl parentid='clear_link' tag='IMG' type='' aaname='Log In with a Different Username' /&gt;" Guid="ff2cb02f-e6e8-416c-9089-2bb868157f55" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAFPSURBVDhPvZNfSwJREMX7/l/CIEtRSJK0RDHooeghehD6ErLtn5R8UKb9bc1tdrzbQywdOHB35szZvTOzJ9Iy/s/wLSvk6eVVRrN7Obu8rciZGLkmHBnu9wd5eF7J6XAqncEkSnJo0HrUDBHc3D1GTWKcllpvWjPkrSoeXC+lO5rVDCCx/ngRnqmxCIb0Ra85nCxl+7GTdZLKuTHlTKzYbIMpNbanwZBma2Hvai5p/iVSUzUD5C5KjeqpVQRDJqgC2B//mCZpXhEQ44VWS60iGLIWVgQxzYr3b4WU500V8zpqFb8ack39MpBkea2nyqihv7LtWV5+GQR+UDB6ZTsUVsMOgGvanpKzKxUdil0bdpC18QNQU3JoiDWuDbCLzS76aUJi5PS5cbFB678eQMBb9foxkkPjzcCRoYK+0GwmyFpAzsRszzwaDf+Klg1FPgGtJZhowKMjaAAAAABJRU5ErkJggg==" InformativeScreenshot="452ef079ba0dbca83390385a857b21e5.png" ScopeSelectorArgument="&lt;html title='Login | Salesforce' /&gt;" SearchSteps="FuzzySelector, Image">
+                              <uix:TargetAnchorable.Anchors>
+                                <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                                  <uix:Target DesignTimeRectangle="325, 406, 32, 32" ElementType="Icon" FriendlyName="'IMG idcard-avatar'" FullSelectorArgument="&lt;webctrl id='idcard-avatar' tag='IMG' /&gt;" FuzzySelectorArgument="&lt;webctrl id='idcard-avatar' tag='IMG' type='' aaname='vikram.parolkar@uipath.com.uipath-demo' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAACQAAAAkCAYAAADhAJiYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAJDSURBVFhH7Zb7S1RBFMf711UEIaQfQjDzgSyCIdZKWj7aymdoKZGELYgPFBW1jF0s29dxP+MddrnM614RltgvfGE4c86Z78yce+Y+khZDW5APbUE+/B+CLn8XZXkrL5npFenNvJXOgawiY2zM4ZMGiQSxyMvcZ+l49iqI+CYVFixoc2dfnYJpYReJITYUQYK4AtNiSUiOEHgFsTvTAmkYclJOQdy/75q6B6dkOLuoyNjko0kuX005BfkK+PHojMx/2pbdozNFxthMvprkdMEqiJ2YEmr2jExL9sOm/CuVowhRY2zMmWI0XadkFeQr5P6JnBycXETeDWBjzhSj6SpwqyAanCmZ5lC9Zq4K15F3A9iYM8VoktsGqyC6rimZ5tPxBdnePY68G8DGnClGk9w2WAWFNMGByfdyUypJpVpVZIzN5NtMcttwL0Fdz+/er49fdhQZdwXEpRLkujLm5ta+ycVVQfKHpzKxsK74Y/9Uzn8VZLY+54u3IVFRd9Y59mZN9o7PpfjnRmq1mpTKFVXIkDG24vVf5YMvMfE8qYra9Nn3vXgnX/OHUq5UIy878MGXmHieVJ+9qTGOTC2pnYcCX2LieVI1RhB/Op6MzUpu43u9+V3K0dlPJ/HBl5jmHKmfDsBO4l8bC4y+XpHMzKqT+MTFkMt1OsApCLTU74eG710LoauQmxEkCLC7kGYZJzEhJ6MRLAhw/75/pGbi66uZOBIJ0mARroAGR9flFCBjbMwlFaKRStBDoi3Ih7YgH1pMkMgtFl5sLp7vMT8AAAAASUVORK5CYII=" SearchSteps="FuzzySelector, Image" />
+                                </scg:List>
+                              </uix:TargetAnchorable.Anchors>
+                            </uix:TargetAnchorable>
+                          </uix:NClick.Target>
+                        </uix:NClick>
+                      </Sequence>
+                    </uix:NCheckState.IfExists>
+                    <uix:NCheckState.IfNotExists>
+                      <Sequence DisplayName="Target does not appear" sap:VirtualizedContainerService.HintSize="250,84" sap2010:WorkflowViewState.IdRef="Sequence_44">
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                      </Sequence>
+                    </uix:NCheckState.IfNotExists>
+                    <uix:NCheckState.Target>
+                      <uix:TargetAnchorable BrowserURL="https://uipath-demo.my.salesforce.com/?ec=302&amp;startURL=%2Fone%2Fone.app" DesignTimeRectangle="627, 414, 16, 16" ElementType="Icon" FriendlyName="'IMG'" FullSelectorArgument="&lt;webctrl parentid='clear_link' tag='IMG' /&gt;" FuzzySelectorArgument="&lt;webctrl parentid='clear_link' tag='IMG' type='' aaname='Log In with a Different Username' /&gt;" Guid="a889c5ea-2d1c-4fc0-aaff-a123bdacc03b" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAFPSURBVDhPvZNfSwJREMX7/l/CIEtRSJK0RDHooeghehD6ErLtn5R8UKb9bc1tdrzbQywdOHB35szZvTOzJ9Iy/s/wLSvk6eVVRrN7Obu8rciZGLkmHBnu9wd5eF7J6XAqncEkSnJo0HrUDBHc3D1GTWKcllpvWjPkrSoeXC+lO5rVDCCx/ngRnqmxCIb0Ra85nCxl+7GTdZLKuTHlTKzYbIMpNbanwZBma2Hvai5p/iVSUzUD5C5KjeqpVQRDJqgC2B//mCZpXhEQ44VWS60iGLIWVgQxzYr3b4WU500V8zpqFb8ack39MpBkea2nyqihv7LtWV5+GQR+UDB6ZTsUVsMOgGvanpKzKxUdil0bdpC18QNQU3JoiDWuDbCLzS76aUJi5PS5cbFB678eQMBb9foxkkPjzcCRoYK+0GwmyFpAzsRszzwaDf+Klg1FPgGtJZhowKMjaAAAAABJRU5ErkJggg==" InformativeScreenshot="25d342394aaf4b962f7f96d1ac50291d.png" ScopeSelectorArgument="&lt;html title='Login | Salesforce' /&gt;" SearchSteps="FuzzySelector">
+                        <uix:TargetAnchorable.Anchors>
+                          <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                            <uix:Target DesignTimeRectangle="325, 406, 32, 32" ElementType="Icon" FriendlyName="'IMG idcard-avatar'" FullSelectorArgument="&lt;webctrl id='idcard-avatar' tag='IMG' /&gt;" FuzzySelectorArgument="&lt;webctrl id='idcard-avatar' tag='IMG' type='' aaname='vikram.parolkar@uipath.com.uipath-demo' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAACQAAAAkCAYAAADhAJiYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAJDSURBVFhH7Zb7S1RBFMf711UEIaQfQjDzgSyCIdZKWj7aymdoKZGELYgPFBW1jF0s29dxP+MddrnM614RltgvfGE4c86Z78yce+Y+khZDW5APbUE+/B+CLn8XZXkrL5npFenNvJXOgawiY2zM4ZMGiQSxyMvcZ+l49iqI+CYVFixoc2dfnYJpYReJITYUQYK4AtNiSUiOEHgFsTvTAmkYclJOQdy/75q6B6dkOLuoyNjko0kuX005BfkK+PHojMx/2pbdozNFxthMvprkdMEqiJ2YEmr2jExL9sOm/CuVowhRY2zMmWI0XadkFeQr5P6JnBycXETeDWBjzhSj6SpwqyAanCmZ5lC9Zq4K15F3A9iYM8VoktsGqyC6rimZ5tPxBdnePY68G8DGnClGk9w2WAWFNMGByfdyUypJpVpVZIzN5NtMcttwL0Fdz+/er49fdhQZdwXEpRLkujLm5ta+ycVVQfKHpzKxsK74Y/9Uzn8VZLY+54u3IVFRd9Y59mZN9o7PpfjnRmq1mpTKFVXIkDG24vVf5YMvMfE8qYra9Nn3vXgnX/OHUq5UIy878MGXmHieVJ+9qTGOTC2pnYcCX2LieVI1RhB/Op6MzUpu43u9+V3K0dlPJ/HBl5jmHKmfDsBO4l8bC4y+XpHMzKqT+MTFkMt1OsApCLTU74eG710LoauQmxEkCLC7kGYZJzEhJ6MRLAhw/75/pGbi66uZOBIJ0mARroAGR9flFCBjbMwlFaKRStBDoi3Ih7YgH1pMkMgtFl5sLp7vMT8AAAAASUVORK5CYII=" SearchSteps="FuzzySelector" />
+                          </scg:List>
+                        </uix:TargetAnchorable.Anchors>
+                      </uix:TargetAnchorable>
+                    </uix:NCheckState.Target>
+                  </uix:NCheckState>
+                  <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="None" DelayAfter="[aft_delay]" DelayBefore="[bef_delay]" DisplayName="Type Into 'Username'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="420,216" sap2010:WorkflowViewState.IdRef="NTypeInto_7" ScopeIdentifier="135ae867-7fb1-40df-8170-f6ab4b7d35c5" Text="[username]" Version="V1">
+                    <uix:NTypeInto.Target>
+                      <uix:TargetAnchorable BrowserURL="https://uipath-demo.my.salesforce.com/" DesignTimeRectangle="311, 321, 338, 43" ElementType="InputBox" FriendlyName="'Username'" FullSelectorArgument="&lt;webctrl tag='INPUT' type='email' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='INPUT' type='email' aaname='Username' /&gt;" Guid="6fcb7349-56be-4df8-86ea-7dd27824ac77" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAVYAAAAvCAYAAAC49eI+AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAALiSURBVHhe7dpBThNhGMbxuYQ38AScwBN4AA/A2mvoip2wcmUIAjGIkLgl4IaYtoGqiIJBSigoM512ynSmM4/zfm1MjEgq/Zb/X/IYwK7/eadtoEpZSnkh9bNSYb9Qu5vrLMp0yhhj7Ma1olznca6rZKhkULiGWktNYD9kw9L95+HlQO++Jdr8EGu10dFSLRovZIwx5jbq4ko90ptmrO2jRJ8vUtdQa6k1NbDK2h8arWutN3t6vNnTg+cd3XtyxRhj7JbNPIs0u9bVYi1W/fTatTQvSgX9rHCXqkV1Zj7Swm6qvfZwdM8CAP7pJCpcM+/PhXq133OXq70tEIT9oXv8t+o+3b4evxwAMCmLqzV05zhxV2tgH1TZe6p2rVp9AQD/J0pLd7VuNGO141zBWSfTaiNy7xcAAO7GGmofaLWqpgatKNPLGmEFgGlYQ+3bAvZVrMD+sV8IKwDc3Q1hDQkrAExhFNaQsAKAL4QVADwjrADgGWEFAM8IKwB4RlgBwDPCCgCeEVYA8IywAoBnhBUAPCOsAOAZYQUAzwgrAHhGWAHAM8IKAJ4RVgDwjLACgGeEFQA8I6wA4BlhBQDPCCsAeEZYAcAzwgoAnhFWAPCMsAKAZ4QVADwjrADgGWEFAM9uCGtEWAFgCoQVADz7I6ytTqaVOmEFgGlYQ5erI9WaGrTjXBvNWDPzkU6iYvwSAMCkorTU/blQr/c7Oq+aGoT9oXaOE82udbWwm45fBgCYlLXz0UpXW196+pkMFfSzQoeXaVXarjtliSsATMYu1cW9gXviX2ok+thO1RsUCvLq6f+qKmz9tK+3Bz13uVpgGWOM3T57/H/4ItbqXlfvv/f1o5crG5YKylLuBztfDy5SbR8lWt/vaLleFbhmCxljjP3eqI32of96M9bW154+VZeqRTWtLtWyimpg52zVVuVFqaQ6Ye16tTdf7ZMt+9oAY4yxv9eKctdKO0rt8d8OVIuqJP0CKju86L6fwmAAAAAASUVORK5CYII=" InformativeScreenshot="13a5a7638941d3902d6989b0c42584bf.png" IsResponsive="True" ScopeSelectorArgument="&lt;html title='Login | Salesforce' /&gt;" SearchSteps="FuzzySelector, Image">
+                        <uix:TargetAnchorable.Anchors>
+                          <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                            <uix:Target DesignTimeRectangle="311, 298, 57, 15" ElementType="Text" FriendlyName="'Username'" FullSelectorArgument="&lt;webctrl tag='LABEL' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='LABEL' type='' aaname='Username' check:text='Username' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAD0AAAATCAYAAAAjxAWvAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAGZSURBVFhH7ZS9SgRBEIR9SENDE8HASLMLLzsEQTQ5DDRQDAQ1UuESBQNBEEw0NBBMfISRb51aaxpRRk4O3S0YZnq3f6p6encudRC96K6gF90VFKLnl0b59IGLy7u0OtzN1v9AL3rWou8fn9L17UO2fg9VojkvD8aNvbi23RI8Pr9pn7M7cXLuHE7SwspGm2tr76zxIwf288tr9n7Ppfzr49P8NH0aRx3OMQ/7cPOo8WV5HlAlmh1SDm4HQRKKPyQEckbyg9FBtlJzjqQECJMPxDhs6kgoORAK2HUG+O6fXGWrUjSBFKLjEskzvRcgSzMAOf0m8ZUQ4PnJiTBslqYDxDg4sATPA0f35aK8CYVoioisoHETEIBQhPGOM3EiqqWmxEbyzgk5WQTzKQjuG+O+Ew0/bC2fpkK0xkI3QwMI9tEQSEJR+fhtOmpEs6uWPpufiIabNy+iEA1xAigGWY2yoNFTFyWUG8eXZzTNp6VGtH5M2CwnH+O+Eg0veChXvLRC9DRAwfizmzVoiF/E1EX/BfSiu4IOik7pDVqSF/yiNxORAAAAAElFTkSuQmCC" SearchSteps="FuzzySelector, Image" />
+                          </scg:List>
+                        </uix:TargetAnchorable.Anchors>
+                      </uix:TargetAnchorable>
+                    </uix:NTypeInto.Target>
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                  </uix:NTypeInto>
+                  <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="None" DelayAfter="[aft_delay]" DelayBefore="[bef_delay]" DisplayName="Type Into 'Password'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="420,241" sap2010:WorkflowViewState.IdRef="NTypeInto_8" IsPassword="True" ScopeIdentifier="135ae867-7fb1-40df-8170-f6ab4b7d35c5" SecureText="[password]" Version="V1">
+                    <uix:NTypeInto.Target>
+                      <uix:TargetAnchorable BrowserURL="https://uipath-demo.my.salesforce.com/" DesignTimeRectangle="311, 403, 338, 43" ElementType="InputBoxPassword" FriendlyName="'Password'" FullSelectorArgument="&lt;webctrl tag='INPUT' type='password' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='INPUT' type='password' aaname='Password' /&gt;" Guid="227eb915-a9f1-4cb6-97fe-cac8895ceaef" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAVYAAAAvCAYAAAC49eI+AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAFuSURBVHhe7djdSgJRGIbR7v8KIxDpV01RK4myhh1fjaL9mNR7uBa8B3uY44c9c9IAiBJWgLC9sHZd1yazuza8nLbTwY2ZmR3Y4HzSRreLtn557Sv6YRvWimq9NF+u2tPzun8KwE8qqNXMs+F4L67bsFZ1p/OH/gTAsSqu1dCNbVjrtvr5OgvA7+qLv26tG9uw1v8CAP5mt6HCChAgrABhwgoQJqwAYcIKECasAGHCChAmrABhwgoQJqwAYcIKECasAGHCChAmrABhwgoQJqwAYcIKECasAGHCChAmrABhwgoQJqwAYcIKECasAGHCChAmrABhwgoQJqwAYcIKECasAGHCChAmrABhwgoQJqwAYd+GdXA+aeuX1/4EwLG6rmtnw3F/2gnr6HbR5stVfwLgWNXOq/G8P+2EtYpbV1lxBThOdXN5//j+xf/0vO6f7oS11Et1c63AmpnZ4dXn/8X17Mtv1L2wAvB/wgoQ1dobSDwb59hWce8AAAAASUVORK5CYII=" InformativeScreenshot="34262b4bc653e6efac19ccd2b71a68d4.png" ScopeSelectorArgument="&lt;html title='Login | Salesforce' /&gt;" SearchSteps="FuzzySelector, Image">
+                        <uix:TargetAnchorable.Anchors>
+                          <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                            <uix:Target DesignTimeRectangle="311, 380, 53, 15" ElementType="Text" FriendlyName="'Password'" FullSelectorArgument="&lt;webctrl parentid='login_form' tag='LABEL' /&gt;" FuzzySelectorArgument="&lt;webctrl parentid='login_form' tag='LABEL' type='' aaname='Password' check:text='Password' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAADkAAAATCAYAAAAqL6XVAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAGZSURBVFhH7dShS0RBEMdx/0ij0SIYTNouXhNBEC2HQYNiENSkgkXBIAiCRaNBsPgnrHwe/mRdhVPbPe8Lj3s7O7Mzv9l5N1P+AVORfWEqsi98Ejm7sFoWB6OyPNwpc0vrZbC6X55fXt93Jwc6ar6IPL+8e1+VMtw47IROGr8Sef/49BHAPim3+iuR17cP3diCQDdrlOdXtro9aASbx6hvH1x0dr4ZfdPAT1xYG518WSd2c/e020uuo7Obzg418lNXGi8XP/mc82ORgiUR1CKpPSio9XGGhC0KIRb2iU+zrO0523umxi9BiVNjnc97/UnJPVakBAR4CAjeY48PFKl4ydJxhfHR4b3jq4+C+ViLsedGnFvfMnudF+JiU2POg7h6+jBWZBuACMnhfCIyEKijdZfFWROM2odY4ux5T9xPRNa0ItX4J5Fs6TQkbUWiHuPQJjV6hKVhmYpMgd+6oRrRjmuNpniC6fiTSBAmeTqfPySHplD7bi83Hxv/4Cbrb+i7otoz0wC0vpoRPzFjRfaVqci+MBXZD0p5A8ip62n6+wiMAAAAAElFTkSuQmCC" SearchSteps="FuzzySelector, Image" />
+                          </scg:List>
+                        </uix:TargetAnchorable.Anchors>
+                      </uix:TargetAnchorable>
+                    </uix:NTypeInto.Target>
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                  </uix:NTypeInto>
+                  <uix:NClick ActivateBefore="True" ClickType="Single" DelayAfter="[aft_delay]" DelayBefore="[bef_delay]" DisplayName="Click 'Log In'" sap:VirtualizedContainerService.HintSize="420,156" sap2010:WorkflowViewState.IdRef="NClick_6" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="135ae867-7fb1-40df-8170-f6ab4b7d35c5" Version="V1">
+                    <uix:NClick.Target>
+                      <uix:TargetAnchorable BrowserURL="https://uipath-demo.my.salesforce.com/" DesignTimeRectangle="311, 462, 338, 43" ElementType="Button" FriendlyName="'Log In'" FullSelectorArgument="&lt;webctrl tag='INPUT' type='submit' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='INPUT' type='submit' aaname='Log In' check:text='Log In' /&gt;" Guid="cf452aa8-6935-4d8b-9664-17990929b9f5" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAVYAAAAvCAYAAAC49eI+AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAALFSURBVHhe7dvPSlRxGMdhL8E7qBvpHty19QrCrbvyEmrtIgKXRasIgqBNixZRIf0jNMyoUCTSzDBOvCff4ed0ZlT8HWcWzxceZOacmTbDh9NxnGnMzKzqhNXMrPKOhfX5p/1m4d7nZnZxtZlZeAnAGNHKueX1Zm374Kii/zYIaxwQVICzi3bGhWluENb5lY3OFwBwsmhobhDWy0tvOk8G4GRx1ZobhLXrRABOLyesAJXkhBWgkpywAlSSE1aASnLCClBJTlgBKskJK0AlOWEFqCQnrACV5IQVoJKcsAJUkhNWgEpywkrv7r/63uo6Vsu7b7/az/HGzu/m6u2PnedA33LCSu8uIqwhdu3uZucxuAg5YaV348K69PBre5UZ2zv40zx6++PY8Xgcx/OcWFydluekWIY1fm7tHrb/brxvLF536cbr/14HteSEld6NCuuVmx/az17GMKL3YnN/ENc7z3bax3l+PB4Ob6l8r/gZe7q+1z6O946wjgo81JATVno3KqzxXBnOEEGMK8w8Xr4ujo26Wg2x4bCWV6jxXuNeD+eVE1Z6NxzIk57Pz+OtJ1vtLYCMY1ytDoe4FBsOa3lcWOlbTljp3biwjrtiDRHCuFcaPyOs4+6RxoSVScoJK70bFda4xxoRzRgO3weN5yOq5WvGiQkrk5QTVnoXQRteBi6+c1p+K6AMcIY3r1hD/AIrj5fKRVSFlUnICStTKyJYhjYjPCquMGk5YWVqxdVq+VdUeasgfqlVngfTIiesTK3844GUX/jvOhemQU5YASrJCStAJTlhBagkJ6wAleSEFaCSnLACVJITVoBKcsIKUElOWAEqyQkrQCW5QVhnF1c7TwTgdHKDsM6vbHSeCMDJ5pbXj2pahHVt+6DzZADGi//xP36/e1TTIqyxnZ+HzfUHXwA4g7gwLXcsrGZmdv4Jq5lZ1TXNX18O9K22Fm//AAAAAElFTkSuQmCC" InformativeScreenshot="adf390e41dff00940d2389190cc0c4d5.png" ScopeSelectorArgument="&lt;html title='Login | Salesforce' /&gt;" SearchSteps="FuzzySelector" />
+                    </uix:NClick.Target>
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                  </uix:NClick>
+                  <uix:NCheckState DisplayName="Check App State 'Verify Your Identity'" EnableIfNotExists="False" sap:VirtualizedContainerService.HintSize="420,1414" sap2010:WorkflowViewState.IdRef="NCheckState_5" ScopeIdentifier="135ae867-7fb1-40df-8170-f6ab4b7d35c5" Timeout="2" Version="V1">
+                    <uix:NCheckState.IfExists>
+                      <Sequence DisplayName="Target appears" sap:VirtualizedContainerService.HintSize="376,1198" sap2010:WorkflowViewState.IdRef="Sequence_17">
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                        <uix:NGetText DisplayName="Get Text 'Verification Text'" sap:VirtualizedContainerService.HintSize="334,156" sap2010:WorkflowViewState.IdRef="NGetText_1" ScopeIdentifier="135ae867-7fb1-40df-8170-f6ab4b7d35c5" Version="V1">
+                          <uix:NGetText.Target>
+                            <uix:TargetAnchorable BrowserURL="https://uipath-demo.my.salesforce.com/_ui/identity/verification/method/SmsVerificationFinishUi/e?vcsrf=B9Ifch7lLC2PDhzPeiBo9CkwFFV_EWqrVelzyMfSUHfGLo_C_npCD5YcqBH96lGZ5e0G-r37MPZpDvVUSBaBHC71uUuS40mF40nPcK0x7ac-jy91-u7s0ucts2kvjWkyM8MIeDCjo5-j-tclnOHvag2vWV8SoC70NxHazvBzzRIQHSE87Ww6l4LHpHvDZ3cNfH3fIYK0h_AJi4VejviBMsgpg2nCVCP1n-Fpygf16bX_K1DeEQ5iSXLwQcNeMZyHC8BerKWUsryj_C6xqj_jXQJCSE4flo-tZaS6sqooSFTkStzqm6N0TUouakVfXy3SVAlrQCRm13ey-aRKpIcuKLzujpAQQ_Urz3Mj1l6s807kk5ZcqnwFvYaqytsAeanhDqmwRn35t7Ir433yYMO3tHaDwB3joViDf7uSdi7qGR5STMgx-LI0-pnXLZusO5qYkdCPFICb0k3SGnzXo24_q81qpUm44T3YDuYjmQ7eGSzKMXAPmlra1W4zchFdN8AREdrutl4QLHrnfPFcNmpEJa9gDIv0NAkS99p9MCXxXaPKLxZRbyzo1NC4T4OOQ8Fr_owasAddgeRV7fPmX-5dgJZAZbHFs1iTyiYzaYYZLsxglMKHsob7Ae1iQ_C6l7jO0tWX_Ip5owFIJ6nPmxHwCnG_opWkXT5nClh8c2FyidU%3D&amp;vpol=ic&amp;vflid=0&amp;vfgrp=985464725&amp;retURL=%2Fsecur%2Ffrontdoor.jsp%3Fallp%3D1%26cshc%3DJ0000050AlgJ0000003Koq%26apv%3D1%26display%3Dpage%26ucs%3D1" DesignTimeRectangle="799, 434, 338, 120" ElementType="Text" FriendlyName="'Verification Text'" FullSelectorArgument="&lt;webctrl tag='P' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='P' type='' aaname='You&amp;apos;re trying to . To make sure your Salesforce account is secure, we have to verify your identity.*' /&gt;" Guid="43db9f5d-926d-418b-a2ae-c4a357a6f518" ImageBase64="" InformativeScreenshot="bf3cfb2a37bf86af80564033233f73eb.png" ScopeSelectorArgument="&lt;html title='Verify Your Identity | Salesforce' /&gt;" SearchSteps="FuzzySelector" />
+                          </uix:NGetText.Target>
+                          <uix:NGetText.Text>
+                            <OutArgument x:TypeArguments="x:String">[InputLabel]</OutArgument>
+                          </uix:NGetText.Text>
+                        </uix:NGetText>
+                        <uix:NKeyboardShortcuts ActivateBefore="True" ClickBeforeMode="None" DisplayName="Keyboard Shortcuts" sap:VirtualizedContainerService.HintSize="334,178" sap2010:WorkflowViewState.IdRef="NKeyboardShortcuts_1" Shortcuts="[d(hk)][k(enter)][u(hk)]" Version="V1" />
+                        <ui:InputDialog Options="{x:Null}" OptionsString="{x:Null}" DisplayName="Input Dialog" sap:VirtualizedContainerService.HintSize="334,238" sap2010:WorkflowViewState.IdRef="InputDialog_1" IsPassword="False" Label="[InputLabel]" Title="Two-Factor Authentication Required!">
+                          <ui:InputDialog.Result>
+                            <OutArgument x:TypeArguments="x:String">[VerificationCode]</OutArgument>
+                          </ui:InputDialog.Result>
+                        </ui:InputDialog>
+                        <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="None" DisplayName="Type Into 'Verification Code'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="334,216" sap2010:WorkflowViewState.IdRef="NTypeInto_9" ScopeIdentifier="135ae867-7fb1-40df-8170-f6ab4b7d35c5" Text="[VerificationCode]" Version="V1">
+                          <uix:NTypeInto.Target>
+                            <uix:TargetAnchorable BrowserURL="https://uipath-demo.my.salesforce.com/_ui/identity/verification/method/SmsVerificationFinishUi/e?vcsrf=B9Ifch7lLC2PDhzPeiBo9CkwFFV_EWqrVelzyMfSUHfGLo_C_npCD5YcqBH96lGZ5e0G-r37MPZpDvVUSBaBHC71uUuS40mF40nPcK0x7ac-jy91-u7s0ucts2kvjWkyM8MIeDCjo5-j-tclnOHvag2vWV8SoC70NxHazvBzzRIQHSE87Ww6l4LHpHvDZ3cNfH3fIYK0h_AJi4VejviBMsgpg2nCVCP1n-Fpygf16bX_K1DeEQ5iSXLwQcNeMZyHC8BerKWUsryj_C6xqj_jXQJCSE4flo-tZaS6sqooSFTkStzqm6N0TUouakVfXy3SVAlrQCRm13ey-aRKpIcuKLzujpAQQ_Urz3Mj1l6s807kk5ZcqnwFvYaqytsAeanhDqmwRn35t7Ir433yYMO3tHaDwB3joViDf7uSdi7qGR5STMgx-LI0-pnXLZusO5qYkdCPFICb0k3SGnzXo24_q81qpUm44T3YDuYjmQ7eGSzKMXAPmlra1W4zchFdN8AREdrutl4QLHrnfPFcNmpEJa9gDIv0NAkS99p9MCXxXaPKLxZRbyzo1NC4T4OOQ8Fr_owasAddgeRV7fPmX-5dgJZAZbHFs1iTyiYzaYYZLsxglMKHsob7Ae1iQ_C6l7jO0tWX_Ip5owFIJ6nPmxHwCnG_opWkXT5nClh8c2FyidU%3D&amp;vpol=ic&amp;vflid=0&amp;vfgrp=985464725&amp;retURL=%2Fsecur%2Ffrontdoor.jsp%3Fallp%3D1%26cshc%3DJ0000050AlgJ0000003Koq%26apv%3D1%26display%3Dpage%26ucs%3D1" DesignTimeRectangle="799, 594, 338, 43" ElementType="InputBox" FriendlyName="'Verification Code'" FullSelectorArgument="&lt;webctrl tag='INPUT' type='text' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='INPUT' type='text' aaname='Verification Code' /&gt;" Guid="064e95a0-ec65-4e62-85f7-8ffbac687f32" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAVYAAAAvCAYAAAC49eI+AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAEnSURBVHhe7dS9akJBAITRvP8T2qQTrRQEQbHZMMG7XCHgTTLlOTDF/tTfxwCgSlgByl7Cers/xv54GrvPg5mZbViamXauzbDmIZ/Ol+vzBoB30sy0cx3XGdZUV1QBfi/tTEMXM6wpLgB/s26osAIUCCtAmbAClAkrQJmwApQJK0CZsAKUCStAmbAClAkrQJmwApQJK0CZsAKUCStAmbAClAkrQJmwApQJK0CZsAKUCStAmbAClAkrQJmwApQJK0CZsAKUCStAmbAClAkrQJmwApQJK0CZsAKUCStAmbAClAkrQJmwApQJK0DZj2HdH0/jfLk+TwBslXamoYsZ1tv98V1ccQXYLs1MO9PQxQxr5CHVzSczM3u/NHMd1XgJKwD/J6wAVWN8AXLhG0zJObEJAAAAAElFTkSuQmCC" InformativeScreenshot="510b1c5a846f4f9da7478a47821f4022.png" IsResponsive="True" ScopeSelectorArgument="&lt;html title='Verify Your Identity | Salesforce' /&gt;" SearchSteps="FuzzySelector, Image">
+                              <uix:TargetAnchorable.Anchors>
+                                <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                                  <uix:Target DesignTimeRectangle="799, 571, 95, 15" ElementType="Text" FriendlyName="'Verification Code'" FullSelectorArgument="&lt;webctrl tag='LABEL' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='LABEL' type='' aaname='Verification Code' check:text='Verification Code' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAGMAAAATCAYAAACEGbNUAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAARySURBVFhH7VfxS1tXFN4fKYgEi+sIGG146CK2M0vXkZZSdWoeSSQ2mpYoqVqsW7CC0kxXW7qmZkW0pdlKuwVLna4JtW71Cd/Offe+9+6LzsaYQX54HwTeued57nnnu+c718/goG7gkFFHcMioIzhk1BEcMuoIgoxtpL4dQHDlgJsm9pDu7UfPwp6wK8NP4QF4b78V1ntkolE0d0RwtiuG1svfY+WdcNUA9r1qhX28ysxA6RhEg6cfDV4VytADPPso3CfByhQa/It4KczjYHbGVvoGGkNPoQlbx+4j9LRP4O6usCuErUC5WbiuPkSRW6fEK4wFEki+Fiah9mQcID8ZR9PFOTza2udLWhHZyST8d6rYpxoyeOGnkJHY2F0YR2PfY5yQCxsYyQ1E8kmwV9rB9ofyLt1HsZRF0DOChERGzbH7GIH2MaRqxW9VZJAk3e0blKSKSVQIfVluF7M/QPGF0dJFv/NTSG+K914vos2fRioeg8t7E1NvgEyon+IAm3MTaFEG9DY/28VkKoJmL/fpKOWR6I3CpYR1X2skh7/Yun4SJ9DK3u+Iwp8uUMeuY4j2drUPwOWjWPF1PYSxlw4RT5fEDhVf9C4iV+Kul5MjaBtbQihA+fuG0KQkEN84Qn5Z8YL3sSXMwzhAYXkG5yg+q0Vzx3VcW96yFEXKocU3DP+VEYsMrYDp3mFap/yoll8m8zbFsA3w3XsTaDKkinWKMoOHzHh7Hz7vOGZ3OAHaxhzcxgaMDI+K4HLRTEguECuC3BmWbxvTwUH4ZqUPOQraKi6ZHbuJhN/eGeXxeuaNPA6wPT+OJtHZeh6dFEeQU1y+BdfFDH7npgVGxjGdrJHsnulOI2fMj495qN1RxF4wgx9o7yQ7PAw0e6bHBBkH+Dmmwj2Wxz+67z0ddqrbinUgbGRAe4qgl384kyhX7DlfZwkOrkpFK2D0qziSBXpkZHTNYY07dFRGBu3luYUFK6iJ4toi/F8Pw613k4omU5qOI+OIeIxID30PPbI8WlMsYQH9EHGfDZ/ojENxCPlUDG2Tm/R0RA6mTLHcYxiV9EqjA9EYtipnJ4PYy4QGEbi3Q6xFENkQyyygJDX8l8SUQUaZJp6OjOf4TonS3oZcsvdqQwYvmMB/kfGJmXE6MoTEynUUcstQRgbln53Bmcs30Nk9j2diDdsP0H1Bak0ZVZPxDjNX5JY2sIarUjGK2Ttw28iwny4rXrlEiFuRJFMVkWH83YVZ/Gjepv7Gb/MT8ETXsfdiHm5J7lAiAjoNmSqXSrrWh1RzZjyJhyXfYRwigwYC+pR+uOX7I0GXjvNsgEfozr1kDsbqySCUNhD6Ri0b4FSMdBKfK7wTlfgSVLMbyHc7Qe/T8Aw/ofKXx2PD0xqQ7vIBXhEZDEf9n7GErD4z+QA3LzO+UdsA1zZXcS2golnvgFGEZtNWfbQtLESv8/x6biIkD37CYTIqgPbhT6z/8ge/+TioEnRV/zWP3Bs+zhmqIsPB/wOHjDqCQ0YdwSGjbgD8C4etsmdkClJOAAAAAElFTkSuQmCC" SearchSteps="FuzzySelector, Image" />
+                                </scg:List>
+                              </uix:TargetAnchorable.Anchors>
+                            </uix:TargetAnchorable>
+                          </uix:NTypeInto.Target>
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                              <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
+                        </uix:NTypeInto>
+                        <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Verify Button'" sap:VirtualizedContainerService.HintSize="334,156" sap2010:WorkflowViewState.IdRef="NClick_7" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="135ae867-7fb1-40df-8170-f6ab4b7d35c5" Version="V1">
+                          <uix:NClick.Target>
+                            <uix:TargetAnchorable BrowserURL="https://uipath-demo.my.salesforce.com/_ui/identity/verification/method/SmsVerificationFinishUi/e?vcsrf=B9Ifch7lLC2PDhzPeiBo9CkwFFV_EWqrVelzyMfSUHfGLo_C_npCD5YcqBH96lGZ5e0G-r37MPZpDvVUSBaBHC71uUuS40mF40nPcK0x7ac-jy91-u7s0ucts2kvjWkyM8MIeDCjo5-j-tclnOHvag2vWV8SoC70NxHazvBzzRIQHSE87Ww6l4LHpHvDZ3cNfH3fIYK0h_AJi4VejviBMsgpg2nCVCP1n-Fpygf16bX_K1DeEQ5iSXLwQcNeMZyHC8BerKWUsryj_C6xqj_jXQJCSE4flo-tZaS6sqooSFTkStzqm6N0TUouakVfXy3SVAlrQCRm13ey-aRKpIcuKLzujpAQQ_Urz3Mj1l6s807kk5ZcqnwFvYaqytsAeanhDqmwRn35t7Ir433yYMO3tHaDwB3joViDf7uSdi7qGR5STMgx-LI0-pnXLZusO5qYkdCPFICb0k3SGnzXo24_q81qpUm44T3YDuYjmQ7eGSzKMXAPmlra1W4zchFdN8AREdrutl4QLHrnfPFcNmpEJa9gDIv0NAkS99p9MCXxXaPKLxZRbyzo1NC4T4OOQ8Fr_owasAddgeRV7fPmX-5dgJZAZbHFs1iTyiYzaYYZLsxglMKHsob7Ae1iQ_C6l7jO0tWX_Ip5owFIJ6nPmxHwCnG_opWkXT5nClh8c2FyidU%3D&amp;vpol=ic&amp;vflid=0&amp;vfgrp=985464725&amp;retURL=%2Fsecur%2Ffrontdoor.jsp%3Fallp%3D1%26cshc%3DJ0000050AlgJ0000003Koq%26apv%3D1%26display%3Dpage%26ucs%3D1" DesignTimeRectangle="799, 653, 338, 43" ElementType="Button" FriendlyName="'Verify Button'" FullSelectorArgument="&lt;webctrl tag='INPUT' type='submit' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='INPUT' type='submit' aaname='Verify' check:text='Verify' /&gt;" Guid="c129f46d-6884-4b0b-a23d-f522edb5dbe2" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAVYAAAAvCAYAAAC49eI+AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAO5SURBVHhe7drPaxRnHMfxXP0jcvcfyLV3T0r/AS+9eQkF8dLDXtpLwB4q9BIPFlIKlkgtKQHLgqi01IiwJkRJK8uadRE32fza3e7M7Hw6z85+Zzdx67rx2SkN74+8IJlnjLc342xmxBhjzOsIK2OMed6xsK5VWrq4WNa5q+uamS8BAN7DtdI107VzeFlY3QFBBYDJuXYOxzULq6vuqL8AABjPNdSWhZWnVQA4PddQWxbWUTcCAD6cjbACgCc2wgoAntgIKwB4YiOsAOCJjbACgCc2wgoAntgIKwB4YiOsAOCJjbACgCc2wgoAntgIKwB4YiOs+J+qqdjpqvjzqDPgv2EjrMjFpSeBtNvQpXfOqlppxnr2YOvE9XFOhLWwrVu1SEE3VvvoUJ+/cz8wfTbCinxcr+tZN9DSzRPX7xxqL2yqUDhxfVL3mooO9/XZqDMgJzbCipxsaqESa2ejeuz6F38Orn1yd1/rza6OWolOoOK9l5oduq/2oqHiXqxILS3Mv9LyQajlpZI+/a2teieWkqfV/Vak54/3dD+Mdf+Xwb8z96CtqL6rC/3vgWmwEVbkZna1qXbzQFfsWuGNHoaRVn5Mvv5mRxtRoOUfNtN7v63raaejW/0n3MulUFFy/tPyVj+2g7D2flaxJR3s63LvrKQrG5HaL9/0702jvvFo0tcNwGRshBU5St+n2pPkbBLDqP/e9cIfHWn7bfaE6rin1O2nld7XvbBWhs/fH9aZmw2V7RVD4a3WorZuXO+fAVNiI6zI1eBJcks3Xg8+tHLhVNRVI/mv/LDnjwdhrZVeDf2sMWGdL2tpN9bD1c1ewIPXdc1lZ8B02Agr8uWeJLstLbj/+ncHT5Fzj/6Wajv/Gr/Jw5q+Vw2Sp9yvK7HWiukrBmCabIQVOUufVLf3wqF3oInebw2E+vXuX+n3X1W0WG3r++/S89OENX0F4D4IS0L+sb91AHwAG2FF7nqf0Cd/eh9aDV0/f7uh9aNYQRirHQZ68ntV5/tnpwrr/Ka+LCc/azjgwBTZCCvOMBff9D3r6HPALxthxZk1e+dQO50jXRtxBkyDjbDiDKpqJXlSDaJQxdX+O1sgBzbCCgCe2AgrAHhiI6wA4ImNsAKAJzbCCgCe2AgrAHhiI6wA4ImNsAKAJzbCCgCe2AgrAHhiy8J67ur6yBsBAOO5htqysF5cLI+8GQAwnmuoLQvrWqXFUysAnIJrp2uoLQurmztw1SWwADCea6Vr5nBU3Y6FlTHG2MePsDLGmNdJ/wAM39KZ93kjQgAAAABJRU5ErkJggg==" InformativeScreenshot="89150205c046327e70897d5c7c4fa661.png" ScopeSelectorArgument="&lt;html title='Verify Your Identity | Salesforce' /&gt;" SearchSteps="FuzzySelector, Image" />
+                          </uix:NClick.Target>
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                              <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
+                        </uix:NClick>
+                      </Sequence>
+                    </uix:NCheckState.IfExists>
+                    <uix:NCheckState.IfNotExists>
+                      <Sequence DisplayName="Target does not appear" sap:VirtualizedContainerService.HintSize="250,84" sap2010:WorkflowViewState.IdRef="Sequence_18">
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                      </Sequence>
+                    </uix:NCheckState.IfNotExists>
+                    <uix:NCheckState.Target>
+                      <uix:TargetAnchorable BrowserURL="https://uipath-demo.my.salesforce.com/_ui/identity/verification/method/SmsVerificationFinishUi/e?vcsrf=B9Ifch7lLC2PDhzPeiBo9CkwFFV_EWqrVelzyMfSUHfGLo_C_npCD5YcqBH96lGZ5e0G-r37MPZpDvVUSBaBHC71uUuS40mF40nPcK0x7ac-jy91-u7s0ucts2kvjWkyM8MIeDCjo5-j-tclnOHvag2vWV8SoC70NxHazvBzzRIQHSE87Ww6l4LHpHvDZ3cNfH3fIYK0h_AJi4VejviBMsgpg2nCVCP1n-Fpygf16bX_K1DeEQ5iSXLwQcNeMZyHC8BerKWUsryj_C6xqj_jXQJCSE4flo-tZaS6sqooSFTkStzqm6N0TUouakVfXy3SVAlrQCRm13ey-aRKpIcuKLzujpAQQ_Urz3Mj1l6s807kk5ZcqnwFvYaqytsAeanhDqmwRn35t7Ir433yYMO3tHaDwB3joViDf7uSdi7qGR5STMgx-LI0-pnXLZusO5qYkdCPFICb0k3SGnzXo24_q81qpUm44T3YDuYjmQ7eGSzKMXAPmlra1W4zchFdN8AREdrutl4QLHrnfPFcNmpEJa9gDIv0NAkS99p9MCXxXaPKLxZRbyzo1NC4T4OOQ8Fr_owasAddgeRV7fPmX-5dgJZAZbHFs1iTyiYzaYYZLsxglMKHsob7Ae1iQ_C6l7jO0tWX_Ip5owFIJ6nPmxHwCnG_opWkXT5nClh8c2FyidU%3D&amp;vpol=ic&amp;vflid=0&amp;vfgrp=985464725&amp;retURL=%2Fsecur%2Ffrontdoor.jsp%3Fallp%3D1%26cshc%3DJ0000050AlgJ0000003Koq%26apv%3D1%26display%3Dpage%26ucs%3D1" DesignTimeRectangle="778, 370, 380, 31" FriendlyName="'Verify Your Identity'" FullSelectorArgument="&lt;webctrl tag='H2' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='H2' type='' aaname='Verify Your Identity' check:text='Verify Your Identity' /&gt;" Guid="4dd636e9-49bf-4d92-9c4f-74f9a52782b9" ImageBase64="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" InformativeScreenshot="dcc2d0236cce2539b44f312890591ffa.png" ScopeSelectorArgument="&lt;html title='Verify Your Identity | Salesforce' /&gt;" SearchSteps="FuzzySelector" />
+                    </uix:NCheckState.Target>
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                  </uix:NCheckState>
+                </Sequence>
+              </uix:NCheckState.IfExists>
+              <uix:NCheckState.IfNotExists>
+                <Sequence DisplayName="Target does not appear" sap:VirtualizedContainerService.HintSize="250,85" sap2010:WorkflowViewState.IdRef="Sequence_14">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                </Sequence>
+              </uix:NCheckState.IfNotExists>
+              <uix:NCheckState.Target>
+                <uix:TargetAnchorable BrowserURL="https://uipath-demo.my.salesforce.com/" DesignTimeRectangle="311, 462, 338, 43" ElementType="Button" FriendlyName="'Log In'" FullSelectorArgument="&lt;webctrl tag='INPUT' type='submit' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='INPUT' type='submit' aaname='Log In' check:text='Log In' /&gt;" Guid="cf452aa8-6935-4d8b-9664-17990929b9f5" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAVYAAAAvCAYAAAC49eI+AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAALFSURBVHhe7dvPSlRxGMdhL8E7qBvpHty19QrCrbvyEmrtIgKXRasIgqBNixZRIf0jNMyoUCTSzDBOvCff4ed0ZlT8HWcWzxceZOacmTbDh9NxnGnMzKzqhNXMrPKOhfX5p/1m4d7nZnZxtZlZeAnAGNHKueX1Zm374Kii/zYIaxwQVICzi3bGhWluENb5lY3OFwBwsmhobhDWy0tvOk8G4GRx1ZobhLXrRABOLyesAJXkhBWgkpywAlSSE1aASnLCClBJTlgBKskJK0AlOWEFqCQnrACV5IQVoJKcsAJUkhNWgEpywkrv7r/63uo6Vsu7b7/az/HGzu/m6u2PnedA33LCSu8uIqwhdu3uZucxuAg5YaV348K69PBre5UZ2zv40zx6++PY8Xgcx/OcWFydluekWIY1fm7tHrb/brxvLF536cbr/14HteSEld6NCuuVmx/az17GMKL3YnN/ENc7z3bax3l+PB4Ob6l8r/gZe7q+1z6O946wjgo81JATVno3KqzxXBnOEEGMK8w8Xr4ujo26Wg2x4bCWV6jxXuNeD+eVE1Z6NxzIk57Pz+OtJ1vtLYCMY1ytDoe4FBsOa3lcWOlbTljp3biwjrtiDRHCuFcaPyOs4+6RxoSVScoJK70bFda4xxoRzRgO3weN5yOq5WvGiQkrk5QTVnoXQRteBi6+c1p+K6AMcIY3r1hD/AIrj5fKRVSFlUnICStTKyJYhjYjPCquMGk5YWVqxdVq+VdUeasgfqlVngfTIiesTK3844GUX/jvOhemQU5YASrJCStAJTlhBagkJ6wAleSEFaCSnLACVJITVoBKcsIKUElOWAEqyQkrQCW5QVhnF1c7TwTgdHKDsM6vbHSeCMDJ5pbXj2pahHVt+6DzZADGi//xP36/e1TTIqyxnZ+HzfUHXwA4g7gwLXcsrGZmdv4Jq5lZ1TXNX18O9K22Fm//AAAAAElFTkSuQmCC" InformativeScreenshot="adf390e41dff00940d2389190cc0c4d5.png" ScopeSelectorArgument="&lt;html title='Login | Salesforce' /&gt;" SearchSteps="FuzzySelector" />
+              </uix:NCheckState.Target>
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+            </uix:NCheckState>
+          </Sequence>
+        </ActivityAction>
+      </uix:NApplicationCard.Body>
+      <uix:NApplicationCard.TargetApp>
+        <uix:TargetApp Area="0, 78, 1920, 962" BrowserType="IE" IconBase64="iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAn6SURBVFhHtZcJUJPXFsc/Vls79i1QFcIiCtrWpVrtPK1dLD6nRbv42mqt1FoVZQ8i1lqk2lr0uQCibEIB2cUAgggWrEARHKTsCSDKjgQQCEvIRkjyfyfhm+F1lM57M/Y/85/JJPf7fueec++5N8zTFAA9dHwyS/PQdjN6TM6g77lEDBjlodcoT9Nm/JO8xPijLQxjyA5/ehqqzjKYaN24Fv12IRib0Yo+phcPmB5UMd0o1fkhyhgh7jI9mkL9BB8b/b9QIHrs4/+f5h2+scDW7+c9y/x/id0UXpD9Q0Z612DHUals6HWNvNtcLW8wUCqL9aWaHL3WkWijczV+hi7BbxtsCnrTwGEoycgfRYxoJMzAjQKYyb7yfxOB357veyP1jdCyepecGlFI8c9KQW2EWq24ArXiCFR9dlCV6wmVaYZVIac3F6928ota5eD86WeGhgsJZk3mkC0UuUbBmmwmmT7PJeuzr59eNt/emEPwqHdialtdq4el5+81Iu9uBFTyTECTBCgcQekGbjC4m7FRGJydCPdbjVif3iJZ9mNBu5UXL2a+R5I5wfTIBv28Gfa4xWTRZyuyEYt5sgi+Yv6Rmze3FPYO+vcD8a18VFWH0VrLJ4cAQyuACgaaRH3kZHog4NfbONYkgtcDJXZUj+H9wiG8GMofsPTOKLD0urJE+05x3qylmkK9MIJrgzLWgZ4kLXzh0YI7u2tHxedGAV5bDVoF5wh8g+wPdJsABQweJc9EdJo//l1eh6BBJfxFwOFegNuuxld1MnxQPIxFkfdHLblplfMP8JYqS59fNZFv6EpwU7IBi/u9CG5OM8/fXTsmDhcDmW2/obuZZqyb+TdAizGQy6D5sjUCsxJwmt+OC30KBIvUCKJgT1EQvhSEZ7sKO+rk2Fg0BNvwxlFrr9TCzLQNr43wjNf84eyp5hHbbvcOhoxocLWtAgNtWvhNqjkXaKJ6ZzMoi7FVvOsf98B6P6/S6sDVilWnbjVuSxMIf2yRKANEGpykIL7tAVybVfi8Wor1+QOwOV02aO2ZFF7tbzz9DiD4O+vjBe2nh9TgddVD2BRI8FsEdwfuETyTQdYZy4FVX0f5WPtcXcg+xlh5py+08k7ba7U/rfjzzPt9ZwY1OE5BHOwG9jQpsLl0FP/I6IHtoevtdu5Rb7GPPa55h3NTPQQSeWJ3G5rrThG8gHxwEp7BgHfGTrj4YIIFO/wxWXrxZtOCu76/vE9yegj47hHg0abCdloP62+KYBNcI7F0i0tlh/9eBF+xLrKyObjrESoqztCstTU/QTU31KU9L2yx1NbnigM7fFpZclPt7UNut53q1+AEZeFAtxq7GhT4oHQEK64IscCL12yxL+ZldviU5n2T47q7oHsoryEbalUGwS8CXX/VLbiOlL9jnV9Eg5XP1b+xw6eVpedlI+v9qbUBjyZwZnhyLbg8GMfHv41hdVYf7I780m/hHLuHHT4lCiD83N1fldL2C9Co04CBBVR+BgOxMxBTnIK1oeWyF7/LqbHyzqikmldSvass9/OqKeVa19DMawheo4W/FlA6HtivQhDtIm0ZXKkM22qkWJc3gHlnKyXmzrEhLHZKdt9k5VeUHteo5LmA5F3QIQJ5jD4Srp9C7MgoEjRAnBqIVZGVjzua/JMCiFFoECXVIIS2pDaAYwO0DqgvbOfTOrglwoKwe+Pm+2JyWOyUNp+NrpINxlJv9wXqadHFMEhP90Rk3wASCZ6kNRXmMbO/JVBgWseNa4OgAkqBwJHJADw7JgP4pzaAyBaV+d7oEhY7peISp0GZKAaqzrm6ut+9tBjBfAESJjS62f9RANoAdQFMTAagzUS4BAigNeCnzYB2J9RKqB+IqCk1qcycoopZ7KS6+QeWiofXKmT926Aq0cNQtBGCMyMQOSpHHL00ngBvhFXKX/K7LtDVXFtv7mVdzS08UsjJtRbuSeTEOo5bQh3HNZ6vs0ucgON8SUA1r6e019PMGwjeYLb7oheLnrzJPORvC5IMLpZJ75lClaKHyCR3+FY0IkSqQgxlIFqmxiLfawIL7hUT9rGnJ/SfeLazyb5R2vHMqPTOTE1xtA24RVU40tRHvX0CkbSofpKq8VZoSYuFx+U32ceentSdDmsw+oJw4r5B/1jac+oDVyKwu6YPh1qGcZJOuAtjakRSJrhlwlGOW3IKxz35D89xjsul5Rzn2Ivm+2LTzPbGFFHKq+buutgw58uwRtPt52/P/uJ89Jwd55exwxlG83DVXvTq7mzC4mBz4br4EuXWsl54No3gaI8CZ0dVCKMMhA1PYFN8ZbeZa+LX5m6JT7zNUL2XErjEKff+2HfNMhxtU8D3gRzedWI4lQzi9QtVcoJfYodPCn2cE2inAG4ywnCfxaFLj1/rfa+oBzv5QzjYIcGP/UoEilUIpUwE9ys0DrHl3WbO8cnkdWYucabmznEzzPcR2Dl2P8246surgmEt+FvtOUDb74sGGTb8SveClG5Yuab0zvni3PsselLoeTacjlkhbb1WLkd/vdWe8OQV8Q2SD0v7sYs/QkHI4D84QXtajQtiNUKpLNzSLvGawF865ntfbuS4xjW8ciyr5ZPEyoGjfJHqaOe47lLiRs3HUaDAhttivJzeA5PD+SOzHYOSWeyU0GMciQZGqM7Qz92qz6xZbr9viQU3rWQlr1nxYekgvmoYhXenHMeot58cVuMsBRI4rEJgP5WnS4ZTnRKcbJPi+04l/HrVOERwl04NttMBtOHOGJZlDuD5H+5KTT8L+G329gArFjsltM08SZ1PqEw1iN+ix7xKt5W/0B5fyeFm1L2a1iJ3uCOCI18Ml3Y5fIRK6u0q/EC3n+PaM5+1H6X7EJnbo8GuVhU+5SuwvkSMJdmP8PyJMonJJ2cbCL6aRf5eqhoTR20AqmsG6QR/hTxL+z01mJVm7smlSy7Vj24oEeGjajG+bJTBqW0crp0T8OhWkdVw6VLDSVvrFhW21I/DoUKG1wtHYMfrhalvwajp1sBKgr+mgz1JDVEmcyiAVvrT8OD4Cv212gywPzE23JS5Fm6JCS/53+xeld4uty8bwcbKMXxEF4x/8aX4mC/HZoEcm6plsC+TYnXhMF661g/zEMG4pQfv0RzHoIzZnwfYsK97sghoIM4x3olipkudq5/TGGy8oSNuBmeiZNYaTfnMTagwWraIG/UetdVca5+0tsXBZaLlvDb58oyO8ZV0y1l+YxCLEtsn5l+sl9v4/TxkuS/+Ia30nNmOgVsJ/uSb73+LAtD+aXim/Htj+4lsg0uafL0CFOllaooMQuWZhjtveRra7pipp2s+HOeYl2mfu1NfT7HmphSY7Ymkvh7ROPersNy5O0MSaI97Enz6dE8nNghj8gvkeawtydPf3/8MEUz3F4psqP3Mfv0niWH+A97GAIHbLcG+AAAAAElFTkSuQmCC" InformativeScreenshot="72ac0047eb7e1426cbc3b06c4ddcb1db.png" Selector="&lt;html title='Login | Salesforce' /&gt;" Url="https://uipath-demo.my.salesforce.com/" />
+      </uix:NApplicationCard.TargetApp>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+    </uix:NApplicationCard>
+    <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Never" DisplayName="Use Browser | Salesforce" sap:VirtualizedContainerService.HintSize="842,1699" sap2010:WorkflowViewState.IdRef="NApplicationCard_6" InUiElement="[out_BrowserElement]" InteractionMode="Simulate" OpenMode="Never" ScopeGuid="135ae867-7fb1-40df-8170-f6ab4b7d35c5" Version="V1">
+      <uix:NApplicationCard.Body>
+        <ActivityAction x:TypeArguments="x:Object">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+          </ActivityAction.Argument>
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="544,1563" sap2010:WorkflowViewState.IdRef="Sequence_25">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <Switch x:TypeArguments="x:String" DisplayName="Switch" Expression="[in_SFDCMode]" sap:VirtualizedContainerService.HintSize="502,1469" sap2010:WorkflowViewState.IdRef="Switch`1_2">
+              <Sequence x:Key="Classic" DisplayName="Check Classic Sequence" sap:VirtualizedContainerService.HintSize="462,1458" sap2010:WorkflowViewState.IdRef="Sequence_39">
+                <sap:WorkflowViewStateService.ViewState>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                  </scg:Dictionary>
+                </sap:WorkflowViewStateService.ViewState>
+                <uix:NCheckState DisplayName="Check for Profile Icon" EnableIfNotExists="False" sap:VirtualizedContainerService.HintSize="420,662" sap2010:WorkflowViewState.IdRef="NCheckState_12" ScopeIdentifier="135ae867-7fb1-40df-8170-f6ab4b7d35c5" Timeout="1.5" Version="V1">
+                  <uix:NCheckState.IfExists>
+                    <Sequence DisplayName="Target appears" sap:VirtualizedContainerService.HintSize="376,446" sap2010:WorkflowViewState.IdRef="Sequence_36">
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                      <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Profile Icon'" sap:VirtualizedContainerService.HintSize="334,156" sap2010:WorkflowViewState.IdRef="NClick_20" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="135ae867-7fb1-40df-8170-f6ab4b7d35c5" Version="V1">
+                        <uix:NClick.Target>
+                          <uix:TargetAnchorable BrowserURL="https://uipath-demo.lightning.force.com/lightning/page/home" DesignTimeRectangle="1859, 86, 32, 30" FriendlyName="'SPAN'" FullSelectorArgument="&lt;webctrl sfl-path='oneOne/lafAppLayoutHost:host/navexDesktopLayoutContainer/oneHeader:header/oneUserProfileCardTrigger:userProfileCardTrigger/auraIf/forceSocialPhoto:profileIcon/forceEntityIcon/uiImage/auraHtml:body' tag='SPAN' /&gt;" FuzzySelectorArgument="&lt;webctrl sfl-path='oneOne/lafAppLayoutHost:host/navexDesktopLayoutContainer/oneHeader:header/oneUserProfileCardTrigger:userProfileCardTrigger/auraIf/forceSocialPhoto:profileIcon/forceEntityIcon/uiImage/auraHtml:body' tag='SPAN' type='' aaname='' /&gt;" Guid="3f37a32a-f46d-4103-bbd6-efb78325ec3c" ImageBase64="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" InformativeScreenshot="6c494910ac96bb84c1d020da0ea987e1.png" ScopeSelectorArgument="&lt;html title='Home | Salesforce' /&gt;" SearchSteps="FuzzySelector, Image">
+                            <uix:TargetAnchorable.Anchors>
+                              <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                                <uix:Target DesignTimeRectangle="1822, 95, 18, 18" ElementType="Icon" FriendlyName="'PATH'" FullSelectorArgument="&lt;webctrl sfl-path='oneOne/lafAppLayoutHost:host/navexDesktopLayoutContainer/oneHeader:header/unsNotifications/auraIf/unsNotificationsCounter:counter/forceIcon/lightningIcon' tag='LIGHTNING-ICON' /&gt;&lt;webctrl tag='path' /&gt;" FuzzySelectorArgument="&lt;webctrl sfl-path='oneOne/lafAppLayoutHost:host/navexDesktopLayoutContainer/oneHeader:header/unsNotifications/auraIf/unsNotificationsCounter:counter/forceIcon/lightningIcon' tag='LIGHTNING-ICON' /&gt;&lt;webctrl tag='path' type='' aaname='' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAABYAAAAWCAYAAADEtGw7AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAADaSURBVEhL7ZQxDsMgDEV7/y0TnCAnYMoJsuUEmcLExpbN1UclSsPHQW3Z+qW/AH4C2/ghndQM3rZNvPey7/trRZcKjjGKc06GYXjzNE1pT1MVHEIQa20BzcYeXlETBeM2GjQbZ2o3p2A8lYGYcZaJgo0xFMKMWzMVYFSdATSzTinAKAgL1syK+Acf6g9Go6/rKuM40mDNiEHs+bMkMNql5afdGYzcegn8yfNrzmk5UrEsi8zz/JXByCqK9yvdgjE+r8/F2p2abnyedrVpdlVzKtBKtdnL1CnHIk+E1ZOvKuLL+QAAAABJRU5ErkJggg==" SearchSteps="FuzzySelector, Image" />
+                              </scg:List>
+                            </uix:TargetAnchorable.Anchors>
+                          </uix:TargetAnchorable>
+                        </uix:NClick.Target>
+                      </uix:NClick>
+                      <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Switch to Salesforce Classic'" sap:VirtualizedContainerService.HintSize="334,156" sap2010:WorkflowViewState.IdRef="NClick_21" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="135ae867-7fb1-40df-8170-f6ab4b7d35c5" Version="V1">
+                        <uix:NClick.Target>
+                          <uix:TargetAnchorable BrowserURL="https://uipath-demo.lightning.force.com/lightning/page/home" DesignTimeRectangle="1556, 383, 156, 20" ElementType="Text" FriendlyName="'Switch to'" FullSelectorArgument="&lt;webctrl sfl-path='uiPanelManager2/uiPanel/oneUserProfileCard/auraIf/uiOutputURL:switchToAloha/auraHtml:link' tag='A' /&gt;" FuzzySelectorArgument="&lt;webctrl sfl-path='uiPanelManager2/uiPanel/oneUserProfileCard/auraIf/uiOutputURL:switchToAloha/auraHtml:link' tag='A' type='' aaname='Switch to Salesforce Classic' check:text='Switch to Salesforce Classic' /&gt;" Guid="ac0d1a06-92a0-4c6b-9be3-f6cb308d2f41" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAKAAAAAYCAYAAAB9VvY1AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAPeSURBVGhD7Zc/ihRBFMb1EN5BjyAewRt4Ay+gsaCRkaCpZoZmgomZRibCgqAwsAjqImqyiiwi7f7G/YZv3ryaHrdnrQneD5qeqn71/nz1unr33FAUHakGLLpSDVh0pRqw6Eo1YNGVasCiK9WARVe21oAHh7+GS3ffDc/eHp7MbMbrjz+HKw9m8/W7yDbyu/7kw3D+xt78vmuchf73XnwZrj7cH74f/T6ZabPUgCRz4dabuVhTBaMRN0niXwSYKha5kJPq44UZ8zU15lls8GmIe6u96Z3fogFJ5OLxhnAXj15926iLM3atAdV8vJ3i5f6PpXozpsQE1l97/P7UOm4Daqb5vFb2h2tqfVNZasBMKMbMK3kS9U8tYzZ27+BvIdhRsN40Lrdlrc9LAJpd89nJi62ec6mRos/WqR3riHjOfjIqPx/rJIknqD61XPiLOUsHt8ti3Xz6acnec/OXOsbLiPlH4vOWDtylszez20t75nwffC2X6oJFA1IUxflCgUMVSGA/SXDGGoJQiBJj3sVSEgqOnU4gClJcxvEkFsy5WMpZuQB+fOww76IK/Nx+/nlpYz0fxVxXI761xsHWX2zsXBf3gS1aeP7RXl8lj8cYG2nrtPISXh9+Mh1a/j13x2PiN9t3sfJPCAu9m8ED4ZwkJSpjnq/bHI3dp3ABoFUsRNsYA7DJTnLBGurLGlF4rh4zbiZzxOee5QKeD3auETCvk9ljxWdO5ofcuCKteRFjOq4D9+intRY7rXMfGSsNKFgkQQnA79nXo/m83yVQFCVuSEuIrAh8sz4SbbPilKv7y2Ctf0oY6xPhL6DHJH+34co+R143z7wBs9xUb6yvZc/YP2m6ohbgzZARY7Z0IH9yYc73Ufb+QntMfrt9pNmABPS3D4cc/3eOTz8fc5e4FCJ7EvONaAkRBQDsWB/JxPIYgI02fAyJE/0wVq4ec0xM4bV6PlEjYF46eyzI7IH5rDEzos+IP1+ng+AZNjxzfK3X778zFg2IA3dKYv63GI4u358tNgBbH0exPCFgntNCMRjrb8AoEAl7LiLacufNUw7AWh8LbPXygITElstF4rfGHpPfrb9PHa8dW38h8Ou6RNtMC7fX34Ce4xjYxT85iMvlMdfp4DAXNW75YT7bd7HyT4iOXv+0AL9dfAJRlBwzJgE9d38eHL/unysTXWsiPGO9BFAeyjsK4/BMdm4bayeGC+j5kZf7kJ379s1mfTyRVQOXN1emBbi94o3tVyTWntXX0iGbB9fC4xNLNsB83HfR/AQXxf+gGrDoSjVg0ZVqwKIr1YBFV6oBi65UAxYdGYY/dKRf/IoWs2wAAAAASUVORK5CYII=" InformativeScreenshot="3bf0fa62cb86077e84d4eec05a56d930.png" ScopeSelectorArgument="&lt;html title='Home | Salesforce' /&gt;" SearchSteps="FuzzySelector, Image" />
+                        </uix:NClick.Target>
+                      </uix:NClick>
+                    </Sequence>
+                  </uix:NCheckState.IfExists>
+                  <uix:NCheckState.IfNotExists>
+                    <Sequence DisplayName="Target does not appear" sap:VirtualizedContainerService.HintSize="250,84" sap2010:WorkflowViewState.IdRef="Sequence_37">
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                    </Sequence>
+                  </uix:NCheckState.IfNotExists>
+                  <uix:NCheckState.Target>
+                    <uix:TargetAnchorable BrowserURL="https://uipath-demo.lightning.force.com/lightning/page/home" DesignTimeRectangle="1859, 86, 32, 30" FriendlyName="'SPAN'" FullSelectorArgument="&lt;webctrl sfl-path='oneOne/lafAppLayoutHost:host/navexDesktopLayoutContainer/oneHeader:header/oneUserProfileCardTrigger:userProfileCardTrigger/auraIf/forceSocialPhoto:profileIcon/forceEntityIcon/uiImage/auraHtml:body' tag='SPAN' /&gt;" FuzzySelectorArgument="&lt;webctrl sfl-path='oneOne/lafAppLayoutHost:host/navexDesktopLayoutContainer/oneHeader:header/oneUserProfileCardTrigger:userProfileCardTrigger/auraIf/forceSocialPhoto:profileIcon/forceEntityIcon/uiImage/auraHtml:body' tag='SPAN' type='' aaname='' /&gt;" Guid="79e949bb-fd5c-49ad-9917-bb23930a535d" ImageBase64="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" InformativeScreenshot="fc44330be10c46b52b5adf893cca2eaa.png" ScopeSelectorArgument="&lt;html title='Home | Salesforce' /&gt;" SearchSteps="FuzzySelector">
+                      <uix:TargetAnchorable.Anchors>
+                        <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                          <uix:Target DesignTimeRectangle="1822, 95, 18, 18" ElementType="Icon" FriendlyName="'PATH'" FullSelectorArgument="&lt;webctrl sfl-path='oneOne/lafAppLayoutHost:host/navexDesktopLayoutContainer/oneHeader:header/unsNotifications/auraIf/unsNotificationsCounter:counter/forceIcon/lightningIcon' tag='LIGHTNING-ICON' /&gt;&lt;webctrl tag='path' /&gt;" FuzzySelectorArgument="&lt;webctrl sfl-path='oneOne/lafAppLayoutHost:host/navexDesktopLayoutContainer/oneHeader:header/unsNotifications/auraIf/unsNotificationsCounter:counter/forceIcon/lightningIcon' tag='LIGHTNING-ICON' /&gt;&lt;webctrl tag='path' type='' aaname='' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAABYAAAAWCAYAAADEtGw7AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAADaSURBVEhL7ZQxDsMgDEV7/y0TnCAnYMoJsuUEmcLExpbN1UclSsPHQW3Z+qW/AH4C2/ghndQM3rZNvPey7/trRZcKjjGKc06GYXjzNE1pT1MVHEIQa20BzcYeXlETBeM2GjQbZ2o3p2A8lYGYcZaJgo0xFMKMWzMVYFSdATSzTinAKAgL1syK+Acf6g9Go6/rKuM40mDNiEHs+bMkMNql5afdGYzcegn8yfNrzmk5UrEsi8zz/JXByCqK9yvdgjE+r8/F2p2abnyedrVpdlVzKtBKtdnL1CnHIk+E1ZOvKuLL+QAAAABJRU5ErkJggg==" SearchSteps="FuzzySelector" />
+                        </scg:List>
+                      </uix:TargetAnchorable.Anchors>
+                    </uix:TargetAnchorable>
+                  </uix:NCheckState.Target>
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                </uix:NCheckState>
+                <uix:NCheckState DisplayName="Check App State 'Sales'" EnableIfExists="False" sap:VirtualizedContainerService.HintSize="420,662" sap2010:WorkflowViewState.IdRef="NCheckState_9" ScopeIdentifier="135ae867-7fb1-40df-8170-f6ab4b7d35c5" Timeout="5" Version="V1">
+                  <uix:NCheckState.IfExists>
+                    <Sequence DisplayName="Target appears" sap:VirtualizedContainerService.HintSize="250,85" sap2010:WorkflowViewState.IdRef="Sequence_26">
+                      <Sequence.Variables>
+                        <Variable x:TypeArguments="x:String" Name="InputLabel" />
+                        <Variable x:TypeArguments="x:String" Name="VerificationCode" />
+                      </Sequence.Variables>
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                    </Sequence>
+                  </uix:NCheckState.IfExists>
+                  <uix:NCheckState.IfNotExists>
+                    <Sequence DisplayName="Target does not appear" sap:VirtualizedContainerService.HintSize="376,446" sap2010:WorkflowViewState.IdRef="Sequence_27">
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                      <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'DIV tsid-arrow'" sap:VirtualizedContainerService.HintSize="334,156" sap2010:WorkflowViewState.IdRef="NClick_12" KeyModifiers="None" MouseButton="Left">
+                        <uix:NClick.Target>
+                          <uix:TargetAnchorable BrowserURL="https://uipath-demo.my.salesforce.com/home/home.jsp" ContentHash="Ud_OlH9MZUmb0BJYdxW3Hw" DesignTimeRectangle="1859, 32, 8, 5" FriendlyName="'DIV tsid-arrow'" FullSelectorArgument="&lt;webctrl id='tsid-arrow' tableCol='3' tableRow='1' tag='DIV' /&gt;" FuzzySelectorArgument="&lt;webctrl id='tsid-arrow' type='' aaname='' tag='DIV' /&gt;" Guid="f72b8355-8e4b-4eea-9c50-2849aa224c9b" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAAwAAAAJCAYAAAAGuM1UAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAB1SURBVChTYxCffuA/KZh8DUuvP/+PC6y48RxTg8zMg/8vvvoEVYIA515+AsthaABho8XH/7/59guq9P//l19//jdYdBwuD8IYfgjYeOH/n3///v/6+++/97pzKHIgjNXT9Ufv/C/cfwNDHISxasCHSdRw4D8AGPUlgXUlBQMAAAAASUVORK5CYII=" InformativeScreenshot="446d0e8215c85c1f0460199404d75bbb.png" Reference="onZsbVircEKStCOfXcT3Hw/ZVbUpmtjw02Zcwba7KsEXA" ScopeSelectorArgument="&lt;html title='Salesforce - Enterprise Edition' /&gt;" SearchSteps="FuzzySelector, Image" />
+                        </uix:NClick.Target>
+                      </uix:NClick>
+                      <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Sales'" sap:VirtualizedContainerService.HintSize="334,156" sap2010:WorkflowViewState.IdRef="NClick_13" KeyModifiers="None" MouseButton="Left">
+                        <uix:NClick.Target>
+                          <uix:TargetAnchorable BrowserURL="https://uipath-demo.my.salesforce.com/home/home.jsp?tsid=02u4J0000016W4X" ContentHash="RenmBH0yiUurKuBhPjaS1g" DesignTimeRectangle="1718, 65, 152, 22" ElementType="Text" FriendlyName="'Sales'" FullSelectorArgument="&lt;webctrl parentid='tsid-menuItems' tableCol='3' tableRow='1' tag='A' /&gt;" FuzzySelectorArgument="&lt;webctrl parentid='tsid-menuItems' type='' aaname='Sales' tag='A' check:text='Sales' /&gt;" Guid="1f065950-c7dc-4b39-8536-f88dac13d06a" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAJwAAAAaCAYAAABCUTWIAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAFGSURBVHhe7dfRbcIwFIXh7kQ7RdstYAu6RJmiTJE1YBlXJ+pBt26Q8nB7heH/JCvBcfL0ywlPDShEcChFcChFcChFcChFcChFcChFcCiVHtzm+eXXWGO//5gH7l9qcK9v7+3zcPj51ebzNdER3ONIC+50Ps9x6Rhp7ut4nM919M4X5/vgtrvdnzUS5wl0TKk7nIOIkVgfpHY/7YgSg9NRz5Fpmi736JmeF92r6xhL+jfctV2sp/ml4PqQFJnijOsxrvTgIu9QDkhRxRiXgovXPfxd6G9CDa/HWNKC6195pqh0zfHZ2h3umrXrcFtSdzgFpZBM55rzN1gMTsEsBadjDNfP1O7mNUJwY0p/pSqQOOK/VkXiee94uh6DEwXndX6dSrw/zmMc//oNB/QIDqUIDqUIDqUIDqUIDqUIDqUIDqUIDoVa+wZcWDaOMCBW4AAAAABJRU5ErkJggg==" InformativeScreenshot="fb940d4413a3162ce60e7b31e0bda757.png" Reference="onZsbVircEKStCOfXcT3Hw/nKlTmLZWpE6Nria6BjstKw" ScopeSelectorArgument="&lt;html title='Salesforce - Enterprise Edition' /&gt;" SearchSteps="FuzzySelector, Image" />
+                        </uix:NClick.Target>
+                      </uix:NClick>
+                    </Sequence>
+                  </uix:NCheckState.IfNotExists>
+                  <uix:NCheckState.Target>
+                    <uix:TargetAnchorable BrowserURL="https://uipath-demo.my.salesforce.com/home/home.jsp" DesignTimeRectangle="1779, 27, 49, 15" ElementType="Text" FriendlyName="'Sales'" FullSelectorArgument="&lt;webctrl id='tsidLabel' tableCol='3' tableRow='1' tag='SPAN' /&gt;" FuzzySelectorArgument="&lt;webctrl id='tsidLabel' type='' aaname='Sales' tag='SPAN' check:text='Sales' /&gt;" Guid="974d31f5-20d0-49fc-a86f-fd3eb7df9b66" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAADUAAAATCAYAAAAwE0VbAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAElSURBVFhH7ZWxCsIwFEX9C//KH/JDnPwHR8cOjoKDo4iLg4OILgoukVu4cvuSxmqKNNoLF2xekr7z8hoHw0nhfs09VC7+D6jRbOVUp9u9Eo8Zc6FQ7Jv2oJDY9nwtf48XmzLJ5eFSmVPnTkLxlJpCWHcaCqoDw7hqut4/YxZqvjuWzxT2ZwzrVJ8WMmSv/WzSaEHGmAjH0KYQ4wrFuYS2cyG2OeG1QCn2oGBbYVvFuhNQKAuhkNoRWMM5bTkIRTMxCM9MjIkwHoOy4mnYwkDanimOQsFacVv9JlCcGzPXYU0o/q4rUDwJVJFjEF/GRPFNaQuFoOxeWgD7V8G92rosvJOybcFWgxUE4qXCllKo0F566RCM0vek+mX75egeKhf3UHm4cA8rXmkdczornAAAAABJRU5ErkJggg==" InformativeScreenshot="fb7b0de6867f40f428c7da026b30437a.png" ScopeSelectorArgument="&lt;html title='Salesforce - Enterprise Edition' /&gt;" SearchSteps="FuzzySelector" />
+                  </uix:NCheckState.Target>
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                </uix:NCheckState>
+              </Sequence>
+              <Sequence x:Key="Lightning" DisplayName="Check Lightning Sequence" sap:VirtualizedContainerService.HintSize="462,1262" sap2010:WorkflowViewState.IdRef="Sequence_32">
+                <sap:WorkflowViewStateService.ViewState>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                  </scg:Dictionary>
+                </sap:WorkflowViewStateService.ViewState>
+                <uix:NCheckState DisplayName="Check App State 'Profile Icon'" EnableIfExists="False" sap:VirtualizedContainerService.HintSize="420,466" sap2010:WorkflowViewState.IdRef="NCheckState_10" ScopeIdentifier="135ae867-7fb1-40df-8170-f6ab4b7d35c5" Timeout="4" Version="V1">
+                  <uix:NCheckState.IfExists>
+                    <Sequence DisplayName="Target appears" sap:VirtualizedContainerService.HintSize="250,85" sap2010:WorkflowViewState.IdRef="Sequence_30">
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                    </Sequence>
+                  </uix:NCheckState.IfExists>
+                  <uix:NCheckState.IfNotExists>
+                    <Sequence DisplayName="Target does not appear" sap:VirtualizedContainerService.HintSize="376,250" sap2010:WorkflowViewState.IdRef="Sequence_31">
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                      <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Switch to'" sap:VirtualizedContainerService.HintSize="334,156" sap2010:WorkflowViewState.IdRef="NClick_15" InteractionMode="Simulate" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="135ae867-7fb1-40df-8170-f6ab4b7d35c5" Version="V1">
+                        <uix:NClick.Target>
+                          <uix:TargetAnchorable BrowserURL="https://uipath-demo.my.salesforce.com/home/home.jsp?source=lex" DesignTimeRectangle="1273, 108, 186, 12" ElementType="Text" FriendlyName="'Switch to'" FullSelectorArgument="&lt;webctrl parentid='phHeader' tag='A' /&gt;" FuzzySelectorArgument="&lt;webctrl parentid='phHeader' tag='A' type='' aaname='Switch to Lightning Experience' check:text='Switch to Lightning Experience' /&gt;" Guid="3c22752d-6f37-4f14-9dc9-ec74a5996487" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAL4AAAAQCAYAAACoYsUDAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAASNSURBVGhD7ZpbS1VBFMf7FtK36NWngqiXQIqgHno4FXT5DEVUDxH4VAQZFASZWUaXI2EXejipWB7Tc7wUmng9iWmmUuHram5r9lqzZ8/Zphan9sMP9p5Zs2Zd/nv22eW2tbU1yMj43wgKf2xxBY52DMG5zrEY195PetdkZNQCQeFf6hmHhsf9cP9DhXH61TDse9TvXZORUQsEhb+nrQ8+LiyzsZUfP2Hvwz7oml5k4xkZtUSi8AtTC3DkWTk2fvntOFzs/hQbj1OB1uYC1DUZ8qMemwQqZciJNY1lc18uQq5QidtRhE1dUxe0VjxzDjOFrsh3SrrzIofmMsy4c26sSVSxSxeTqel6ahlkFBqxP5RN8x9gHf3aChKFf6F7DG6WptlYb+Ur7LxfhC+rP9i4F5qYuk4hDi+6OZsm/LRCdUgUflpC+/5mTBsnZW3/QRKFv0sIfFx83NKx48+HoHUkXZHkCeYToh4vQre8Nw3HE8bOWSH43xpKhM4YCj9H7ONC4iecbni6N1PqE9885Mp/XrypcM7Y5ZpljmZe7R+PSe9VhEYbl6kXO/HxWtjhehJfVCPxJsmTmjNCwjdx0b2Uf7wm8dG6YE8VTtwidzUn7Z2DivbUxoO1FTnG5pw1tG9aR/Fxilf4rye+QK5jkI3dGJiC7cLRofaSouFJP9S39MLn5e/MLoI0lG5OhYIioQWVtkxMvDnsgfL40na0UdIHgfnG4vEH0ScELcZq/qhYogaoOWOHc759eUw8R5aX8mGu0YfJn9ZC+3PsGKRHBIwD49cPK4oU/eE97Y++ZnnQ3tIYiPDVPlhbWotAzcI6wH24dihe4Z/tHIXbgzOx8dLcN8uBpwNwq8x/CvnA4kUFjZqnCyNPAZFAOZ6wtufBR8WM9lCQQgbtAr5D61L5Y77Dc7oupkHOHN+LxhjVjl9zH8y3wL2PSBaGBgVLbcyYjY/cmweOI/d11whsv6I9KGq/QM2CfXJ82RoRvMLfcacHTr4Yhuv9U4oW5+eNfDDOd42xsTC6wBiASsC8KvHnjH6d+YSQCf/vCd/0TWLF44qY3Bvh2/wt7hqBK/xqtRX36YXvy5XjFf7Vvkm4Upyw7H4gP2j1Txr5k+dYx1BsjQsLwCRgC2zuUajaVuBpotscnTwKnMz9lvCrxElI588IhT7gOOfsy8Toi8nuRfOnYqfXjg8mQGPnFQOvrYutdcHnz9MDlr8nVlo/0i/WU9rHQM3YGhoDzd1ZT0n8uEUG5pbgYL6krjvG52F3Wx9MLq3G7OKYIiBMNE4hWKMELGAstMA02T4oZIwVDG18QiVxMTG5/hzYntTWLa7JReL7uEU7Jnwnpg0LX9xH8Vb/uMV4LXJv44/XSPow10kftyT/aE9c49phv9C/Ru8pxoM1S9BBYJxSVfh3h2fVnyiMzC9D/b136t/3fXYZEiOkBDH+MZyDxBXMxvCIuAapKvwzb0aV+A+3l6B5aNZrkxGhRVb9xNla+Akq2byH7z8R/v4nA3BCfOjKv9vxzWdk1CJB4cv/oZWnxamXw975jIzaZA1+AaNAFINuA2mAAAAAAElFTkSuQmCC" InformativeScreenshot="57d975d0c8f3b548425f7a98c4801b57.png" ScopeSelectorArgument="&lt;html title='Login | Salesforce' /&gt;" SearchSteps="FuzzySelector, Image" />
+                        </uix:NClick.Target>
+                      </uix:NClick>
+                    </Sequence>
+                  </uix:NCheckState.IfNotExists>
+                  <uix:NCheckState.Target>
+                    <uix:TargetAnchorable BrowserURL="https://uipath-demo.lightning.force.com/lightning/page/home?0.source=alohaHeader" DesignTimeRectangle="1859, 86, 32, 30" FriendlyName="'Profile Icon'" FullSelectorArgument="&lt;webctrl sfl-path='oneOne/lafAppLayoutHost:host/navexDesktopLayoutContainer/oneHeader:header/oneUserProfileCardTrigger:userProfileCardTrigger/auraIf/forceSocialPhoto:profileIcon/forceEntityIcon/uiImage/auraHtml:body' tag='SPAN' /&gt;" FuzzySelectorArgument="&lt;webctrl sfl-path='oneOne/lafAppLayoutHost:host/navexDesktopLayoutContainer/oneHeader:header/oneUserProfileCardTrigger:userProfileCardTrigger/auraIf/forceSocialPhoto:profileIcon/forceEntityIcon/uiImage/auraHtml:body' tag='SPAN' type='' aaname='' /&gt;" Guid="7d38e2b6-c26a-4fa4-93ac-d3fea57fde1e" ImageBase64="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" InformativeScreenshot="5f422350e204bc7b8d7ca8416c8efb8d.png" ScopeSelectorArgument="&lt;html title='Home | Salesforce' /&gt;" SearchSteps="FuzzySelector, Image">
+                      <uix:TargetAnchorable.Anchors>
+                        <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                          <uix:Target DesignTimeRectangle="1822, 95, 18, 18" ElementType="Icon" FriendlyName="'Profile Icon'" FullSelectorArgument="&lt;webctrl sfl-path='oneOne/lafAppLayoutHost:host/navexDesktopLayoutContainer/oneHeader:header/unsNotifications/auraIf/unsNotificationsCounter:counter/forceIcon/lightningIcon' tag='LIGHTNING-ICON' /&gt;&lt;webctrl tag='path' /&gt;" FuzzySelectorArgument="&lt;webctrl sfl-path='oneOne/lafAppLayoutHost:host/navexDesktopLayoutContainer/oneHeader:header/unsNotifications/auraIf/unsNotificationsCounter:counter/forceIcon/lightningIcon' tag='LIGHTNING-ICON' /&gt;&lt;webctrl tag='path' type='' aaname='' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAABYAAAAWCAYAAADEtGw7AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAADaSURBVEhL7ZQxDsMgDEV7/y0TnCAnYMoJsuUEmcLExpbN1UclSsPHQW3Z+qW/AH4C2/ghndQM3rZNvPey7/trRZcKjjGKc06GYXjzNE1pT1MVHEIQa20BzcYeXlETBeM2GjQbZ2o3p2A8lYGYcZaJgo0xFMKMWzMVYFSdATSzTinAKAgL1syK+Acf6g9Go6/rKuM40mDNiEHs+bMkMNql5afdGYzcegn8yfNrzmk5UrEsi8zz/JXByCqK9yvdgjE+r8/F2p2abnyedrVpdlVzKtBKtdnL1CnHIk+E1ZOvKuLL+QAAAABJRU5ErkJggg==" SearchSteps="FuzzySelector, Image" />
+                        </scg:List>
+                      </uix:TargetAnchorable.Anchors>
+                    </uix:TargetAnchorable>
+                  </uix:NCheckState.Target>
+                </uix:NCheckState>
+                <uix:NCheckState DisplayName="Check App State 'Sales'" EnableIfExists="False" sap:VirtualizedContainerService.HintSize="420,662" sap2010:WorkflowViewState.IdRef="NCheckState_11" ScopeIdentifier="135ae867-7fb1-40df-8170-f6ab4b7d35c5" Timeout="2" Version="V1">
+                  <uix:NCheckState.IfExists>
+                    <Sequence DisplayName="Target appears" sap:VirtualizedContainerService.HintSize="250,85" sap2010:WorkflowViewState.IdRef="Sequence_33">
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                    </Sequence>
+                  </uix:NCheckState.IfExists>
+                  <uix:NCheckState.IfNotExists>
+                    <Sequence DisplayName="Target does not appear" sap:VirtualizedContainerService.HintSize="376,446" sap2010:WorkflowViewState.IdRef="Sequence_34">
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                      <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'App Launcher'" sap:VirtualizedContainerService.HintSize="334,156" sap2010:WorkflowViewState.IdRef="NClick_16" InteractionMode="HardwareEvents" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="135ae867-7fb1-40df-8170-f6ab4b7d35c5">
+                        <uix:NClick.Target>
+                          <uix:TargetAnchorable BrowserURL="https://uipath-demo.lightning.force.com/lightning/page/home" DesignTimeRectangle="32, 129, 44, 37" FriendlyName="'App Launcher'" FullSelectorArgument="&lt;webctrl sfl-path='oneOne/lafAppLayoutHost:host/navexDesktopLayoutContainer/navexContentRegionNavContainer:contentRegionNavContainer/navexStandardManager/oneAppNavContainer:appnav/auraIf/oneAppnav:oneAppNav' tag='ONE-APPNAV' /&gt;&lt;webctrl css-selector='body&amp;gt;div&amp;gt;div&amp;gt;section&amp;gt;div&amp;gt;div&amp;gt;one-appnav&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;one-app-launcher-header&amp;gt;button&amp;gt;div' tag='DIV' /&gt;" FuzzySelectorArgument="&lt;webctrl sfl-path='oneOne/lafAppLayoutHost:host/navexDesktopLayoutContainer/navexContentRegionNavContainer:contentRegionNavContainer/navexStandardManager/oneAppNavContainer:appnav/auraIf/oneAppnav:oneAppNav' tag='ONE-APPNAV' /&gt;&lt;webctrl type='' tag='DIV' aaname='' check:text='App Launcher' /&gt;" Guid="9685a152-1244-47f9-be4c-b1dc3ac0b052" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAABkAAAAZCAYAAADE6YVjAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAACKSURBVEhL3ZDBCcRADAPT70G4SkJIkbkyHHQgoZc/Yv3IgFiMDMN6qwFmJb/7rus86rt//i9mJ+kl4QKD2Ul6SXyBcZJ+9ifJzUHXS7KSF0qSm4Oul4QLDGYn6SXxBcZJ+tmfJDcHXS/JSl4oSW4Oul4SLjCYnaSXxBcYJ+lnf5LcHHS9JCsZkFQ99uKLYaRYRGgAAAAASUVORK5CYII=" InformativeScreenshot="14dd0f91eea1055521b8f586124c3e63.png" ScopeSelectorArgument="&lt;html title='Login | Salesforce' /&gt;" SearchSteps="FuzzySelector, Image" />
+                        </uix:NClick.Target>
+                      </uix:NClick>
+                      <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Sales'" sap:VirtualizedContainerService.HintSize="334,156" sap2010:WorkflowViewState.IdRef="NClick_17" InteractionMode="HardwareEvents" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="135ae867-7fb1-40df-8170-f6ab4b7d35c5">
+                        <uix:NClick.Target>
+                          <uix:TargetAnchorable BrowserURL="https://uipath-demo.lightning.force.com/lightning/page/home" DesignTimeRectangle="77, 458, 29, 20" ElementType="Text" FriendlyName="'Sales'" FullSelectorArgument="&lt;webctrl sfl-path='uiPanelManager2/uiPanel/oneAppLauncherMenu' tag='ONE-APP-LAUNCHER-MENU' /&gt;&lt;webctrl aaname='Sales' tag='P' /&gt;" FuzzySelectorArgument="&lt;webctrl sfl-path='uiPanelManager2/uiPanel/oneAppLauncherMenu' tag='ONE-APP-LAUNCHER-MENU' /&gt;&lt;webctrl aaname='Sales' tag='P' type='' check:text='Sales' /&gt;" Guid="88d72681-b9c7-4c31-9a7a-2f69deda0c68" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAACEAAAAYCAYAAAB0kZQKAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAECSURBVEhL7ZNNDoQgDIVnpzck8T5EbyJH0Xu48BYdKJS/FmNmzGQWvMREobZfX+EFf6AOQeoQpA5B+hriNApGvYWvz1RCHCuoYYCRnhvJn4VAAAXmCN9Wm1nhDO8tPQ8xtYtisejSDFSWQRRupjjbEixxvWw2G8cJZrIBYld2TyfATae4EsIVygrsM4zYmM+97GG9EjuYWMDRXlnskgsQfDQOyrvh8ioj+8wgSAiTj8cVjnYmSAaRx+BDzgSn7VoN04TwP4UE0dagCyda3Sbx0SQIm7iYWXZbapubZ0K4YZLq0fCDyWx0KvcWLTuBEsdW5c7jrS7G8Tt1CFKHIHUIL4A36bWA9+cvaQEAAAAASUVORK5CYII=" InformativeScreenshot="e343f2928a4dc05759e866d654e5e90b.png" ScopeSelectorArgument="&lt;html title='Login | Salesforce' /&gt;" SearchSteps="FuzzySelector, Image" />
+                        </uix:NClick.Target>
+                      </uix:NClick>
+                    </Sequence>
+                  </uix:NCheckState.IfNotExists>
+                  <uix:NCheckState.Target>
+                    <uix:TargetAnchorable BrowserURL="https://uipath-demo.lightning.force.com/lightning/page/home?0.source=alohaHeader" DesignTimeRectangle="76, 136, 40, 23" ElementType="Text" FriendlyName="'Sales'" FullSelectorArgument="&lt;webctrl sfl-path='oneOne/lafAppLayoutHost:host/navexDesktopLayoutContainer/navexContentRegionNavContainer:contentRegionNavContainer/navexStandardManager/oneAppNavContainer:appnav/auraIf/oneAppnav:oneAppNav' tag='ONE-APPNAV' /&gt;&lt;webctrl aaname='Sales' tag='SPAN' /&gt;" FuzzySelectorArgument="&lt;webctrl sfl-path='oneOne/lafAppLayoutHost:host/navexDesktopLayoutContainer/navexContentRegionNavContainer:contentRegionNavContainer/navexStandardManager/oneAppNavContainer:appnav/auraIf/oneAppnav:oneAppNav' tag='ONE-APPNAV' /&gt;&lt;webctrl aaname='Sales' tag='SPAN' type='' check:text='Sales' /&gt;" Guid="9dbb2d55-07a1-41e6-a795-09cf45d090d2" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAACwAAAAbCAYAAAAH+20UAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAFiSURBVFhH7ZRBrsIwDETZwYXgFPyTwDVgz993C/seondo79Btt0GDOmgwTloJgkDKk6ICSe1n12URfowinJsinJsiTI6HQ9jvdmEYhvGX9/Ak3Pd9+Ntuw2q5vK/Neh3ath1PzOMjwk3T3ARxVf5Pp+8TRmAkQKJ3kF2Yo3A5n8dfXuMjI4EkkIZ8Co6OLjtGnrB9P7xcNrY98yCsAWOdhgBkNAjO2hfTCmMPZzSubRBkbZyqquLCBIFY4ZwRYaHaZStsvwPexxy4To2RK0wojquFHWNhtjgV9AoC2MMZxuc4ePlIUhgwCJMxuT462ymgwl5xulRQzyImYiuTwrYLKkKmhGMdTsG8dqZnC1PGE+ZTiAkzBouei1foXRibCGofAZLoo4GUNw4pYeAVBfRfoK7rh27inmiHNbEu200AGe7jnq7rbteUMND55NJ78Fn3rCyYHIlvowjnpgjnpgjnJYQrv2Mnwcl/XkcAAAAASUVORK5CYII=" InformativeScreenshot="4618615d69fcbeaf2a9e2b4374026c2c.png" ScopeSelectorArgument="&lt;html title='Login | Salesforce' /&gt;" SearchSteps="FuzzySelector" />
+                  </uix:NCheckState.Target>
+                </uix:NCheckState>
+              </Sequence>
+            </Switch>
+          </Sequence>
+        </ActivityAction>
+      </uix:NApplicationCard.Body>
+      <uix:NApplicationCard.TargetApp>
+        <uix:TargetApp Area="0, 78, 1920, 962" BrowserType="IE" IconBase64="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" InformativeScreenshot="72ac0047eb7e1426cbc3b06c4ddcb1db.png" Selector="&lt;html title='Login | Salesforce' /&gt;" Url="https://uipath-demo.my.salesforce.com/" />
+      </uix:NApplicationCard.TargetApp>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+    </uix:NApplicationCard>
+  </Sequence>
+</Activity>

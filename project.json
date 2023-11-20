@@ -1,0 +1,171 @@
+{
+  "name": "AutoPilot_for_low_code_examples",
+  "projectId": "883b43a9-a77d-42da-a917-cb3de962d52f",
+  "description": "Test Automation Project",
+  "main": "Main.xaml",
+  "dependencies": {
+    "UiPath.System.Activities": "[23.12.0-alpha.4620227]",
+    "UiPath.Testing.Activities": "[23.10.0]",
+    "UiPath.UIAutomation.Activities": "[23.12.2023250-dev.1237]"
+  },
+  "webServices": [],
+  "entitiesStores": [],
+  "schemaVersion": "4.0",
+  "studioVersion": "23.12.0.0",
+  "projectVersion": "1.0.0",
+  "runtimeOptions": {
+    "autoDispose": false,
+    "netFrameworkLazyLoading": false,
+    "isPausable": true,
+    "isAttended": false,
+    "requiresUserInteraction": true,
+    "supportsPersistence": false,
+    "workflowSerialization": "DataContract",
+    "excludedLoggedData": [
+      "Private:*",
+      "*password*"
+    ],
+    "executionType": "Workflow",
+    "readyForPiP": false,
+    "startsInPiP": false,
+    "mustRestoreAllDependencies": true,
+    "pipType": "ChildSession"
+  },
+  "designOptions": {
+    "projectProfile": "Developement",
+    "outputType": "Tests",
+    "libraryOptions": {
+      "includeOriginalXaml": false,
+      "privateWorkflows": []
+    },
+    "processOptions": {
+      "ignoredFiles": []
+    },
+    "fileInfoCollection": [
+      {
+        "editingStatus": "InProgress",
+        "testCaseId": "db3fab15-d71f-466f-9094-4b59719a3486",
+        "testCaseType": "TestCase",
+        "executionTemplateInvokeIsolated": false,
+        "fileName": "UiBank Web App\\Click on Products.xaml"
+      },
+      {
+        "editingStatus": "InProgress",
+        "testCaseId": "43948a78-1489-4741-9ee8-dae02131d9db",
+        "testCaseType": "TestCase",
+        "executionTemplateInvokeIsolated": false,
+        "fileName": "UiBank Web App\\Open UiBank Web App.xaml"
+      },
+      {
+        "editingStatus": "InProgress",
+        "testCaseId": "9d6768da-6c2a-4e35-9da6-becbd5e15e11",
+        "testCaseType": "TestCase",
+        "executionTemplateInvokeIsolated": false,
+        "fileName": "UiBank Web App\\Click on Loans.xaml"
+      },
+      {
+        "editingStatus": "InProgress",
+        "testCaseId": "1cd94744-822a-4651-8f94-4f9f799cad5d",
+        "testCaseType": "TestCase",
+        "executionTemplateInvokeIsolated": false,
+        "fileName": "UiBank Web App\\Click on Apply For Loan.xaml"
+      },
+      {
+        "editingStatus": "InProgress",
+        "testCaseId": "be068d57-bcb1-4c42-8d7c-b625e02eec03",
+        "testCaseType": "TestCase",
+        "executionTemplateInvokeIsolated": false,
+        "fileName": "UiBank Web App\\Type in Email.xaml"
+      },
+      {
+        "editingStatus": "InProgress",
+        "testCaseId": "e4d7ce57-33ad-4f02-b576-76973b31b992",
+        "testCaseType": "TestCase",
+        "executionTemplateInvokeIsolated": false,
+        "fileName": "UiBank Web App\\Type in Loan Amount.xaml"
+      },
+      {
+        "editingStatus": "InProgress",
+        "testCaseId": "c0cbab63-f651-4e93-b2a4-9ca79dfb67f6",
+        "testCaseType": "TestCase",
+        "executionTemplateInvokeIsolated": false,
+        "fileName": "UiBank Web App\\Select Loan Term.xaml"
+      },
+      {
+        "editingStatus": "InProgress",
+        "testCaseId": "7ebcfbba-5774-4655-aaea-d0f86a2fd850",
+        "testCaseType": "TestCase",
+        "fileName": "SFDC\\SFDC_Login.xaml"
+      },
+      {
+        "editingStatus": "InProgress",
+        "testCaseId": "19d5cc93-f767-444c-a4ca-2efee464538e",
+        "testCaseType": "TestCase",
+        "fileName": "SFDC\\SFDC_Logout.xaml"
+      },
+      {
+        "editingStatus": "InProgress",
+        "testCaseId": "e235d28c-aaa9-4304-bf9a-56ce2d90dc17",
+        "testCaseType": "TestCase",
+        "executionTemplateInvokeIsolated": false,
+        "fileName": "UiBank Desktop\\Login.xaml"
+      },
+      {
+        "editingStatus": "InProgress",
+        "testCaseId": "ac91d890-4e9b-487c-97f9-f9cd41e155aa",
+        "testCaseType": "TestCase",
+        "executionTemplateInvokeIsolated": false,
+        "fileName": "UiBank Desktop\\Create User.xaml"
+      },
+      {
+        "editingStatus": "InProgress",
+        "testCaseId": "d69299ab-94b0-43e7-8126-de048a4ef83c",
+        "testCaseType": "TestCase",
+        "executionTemplateInvokeIsolated": false,
+        "fileName": "UiBank Desktop\\Find User.xaml"
+      },
+      {
+        "editingStatus": "InProgress",
+        "testCaseId": "5d069f37-0103-45b9-9508-8af33403d9ed",
+        "testCaseType": "TestCase",
+        "executionTemplateInvokeIsolated": false,
+        "fileName": "UiBank Desktop\\Delete User.xaml"
+      },
+      {
+        "editingStatus": "InProgress",
+        "testCaseId": "06bdafd0-ed81-4e2b-93ba-759d31d169ca",
+        "testCaseType": "TestCase",
+        "executionTemplateInvokeIsolated": false,
+        "fileName": "UiBank Desktop\\Verify Quote.xaml"
+      },
+      {
+        "editingStatus": "InProgress",
+        "testCaseId": "da73bfbd-6661-4db2-9384-a6b2ba53256f",
+        "testCaseType": "TestCase",
+        "executionTemplateInvokeIsolated": false,
+        "fileName": "UiBank Desktop\\Verify Account Balance.xaml"
+      },
+      {
+        "editingStatus": "InProgress",
+        "testCaseId": "f9d50ce4-f8ab-42a4-8c94-98ef464263da",
+        "testCaseType": "TestCase",
+        "executionTemplateInvokeIsolated": false,
+        "fileName": "SAP\\WinGUI\\Login.xaml"
+      },
+      {
+        "editingStatus": "InProgress",
+        "testCaseId": "f58ea161-ccf5-43d4-a985-502a51095d01",
+        "testCaseType": "TestCase",
+        "executionTemplateInvokeIsolated": false,
+        "fileName": "SAP\\WinGui_Login.xaml"
+      }
+    ],
+    "modernBehavior": true,
+    "saveToCloud": false
+  },
+  "expressionLanguage": "CSharp",
+  "isTemplate": false,
+  "templateProjectData": {},
+  "publishData": {},
+  "targetFramework": "Windows"
+}

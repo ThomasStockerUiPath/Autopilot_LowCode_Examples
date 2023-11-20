@@ -1,0 +1,13 @@
+﻿{
+  "Name": "WindowsForms10.BUTTON.a…",
+  "Type": "Element",
+  "TaxonomyType": "Button",
+  "Id": "AIdHNZz2JEaUSFP7AeHxtg",
+  "Reference": "XmPyalMSikOXyDwqk_uXgg/AIdHNZz2JEaUSFP7AeHxtg",
+  "ParentRef": "XmPyalMSikOXyDwqk_uXgg/2n30ECPq-0CP8vZm_GX3FQ",
+  "Created": "2023-11-13T12:03:37.0998156Z",
+  "Updated": "2023-11-13T12:03:37.0998156Z",
+  "CreatedBy": [
+    "UiPath.Platform, Version=23.10.0.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

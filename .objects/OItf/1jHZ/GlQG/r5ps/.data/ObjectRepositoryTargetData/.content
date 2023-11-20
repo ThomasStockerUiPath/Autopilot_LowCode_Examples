@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="qTVTJm5o3UaPIGcqgxvwoQ" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" DesignTimeRectangle="694, 183, 66, 17" DesignTimeScaleFactor="1" ElementType="CheckBox" FriendlyName="'Refused'" FullSelectorArgument="&lt;wnd ctrlname='MainPanel' /&gt;&lt;wnd ctrlname='UC_Quotes' /&gt;&lt;wnd ctrlname='gbQuotes' /&gt;&lt;wnd ctrlname='panel1' /&gt;&lt;wnd ctrlname='choiceRefused' /&gt;" FuzzySelectorArgument="&lt;wnd ctrlname='MainPanel' /&gt;&lt;wnd ctrlname='UC_Quotes' /&gt;&lt;wnd ctrlname='gbQuotes' /&gt;&lt;wnd ctrlname='panel1' /&gt;&lt;wnd ctrlname='choiceRefused' check:fulltext='Refused' /&gt;" Guid="b2d114d8-a9b5-4a5e-94cd-3416a4d64e80" ScopeSelectorArgument="&lt;wnd app='uibankadmin.exe' ctrlname='Form1' /&gt;" SearchSteps="Selector, FuzzySelector" Version="V2" Visibility="Interactive">
+      <imageRef attrName="InformativeScreenshot" originalValue="44a26fe73010186f377a2472b2396203.png" xmlns="">0BENdbCan9Emtd21_yP1qew</imageRef>
+    </TargetAnchorable>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

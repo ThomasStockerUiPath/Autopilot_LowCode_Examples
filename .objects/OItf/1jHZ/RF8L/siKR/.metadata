@@ -1,0 +1,13 @@
+﻿{
+  "Name": "Title",
+  "Type": "Element",
+  "TaxonomyType": "Dropdown",
+  "Id": "siKR-_yVg0ezbyP1hMzLvA",
+  "Reference": "XmPyalMSikOXyDwqk_uXgg/siKR-_yVg0ezbyP1hMzLvA",
+  "ParentRef": "XmPyalMSikOXyDwqk_uXgg/RF8LWhCXJUuMYPyacAFFRQ",
+  "Created": "2023-11-13T12:03:37.3759869Z",
+  "Updated": "2023-11-13T12:03:37.3759869Z",
+  "CreatedBy": [
+    "UiPath.Platform, Version=23.10.0.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

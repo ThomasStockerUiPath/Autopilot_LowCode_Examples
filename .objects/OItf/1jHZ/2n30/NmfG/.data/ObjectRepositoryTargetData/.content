@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="ZwaKY4gx8UaJBcbDMah8ww" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" DesignTimeRectangle="203, 69, 136, 20" DesignTimeScaleFactor="1" ElementType="InputBoxPassword" FriendlyName="'Password'" FullSelectorArgument="&lt;wnd ctrlname='txt_Password' /&gt;" FuzzySelectorArgument="&lt;wnd ctrlname='txt_Password' /&gt;" Guid="cd5e389e-56b8-4336-b7e5-f576341964c3" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAIwAAAAYCAYAAAAoNxVrAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAACbSURBVGhD7dTBCYNAEIZR67KgLcIqrGabsZiJQgwJRPS/iIf3YMA5z+cOBQHBEPkEM02TMYez+wkG/hEMEcEQEQyRa8H0Vq2/vzd37zzGaTBLn6uNQw1jq7kvt+88y/kLs6wHXH/3Pq8H3O53986jnAcDXwRDRDBEBENEMEQEQ0QwRARDRDBEBENEMEQOgzHmaHafYOAKwRCoegEs0A0jp2y+gwAAAABJRU5ErkJggg==" ScopeSelectorArgument="&lt;wnd app='uibankadmin.exe' ctrlname='Login' /&gt;" SearchSteps="Selector, FuzzySelector, Image" Version="V2" Visibility="Interactive">
+      <TargetAnchorable.Anchors>
+        <scg:List x:TypeArguments="ITarget" Capacity="4">
+          <Target DesignTimeRectangle="142, 72, 53, 13" ElementType="Text" FriendlyName="'Password'" FullSelectorArgument="&lt;wnd ctrlname='label2' /&gt;" FuzzySelectorArgument="&lt;wnd ctrlname='label2' check:text='Password' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAADkAAAARCAYAAABn5wTeAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAFHSURBVFhH7VSLrcMgDGQuD8Q8noZlGMbvjphPGpBeo0itkp7UFh+28dnQYA/AT+Rd8GCRWU1CsNA+YjH53reBtYpadnOGtcgx8B+JPobLRFqyGCK+vxBXicwpdpvryTXOKp3TLfLAMW9r1ti4YQ2fKJ5fOidYx8h84AYfEXCnRZbi+mFe9x7lcB6wL3ITMuOyKYoqudAs5i5Nanm4T25oEh1KPOIK/+LDPKdFrgKxF9m91oBeXAAfFVJK4Iyjtk1YwlRUcc5mmNRJj+dWe+RXPm7O8KZITqd2FDgcmEzrlXLqwBVBbBTjkA+/iontJ+qo9sivfNyc4YTIfnWz1qvi4rcq/ErOOK7J4y15Ek60vb3it7iurZ6Jz7UiudX/eMZHv+NdwIwD60W6yTfVDABn9z8er+G1Hto1L5p0bpI3w0/kXfAAkWZ/FV635Q8m43wAAAAASUVORK5CYII=" SearchSteps="Selector, FuzzySelector, Image" />
+        </scg:List>
+      </TargetAnchorable.Anchors>
+      <imageRef attrName="InformativeScreenshot" originalValue="2f0025d92f9862016b90bcf718835ad0.png" xmlns="">0-y1i-_4TwUSeD0uuc1B0yg</imageRef>
+    </TargetAnchorable>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

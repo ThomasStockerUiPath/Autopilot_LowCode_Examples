@@ -1,0 +1,15 @@
+﻿{
+  "Name": "UiBank Admin",
+  "Type": "App",
+  "Id": "OItfY06OnkOdKeqLIw-9DA",
+  "Reference": "XmPyalMSikOXyDwqk_uXgg/OItfY06OnkOdKeqLIw-9DA",
+  "Created": "2023-11-13T08:18:29.4991903Z",
+  "Updated": "2023-11-13T12:03:36.7596903Z",
+  "CreatedBy": [
+    "UiPath.UIAutomationCore, Version=23.12.0.0, Culture=neutral, PublicKeyToken=null",
+    "UiPath.Platform, Version=23.10.0.0, Culture=neutral, PublicKeyToken=null"
+  ],
+  "UpdatedBy": [
+    "UiPath.Platform, Version=23.10.0.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}
