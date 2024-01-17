@@ -1,0 +1,217 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="VerifyAccountExists" sap2010:ExpressionActivityEditor.ExpressionActivityEditor="C#" sap:VirtualizedContainerService.HintSize="917.6,1564" sap2010:WorkflowViewState.IdRef="VerifyAccountExists_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:uta="clr-namespace:UiPath.Testing.Activities;assembly=UiPath.Testing.Activities" xmlns:uuam="clr-namespace:UiPath.UIAutomationNext.Activities.Models;assembly=UiPath.UIAutomationNext.Activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <TextExpression.NamespacesForImplementation>
+    <sco:Collection x:TypeArguments="x:String">
+      <x:String>GlobalConstantsNamespace</x:String>
+      <x:String>GlobalVariablesNamespace</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Text</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>UiPath.UIAutomationNext.Enums</x:String>
+      <x:String>UiPath.UIAutomationCore.Contracts</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities</x:String>
+      <x:String>UiPath.Shared.Activities</x:String>
+      <x:String>UiPath.Platform.ObjectLibrary</x:String>
+      <x:String>UiPath.UIAutomationNext.Contracts</x:String>
+      <x:String>UiPath.UIAutomationNext.Models.CV</x:String>
+      <x:String>System.Security</x:String>
+      <x:String>System.ComponentModel</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities.Models</x:String>
+      <x:String>System.Reflection</x:String>
+      <x:String>UiPath.Testing</x:String>
+      <x:String>UiPath.Testing.Activities</x:String>
+    </sco:Collection>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <sco:Collection x:TypeArguments="AssemblyReference">
+      <AssemblyReference>Microsoft.CSharp</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>PresentationCore</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.TypeConverter</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Linq</AssemblyReference>
+      <AssemblyReference>System.ObjectModel</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization</AssemblyReference>
+      <AssemblyReference>System.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.ServiceModel.Activities</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>UiPath.Studio.Constants</AssemblyReference>
+      <AssemblyReference>System.Private.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Formatters</AssemblyReference>
+      <AssemblyReference>System.Private.CoreLib</AssemblyReference>
+      <AssemblyReference>System.Private.DataContractSerialization</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Primitives</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Testing.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Platform</AssemblyReference>
+      <AssemblyReference>System.Security.Permissions</AssemblyReference>
+      <AssemblyReference>System.Runtime.InteropServices</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.EventBasedAsync</AssemblyReference>
+      <AssemblyReference>Microsoft.Win32.Primitives</AssemblyReference>
+      <AssemblyReference>System.ComponentModel</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Primitives</AssemblyReference>
+      <AssemblyReference>System.Reflection.DispatchProxy</AssemblyReference>
+      <AssemblyReference>System.Reflection.TypeExtensions</AssemblyReference>
+      <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
+      <AssemblyReference>UiPath.Workflow</AssemblyReference>
+      <AssemblyReference>UiPath.Testing</AssemblyReference>
+      <AssemblyReference>System.Console</AssemblyReference>
+      <AssemblyReference>System.Configuration.ConfigurationManager</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>System.Private.Uri</AssemblyReference>
+    </sco:Collection>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence DisplayName="VerifyAccountExists" sap:VirtualizedContainerService.HintSize="692,1499.2" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Browser Chrome: Home | Salesforce" sap:VirtualizedContainerService.HintSize="629.6,489.6" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" ScopeGuid="c79f72a2-6ad6-4b2e-917e-d26d139d0f90" Version="V2">
+      <uix:NApplicationCard.Body>
+        <ActivityAction x:TypeArguments="x:Object">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+          </ActivityAction.Argument>
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="449.6,272.8" sap2010:WorkflowViewState.IdRef="Sequence_5">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Accounts'" sap:VirtualizedContainerService.HintSize="387.2,157.6" sap2010:WorkflowViewState.IdRef="NClick_1" InteractionMode="DebuggerApi" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="c79f72a2-6ad6-4b2e-917e-d26d139d0f90" Version="V3">
+              <uix:NClick.Target>
+                <uix:TargetAnchorable BrowserURL="https://uipath.lightning.force.com/lightning/page/home" ContentHash="bwamgxEKkUWTYRsA5EpboQ" DesignTimeRectangle="394, 240, 53, 20" DesignTimeScaleFactor="1" ElementType="Text" FriendlyName="'Accounts'" FullSelectorArgument="&lt;webctrl sfl-path='oneOne/lafAppLayoutHost:host/navexDesktopLayoutContainer/navexContentRegionNavContainer:contentRegionNavContainer/navexStandardManager/oneAppNavContainer:appnav/auraIf/oneAppnav:oneAppNav' tag='ONE-APPNAV' /&gt;&lt;webctrl aaname='Accounts' class='slds-truncate' tag='SPAN' /&gt;" FuzzySelectorArgument="&lt;webctrl sfl-path='oneOne/lafAppLayoutHost:host/navexDesktopLayoutContainer/navexContentRegionNavContainer:contentRegionNavContainer/navexStandardManager/oneAppNavContainer:appnav/auraIf/oneAppnav:oneAppNav' tag='ONE-APPNAV' /&gt;&lt;webctrl aaname='Accounts' class='slds-truncate' tag='SPAN' type='' check:innerText='Accounts' /&gt;" Guid="d3434a47-955d-4d60-b218-9846bd3de178" InformativeScreenshot="f7892f4cf4be5868545d60fa9bb3a37d.png" Reference="Rf9Bbat9okOwmFkeBjH5UQ/qGJKvQEW8kqCvIs5ViN4sg" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Home | Salesforce' /&gt;" SearchSteps="FuzzySelector" Version="V2" Visibility="Interactive" />
+              </uix:NClick.Target>
+            </uix:NClick>
+          </Sequence>
+        </ActivityAction>
+      </uix:NApplicationCard.Body>
+      <uix:NApplicationCard.TargetApp>
+        <uix:TargetApp Area="0, 0, 0, 0" BrowserType="Chrome" ContentHash="sFyi3xOYs0KOirBo_O35yg" IconBase64="iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAJGSURBVFhH7ZZBSBRRGMdHYolFJCJEJEQkJERCPISHCAlP0qGT5w7RwUNIhESEiAfxGJ46ONIpwmOIiHiQiAiRiOgUb6JTePLQIUQ6TL//25ndt85jXGmc7eDht2/3zbfv+79vvu+9L4jjuKOdnAv4fwUEq+ZCsBp1wmW4BFXN+Wz/hYwAHMkxDs0I431YgHl+TzHe0LNmu6gfrkEfNl1BGJ1KZJOA2q7NAIs9hm8QNzB/GL/CDAzCTZiFDfgMb+ERjEKnu24exwREPfASHMcZDhDzjvHLsfmUXbgHen1d0JugaGWiUxfAw4ssTJjNId99C58GCXwA0/CCNcFG7jawyUYuuQKUbOvgW7AoDCzCdbAiXAEKP+H1/rFoXkG/T8DvxKAMnkHFFXAFlM0+4+IJ7evotQKUFPxQaX2oG5TD3USADf8y/EoelMWTgA8dPiqXI+dBWcxIAPUffXImy2RcAqokRDt2/wO/3Qgw3HJeg7PmKVTSV/AzmSwJ84axzxYAXyqgCvAYFo35zrgEw+m1nZbhMHysGRVIaHS3vMbxCuNzmASVfPNlpAm4hSHGBd0Hob3YuP2MDjj1GDpp865jexqqs5kAdUJSvAd+Bw32YQt2QD3Ce5gDdVRV15mPuoD6hKIRqv+jRGp3+kn9gRJqDIZATvU6vbv1kRHgwiLqZLSbbJXUzo5NGIeK7/+tkC+ATCWR1KjcAXU126BkXYOHoPd7YpjzyBWQghOVqsJ6FVF0vzaT1fO1FOY8WhJwlpwLaLOAuOMveA1Of+TuOKQAAAAASUVORK5CYII=" InformativeScreenshot="a6e787d4c8c1d6fedd42005a88c97e9a.jpg" Reference="Rf9Bbat9okOwmFkeBjH5UQ/xLRWtj9G50qKdbzTeJmKBA" Selector="&lt;html app='chrome.exe' title='Home | Salesforce' /&gt;" Title="Home | Salesforce" Url="https://uipath.lightning.force.com/lightning/page/home" />
+      </uix:NApplicationCard.TargetApp>
+    </uix:NApplicationCard>
+    <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Browser Chrome: Accounts by ZoomInfo InboxAI | Accounts | Salesforce" sap:VirtualizedContainerService.HintSize="629.6,857.6" sap2010:WorkflowViewState.IdRef="NApplicationCard_2" InteractionMode="DebuggerApi" ScopeGuid="7faf5b14-8c3d-4989-8334-33a73d3ac656" Version="V2">
+      <uix:NApplicationCard.Body>
+        <ActivityAction x:TypeArguments="x:Object">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+          </ActivityAction.Argument>
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="596,640.8" sap2010:WorkflowViewState.IdRef="Sequence_6">
+            <Sequence.Variables>
+              <Variable x:TypeArguments="x:String" Name="accountName" />
+            </Sequence.Variables>
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into '50+ items'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="533.6,218.4" sap2010:WorkflowViewState.IdRef="NTypeInto_3" ScopeIdentifier="7faf5b14-8c3d-4989-8334-33a73d3ac656" Text=".Noah Holdings Co., Ltd." Version="V3">
+              <uix:NTypeInto.Target>
+                <uix:TargetAnchorable BrowserURL="https://uipath.lightning.force.com/lightning/o/Account/list?filterName=00B1Q000008rxptUAA" ContentHash="_2UsWRG7_Eq76t4MVRNe-w" DesignTimeRectangle="1424, 339, 240, 32" DesignTimeScaleFactor="1" ElementType="InputBox" FriendlyName="'INPUT input-129'" FullSelectorArgument="&lt;webctrl sfl-path='oneOne/lafAppLayoutHost:host/navexDesktopLayoutContainer/navexContentRegionNavContainer:contentRegionNavContainer/navexStandardManager/navexSplitViewWrapper:splitViewWrapper/lafPageHost:pageHost/oneConsoleObjectHome/auraIf/forceListViewManager:listViewManager/auraIf/auraIf/auraIf/forceListViewManagerHeader:header/forceListViewManagerSearchBar:searchBar' tag='FORCE-LIST-VIEW-MANAGER-SEARCH-BAR' /&gt;&lt;webctrl tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl sfl-path='oneOne/lafAppLayoutHost:host/navexDesktopLayoutContainer/navexContentRegionNavContainer:contentRegionNavContainer/navexStandardManager/navexSplitViewWrapper:splitViewWrapper/lafPageHost:pageHost/oneConsoleObjectHome/auraIf/forceListViewManager:listViewManager/auraIf/auraIf/auraIf/forceListViewManagerHeader:header/forceListViewManagerSearchBar:searchBar' tag='FORCE-LIST-VIEW-MANAGER-SEARCH-BAR' /&gt;&lt;webctrl tag='INPUT' type='search' class='slds-input' aaname='Search this list...' /&gt;" Guid="821f761b-ef37-40da-a7b6-b534ee9e81e0" InformativeScreenshot="1ece1bb172ae214c18460e45c6a09a97.png" IsResponsive="True" Reference="Rf9Bbat9okOwmFkeBjH5UQ/NoIoJ4Ea3Ey0OFLNtOSHyg" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Accounts by ZoomInfo InboxAI | Accounts | Salesforce' /&gt;" SearchSteps="FuzzySelector" Version="V2" Visibility="Interactive">
+                  <uix:TargetAnchorable.Anchors>
+                    <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                      <uix:Target DesignTimeRectangle="37, 353, 1363, 18" ElementType="Text" FriendlyName="'50+ items'" FullSelectorArgument="&lt;webctrl tag='P' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='P' type='' class='slds-text-body--small' aaname='' check:innerText='50+ items • Sorted by Account Name • Filtered by All accounts • Updated a few seconds ago' /&gt;" ImageBase64="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" SearchSteps="FuzzySelector" />
+                    </scg:List>
+                  </uix:TargetAnchorable.Anchors>
+                </uix:TargetAnchorable>
+              </uix:NTypeInto.Target>
+            </uix:NTypeInto>
+            <uta:VerifyControlAttribute AlternativeVerificationTitle="{x:Null}" KeepScreenshots="{x:Null}" OutputMessageFormat="{x:Null}" Result="{x:Null}" ScreenshotsPath="{x:Null}" ContinueOnFailure="True" DisplayName="Verify Control Attribute" sap:VirtualizedContainerService.HintSize="533.6,267.2" sap2010:WorkflowViewState.IdRef="VerifyControlAttribute_1" Operator="Contains" OutputArgument="TextString" TakeScreenshotInCaseOfFailingAssertion="True" TakeScreenshotInCaseOfSucceedingAssertion="False">
+              <uta:VerifyControlAttribute.ActivityToTest>
+                <ActivityAction>
+                  <uix:NGetText DisplayName="Get Text '.Noah Holdings Co., Ltd.'" sap:VirtualizedContainerService.HintSize="333.6,157.6" sap2010:WorkflowViewState.IdRef="NGetText_1" ScopeIdentifier="7faf5b14-8c3d-4989-8334-33a73d3ac656" Version="V3">
+                    <uix:NGetText.OutUiElement>
+                      <OutArgument x:TypeArguments="ui:UiElement">
+                        <VariableReference x:TypeArguments="ui:UiElement">
+                          <VariableReference.Variable>
+                            <Variable x:TypeArguments="ui:UiElement" Name="_autogenerated_OutUiElement" />
+                          </VariableReference.Variable>
+                        </VariableReference>
+                      </OutArgument>
+                    </uix:NGetText.OutUiElement>
+                    <uix:NGetText.Target>
+                      <uix:TargetAnchorable BrowserURL="https://uipath.lightning.force.com/lightning/o/Account/list?filterName=00B1Q000008rxptUAA" ContentHash="c64QHLqKZUaB3X-QoJ1EAg" DesignTimeRectangle="121, 422, 138, 20" DesignTimeScaleFactor="1" ElementType="Text" FriendlyName="'.Noah Holdings Co., Ltd.'" FullSelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl tableRow='2' tag='A' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl type='' tag='A' class='slds-truncate outputLookupLink slds-truncate outputLookupLink-0011Q00002HECAhQAP-4023:0 forceOutputLookup' /&gt;" Guid="9948e8cc-5829-4fc8-b148-44f28425f8a8" InformativeScreenshot="f0da40209c68027fcea5b9b4217d9a15.png" Reference="Rf9Bbat9okOwmFkeBjH5UQ/SKAXj8VhjUev5B2vsjngtg" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Accounts by ZoomInfo InboxAI | Accounts | Salesforce' /&gt;" SearchSteps="FuzzySelector" Version="V2" Visibility="Interactive" />
+                    </uix:NGetText.Target>
+                    <uix:NGetText.TextString>
+                      <OutArgument x:TypeArguments="x:String">
+                        <CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_1">accountName</CSharpReference>
+                      </OutArgument>
+                    </uix:NGetText.TextString>
+                    <uix:NGetText.WordsInfo>
+                      <OutArgument x:TypeArguments="scg:IEnumerable(uuam:NWordInfo)">
+                        <VariableReference x:TypeArguments="scg:IEnumerable(uuam:NWordInfo)">
+                          <VariableReference.Variable>
+                            <Variable x:TypeArguments="scg:IEnumerable(uuam:NWordInfo)" Name="_autogenerated_WordsInfo" />
+                          </VariableReference.Variable>
+                        </VariableReference>
+                      </OutArgument>
+                    </uix:NGetText.WordsInfo>
+                  </uix:NGetText>
+                </ActivityAction>
+              </uta:VerifyControlAttribute.ActivityToTest>
+              <uta:VerifyControlAttribute.ArgumentsBridgeActivity>
+                <ActivityFunc x:TypeArguments="x:Object">
+                  <uta:ArgumentsBridge sap2010:WorkflowViewState.IdRef="ArgumentsBridge_1">
+                    <uta:ArgumentsBridge.Input>
+                      <InArgument x:TypeArguments="x:Object">
+                        <VariableValue x:TypeArguments="x:Object">
+                          <VariableValue.Variable>
+                            <Variable x:TypeArguments="x:String" Name="_autogenerated_TextString" />
+                          </VariableValue.Variable>
+                        </VariableValue>
+                      </InArgument>
+                    </uta:ArgumentsBridge.Input>
+                  </uta:ArgumentsBridge>
+                </ActivityFunc>
+              </uta:VerifyControlAttribute.ArgumentsBridgeActivity>
+              <uta:VerifyControlAttribute.Expression>
+                <InArgument x:TypeArguments="x:String">
+                  <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_1">".Noah Holdings Co., Ltd."</CSharpValue>
+                </InArgument>
+              </uta:VerifyControlAttribute.Expression>
+            </uta:VerifyControlAttribute>
+          </Sequence>
+        </ActivityAction>
+      </uix:NApplicationCard.Body>
+      <uix:NApplicationCard.TargetApp>
+        <uix:TargetApp Area="0, 0, 0, 0" BrowserType="Chrome" ContentHash="0nGcBpgzlE25sSrj_Cs73w" IconBase64="iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAJGSURBVFhH7ZZBSBRRGMdHYolFJCJEJEQkJERCPISHCAlP0qGT5w7RwUNIhESEiAfxGJ46ONIpwmOIiHiQiAiRiOgUb6JTePLQIUQ6TL//25ndt85jXGmc7eDht2/3zbfv+79vvu+9L4jjuKOdnAv4fwUEq+ZCsBp1wmW4BFXN+Wz/hYwAHMkxDs0I431YgHl+TzHe0LNmu6gfrkEfNl1BGJ1KZJOA2q7NAIs9hm8QNzB/GL/CDAzCTZiFDfgMb+ERjEKnu24exwREPfASHMcZDhDzjvHLsfmUXbgHen1d0JugaGWiUxfAw4ssTJjNId99C58GCXwA0/CCNcFG7jawyUYuuQKUbOvgW7AoDCzCdbAiXAEKP+H1/rFoXkG/T8DvxKAMnkHFFXAFlM0+4+IJ7evotQKUFPxQaX2oG5TD3USADf8y/EoelMWTgA8dPiqXI+dBWcxIAPUffXImy2RcAqokRDt2/wO/3Qgw3HJeg7PmKVTSV/AzmSwJ84axzxYAXyqgCvAYFo35zrgEw+m1nZbhMHysGRVIaHS3vMbxCuNzmASVfPNlpAm4hSHGBd0Hob3YuP2MDjj1GDpp865jexqqs5kAdUJSvAd+Bw32YQt2QD3Ce5gDdVRV15mPuoD6hKIRqv+jRGp3+kn9gRJqDIZATvU6vbv1kRHgwiLqZLSbbJXUzo5NGIeK7/+tkC+ATCWR1KjcAXU126BkXYOHoPd7YpjzyBWQghOVqsJ6FVF0vzaT1fO1FOY8WhJwlpwLaLOAuOMveA1Of+TuOKQAAAAASUVORK5CYII=" InformativeScreenshot="ce7f4c511e5fb9c1a88fe236e19183d3.jpg" Reference="Rf9Bbat9okOwmFkeBjH5UQ/N7X5O84yPEKilulY0lGneA" Selector="&lt;html app='chrome.exe' title='Accounts by ZoomInfo InboxAI | Accounts | Salesforce' /&gt;" Title="Accounts by ZoomInfo InboxAI | Accounts | Salesforce" Url="https://uipath.lightning.force.com/lightning/o/Account/list?filterName=00B1Q000008rxptUAA" />
+      </uix:NApplicationCard.TargetApp>
+    </uix:NApplicationCard>
+  </Sequence>
+</Activity>

@@ -1,0 +1,131 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="OpenContactInformation" sap2010:ExpressionActivityEditor.ExpressionActivityEditor="C#" sap:VirtualizedContainerService.HintSize="1090.4,1061.6" sap2010:WorkflowViewState.IdRef="OpenContactInformation_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <TextExpression.NamespacesForImplementation>
+    <sco:Collection x:TypeArguments="x:String">
+      <x:String>GlobalConstantsNamespace</x:String>
+      <x:String>GlobalVariablesNamespace</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Text</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>UiPath.UIAutomationNext.Enums</x:String>
+      <x:String>UiPath.UIAutomationCore.Contracts</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities</x:String>
+      <x:String>UiPath.Shared.Activities</x:String>
+      <x:String>UiPath.Platform.ObjectLibrary</x:String>
+      <x:String>UiPath.UIAutomationNext.Contracts</x:String>
+      <x:String>UiPath.UIAutomationNext.Models.CV</x:String>
+    </sco:Collection>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <sco:Collection x:TypeArguments="AssemblyReference">
+      <AssemblyReference>Microsoft.CSharp</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>PresentationCore</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.TypeConverter</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Linq</AssemblyReference>
+      <AssemblyReference>System.ObjectModel</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization</AssemblyReference>
+      <AssemblyReference>System.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.ServiceModel.Activities</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>UiPath.Studio.Constants</AssemblyReference>
+      <AssemblyReference>System.Private.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Formatters</AssemblyReference>
+      <AssemblyReference>System.Private.CoreLib</AssemblyReference>
+      <AssemblyReference>System.Private.DataContractSerialization</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Primitives</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Testing.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Platform</AssemblyReference>
+    </sco:Collection>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence DisplayName="OpenContactInformation" sap:VirtualizedContainerService.HintSize="545.6,996.8" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Browser Chrome: Home - Workday" sap:VirtualizedContainerService.HintSize="483.2,884.8" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" ScopeGuid="6cff8596-8902-49c6-8a99-947e02ea05c7" Version="V2">
+      <uix:NApplicationCard.Body>
+        <ActivityAction x:TypeArguments="x:Object">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+          </ActivityAction.Argument>
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="449.6,668" sap2010:WorkflowViewState.IdRef="Sequence_5">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'MENU'" sap:VirtualizedContainerService.HintSize="387.2,157.6" sap2010:WorkflowViewState.IdRef="NClick_1" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="6cff8596-8902-49c6-8a99-947e02ea05c7" Version="V3">
+              <uix:NClick.Target>
+                <uix:TargetAnchorable BrowserURL="https://wd5.myworkday.com/uipath/d/home.htmld" ContentHash="DcXDPsiHZUGbVQ5pbmvvlw" DesignTimeRectangle="26, 201, 24, 24" DesignTimeScaleFactor="1" ElementType="Icon" FriendlyName="'SVG wd-icon-justify'" FullSelectorArgument="&lt;webctrl id='wd-icon-justify' parentid='app-chrome-container' tag='svg' /&gt;" FuzzySelectorArgument="&lt;webctrl id='wd-icon-justify' parentid='app-chrome-container' tag='svg' type='' class='wd-icon-justify wd-icon' aaname='' /&gt;" Guid="7e795b21-8b9b-47e9-abf5-d733067278b8" InformativeScreenshot="fbf0d222a0b2a3872155f3b0804c60bd.png" Reference="Rf9Bbat9okOwmFkeBjH5UQ/OcViO_AbwECV73ICWluS_Q" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Home - Workday' /&gt;" SearchSteps="FuzzySelector" Version="V2" Visibility="Interactive">
+                  <uix:TargetAnchorable.Anchors>
+                    <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                      <uix:Target DesignTimeRectangle="50, 204, 55, 19" ElementType="Text" FriendlyName="'MENU'" FullSelectorArgument="&lt;webctrl class='wdappchrome-af' parentid='app-chrome-container' tag='SPAN' /&gt;" FuzzySelectorArgument="&lt;webctrl class='wdappchrome-af' parentid='app-chrome-container' tag='SPAN' type='' aaname='MENU' check:innerText='MENU' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAADsAAAAXCAYAAAC1Szf+AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAJMSURBVFhH7ZbbSxRhGMb7n7roIrzwoozOUnZYyiXxhEVGFmFCuZEmWrJ28pCbWCILFWXYuYsgiiJCtC0hQorScjVn13bXWpd96nnbGT6HFabtZhjnge9i3ufjfb/fd5xlWEJyYZ0qF9apsgw79vET1hftxvK8AjT7LyKVSmWcvxoYvC8e2+uhEczN/USdr8mIqY1xTYsafvD6LaTT6Uwm4GxHQOLMo9dlX+bUpfdhXavKCXbrrjKMT3zNOEA8kcDhuhPi6YNUYesbT6MjcMVot+8+xOxszPCZl/l12QZ29aYdyCvYjAePn2Qc4P2HMawp9Eg8Gyy/zTKvfENLG34lk+LZBrZs3yF4Sqrga2o1Btd/7aZ4p86cMwb5L7AbtnmxIn8dnj5/KZ5tYFk00NuPQk8JPn+ZQDyewMHaeoHv6QtmhVUbczCX6t8YuIOi4nJUVh/B9xnNXrDDoXeybVnozdtRY1urg1Rh1DN7+WoQ4anpBT77D957JKvLCWtr77YHbO3xRsxoESlec9SH1vOdxoW1GCy/zTL7P2IxyccaxeX77QHrraiGFonKSnIlVq7aaDxF/wNLjYRGkb92i8T0+GR4Gjv/3BG8J75NhqUf7woeG9YfGg5JzIpyhuV55bllwWcvXkkfK9s429Ojw3LCunr6FsCqse3eCvgvXELp3hr5PtbQIs+eVeUMm0zO42SzH3sqD8i2phaDNTfG1Z8KHZbi6nEV1ThXkhPEyWWcz197dy8i0aj4VmUZ1glyYZ0qF9apcmGdqiUEC/wG+BJ1WfPQgcYAAAAASUVORK5CYII=" SearchSteps="FuzzySelector" />
+                    </scg:List>
+                  </uix:TargetAnchorable.Anchors>
+                </uix:TargetAnchorable>
+              </uix:NClick.Target>
+            </uix:NClick>
+            <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Personal Information'" sap:VirtualizedContainerService.HintSize="387.2,157.6" sap2010:WorkflowViewState.IdRef="NClick_2" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="6cff8596-8902-49c6-8a99-947e02ea05c7" Version="V3">
+              <uix:NClick.Target>
+                <uix:TargetAnchorable BrowserURL="https://wd5.myworkday.com/uipath/d/home.htmld" ContentHash="1xXc6rJ1iE6CRB7hMfM_vA" DesignTimeRectangle="98, 556, 151, 19" DesignTimeScaleFactor="1" ElementType="Text" FriendlyName="'Personal Information'" FullSelectorArgument="&lt;webctrl aaname='Personal Information' css-selector='body&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;ul&amp;gt;li&amp;gt;a&amp;gt;div&amp;gt;span&amp;gt;span&amp;gt;span' tag='SPAN' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='Personal Information' type='' tag='SPAN' class='' check:innerText='Personal Information' /&gt;" Guid="89af2753-e45a-43d8-9f2f-619176b3bf31" InformativeScreenshot="641ed6275e58d4bae7d459a092979a79.png" Reference="Rf9Bbat9okOwmFkeBjH5UQ/d_-dq-j1r0afNgUHRh8DXg" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Home - Workday' /&gt;" SearchSteps="FuzzySelector" Version="V2" Visibility="Interactive">
+                  <uix:TargetAnchorable.Anchors>
+                    <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                      <uix:Target DesignTimeRectangle="20, 199, 67, 28" ElementType="Text" FriendlyName="'Menu'" FullSelectorArgument="&lt;webctrl css-selector='body&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;h2' isleaf='1' tag='H2' /&gt;" FuzzySelectorArgument="&lt;webctrl type='' isleaf='1' tag='H2' class='css-1yzqfxa-HeaderLabel ev5wdb40' aaname='Menu' check:innerText='Menu' /&gt;" SearchSteps="FuzzySelector" />
+                    </scg:List>
+                  </uix:TargetAnchorable.Anchors>
+                </uix:TargetAnchorable>
+              </uix:NClick.Target>
+            </uix:NClick>
+            <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Contact Information'" sap:VirtualizedContainerService.HintSize="387.2,157.6" sap2010:WorkflowViewState.IdRef="NClick_3" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="6cff8596-8902-49c6-8a99-947e02ea05c7" Version="V3">
+              <uix:NClick.Target>
+                <uix:TargetAnchorable BrowserURL="https://wd5.myworkday.com/uipath/d/inst/13102!CK5mGhEKBggDEMenAhIHCgUI1A0QCw~~*UDnJtUBwP-Q~/cacheable-task/2997$2151.htmld#backheader=true" ContentHash="_z4M1JKDQUOPM6u2xJctkw" DesignTimeRectangle="610, 390, 320, 43" DesignTimeScaleFactor="1" ElementType="Text" FriendlyName="'Contact Information'" FullSelectorArgument="&lt;webctrl id='2998$2708' tag='A' /&gt;" FuzzySelectorArgument="&lt;webctrl id='2998$2708' tag='A' type='' class='WEP4 WMXO WJHK' aaname='Contact Information' check:innerText='Contact Information' /&gt;" Guid="5a974fbc-8621-4680-90a0-3c42291a6365" InformativeScreenshot="3dc1acfd36b2c0c31d980c22dd9af2f9.png" Reference="Rf9Bbat9okOwmFkeBjH5UQ/PhsTnzZra0CeHJdSxrXw2w" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Personal Information - Workday' /&gt;" SearchSteps="FuzzySelector" Version="V2" Visibility="Interactive" />
+              </uix:NClick.Target>
+            </uix:NClick>
+          </Sequence>
+        </ActivityAction>
+      </uix:NApplicationCard.Body>
+      <uix:NApplicationCard.TargetApp>
+        <uix:TargetApp Area="0, 0, 0, 0" BrowserType="Chrome" ContentHash="yEhbIldwok2nHJE4OdAcKA" IconBase64="iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAzdSURBVHhe7VsLjJ1FFZ62PIpIisRXUDAYQaONmEYIqBhFiY+CMYCh3f9uSwukGgsagmiE1kRpQreliDyrkYopqKSoUej+t6WVl/LwAcH6AGkbBbVSatm+u7t3r993Hv/897V79+693Zr0JCcz/z9nznxz5pwzM//eDe2mHT1hws6eMMkehfDu6B1LwukoLwPfAX4SvAVye8H7WAc/BV4O/iL4A+DXWnch9D8M7ybY48FJAHiYVcOO68MReD4PfDf4xX3LQrl8s3L/jaG8Z2ko71oSyjvBrPOdtN8Syvsh29cTXkK/H4M/h/prTK0YwqoHDwHkRKuyPgV8NXjj0E06KU4IK13CZAdQDqCtBB5CXZh1ecd25VJmsO+EMtr+AblrYYjjbJiKMceVACRbEQD8PJ7/zVXkimIig9mEl2QTHcJ7L8UD+Gzvyjk5GkkMQgNSJ563gq+w4SrGHhcCOIn1viXhHQDzKEFy5TCJfjyXZHVtchUrrUapZEwUpRjKjJGVfI/+/XtvyAzx5I7F4d2CoSrfHDDCwOKCAHMheB9dFYB14nFVCZYTGESdqynhQFnPBxnjnYSK9qUxBtlXnq003f1lhBbqlCkQA3LJBNQPXIIEIBkMg36NwJnEUO838HHiOukhyQVYOb5HmGxG23rwPWBmffI9kF0vbZCnrBmUxqN3qCGi7oHdGJOGQ32hYFp2gAwA1/OV/6ZNii7NFc4D5HOJAOm2eH4UfAV4at/iMFkU1SGE0mRM9j2Qmw9e75OUMZhPVHfeGwYtJBZb/84mRgykMd8TrrTJ003d5YXx3D+ABMgkiPoq8OnSOUeYzATITsoYet2r8oS+0yB7N0Nj8NvQxxCL3uDGGCjfiuee8HXr05mcAMWScVGeW4JLY2CufDZ5ggEPmFs+B/6odAShzhidBB5xhTDBiZSFzkwWz2eBN4jRNfbzRiCGkoQM8pHJt3d3gEJ3+7eC+8yt3e19JQY5ebjhSrj54ZRHcmpq0o2IfekdrG9Tw3w/C4lKIwzuUUy7wSd5X5ZtIXdPKL3fAHjCi5PHCqB+nXQAYSXbtgrQm7k16gssQVYYARj7zfsepNyediVFHxwre5FNXrYzsA/ubr+IcrtgeUy+7RmZOjFJ98QFjsWM4FjcCLNNrj35AEmPF5G/MrmhzFw/N+CPKEeQnZi8E8Zh8hQjANMKM0K2/RKbnEB7wqa+pY13m6YJCsWCKOe4xW0wMYRl+o1914cjTa59cdeAMIYYeNsiyS9/HuDukF8UhoJujV8w+bF7AZT8rhQHoqXpciXZmnrCJ0zmgJ3LfSyUH7E7h+YDMMpBM8qzItwqQYG72pl2RM2SDsoBS3q/oMzOpW2KtVEQxnbvvNfCULwTJTG6EWQrRjl6z0Qs+wDL7NCjA2jCKdEoaPuQyYyHATwhnsZtGZjcM8UYFga3m0xr+LD6TDp/zMWZuBgPQiifoMxui8nxIOw4MjawPMz7BrGBibHE0AD+57fbmaQlwoHmGCjbapcdP/V55r+KMigPWOxXE8Z2L52f3xHwPMR7BMpt4GNNZnQLhbjOrCvutCTsRX0/P2NROc4Fp1j7uHkAkp6MjfJE4BiUUABG1PfyfoDyIWlvZWtGZ4+xaeAdVEgr2+pfwzYo7vi2NxJhYRznfO5KglEn/wr4vdbWGk5YU5UvCSdAyQLwDeCPSeNBSMB2Gngh8H4Z5Zvk3VgXyY2QJygdN7dvRA1wjm3yTpww3N3v7+1R2gHCqsvtkThRP+gW6RAdokP0/0iF4kTwpJDUKUdLhXRChQ7nRMqJUiaQGS0laQOMeN9RSorNgy2MQnY0RuhuwWBNkYNI0unglVi9O1GusHIl+DPa3sTEoq5TwN+Fjh+gXCFcME7k3R3gk012ZL30KFKSnguuh/E8ax9ZV13q6p2Mzq+ES58qhzmPgh/T8tIny3i/C+3619qRBvBwSXofCPOeKYeLHzZdOb74kXKY9zT19oosQ2I4yozaOwX1PsFUi3E7MGZ/Wm+NkvS3YdY6KtsPyw6gBBf3hdm/4rtzTKbxfds9JCm+DvwyJsZ+/aKH+pz5jm2FdFso9L5e+vgK1yOP70J6dpi1HjqLOXzAqpifDuevanH1k1SvuUm6NMz9NYAVAZQAi0NS57sk/YbJNL4Su3GS9ONitEKxhDp0kEUf9Qzpu+JgmP0Qnz9pfRobtlB0fAsUHycu2GgMx3eTyBSG0dOQIvDp4rIEpyCpeEBcNkmLItM9jLtGPdeZIbH6NRPXOtsUeI/0GQ64hwgxKBZbIDOkvvusybRkAHPd9I3g7aF7LRVi9WBllt0P8nlL6EqnmFx9V+v2EEgfE0Mm6SAA6qS1jHW2qYx8bWpIEduxmPAWw1KSydOQinUH8sPxJtdiGETw682iCl5Xq2Rx9kGTqfWCCPQt4F0GLDf5NeoJbgRpw7sk3QPwb7O+teALWfyfZfGvYaWL40Z8RGS617Q4eZK7YJIuzNw3A5rFmXwaQ1mbB3iw0fICMWAB4BykxvpD4OctoVpugF5m8SSdoX3ruG8Mq68aLiY+M2IWRt8SmZbi38lXNen9sFg6S2BiBAf6M5Gpt21FA95aBXQgXPI4+84BLw9zpa4xzFIn8D3pW28CMf7vNwzel7pLZtCzTaYWV9MUt7BjoOhf5vIxD4j7pX/HXnuUyDWiJH3WVlw9gC6vuk4CF8Lc30TjiHfIBP4SZq6uBe8h0dVLTP+MmKSv56b/hJlF+Rgaupo4qA1L0do/z1mbg+lEChLX00wmAs68J30XmLmDcnnDbbL2d8r72G51eZ5qMvX0nhG6MfnolexrXokDF2mkw1RTFOPtSxVurINiQJy8klT+DpfJkmK/S0TG92nu0dpnpbTP+CUvLdFDNJNrGBSG1XtlXTwaPp6XYr+WKVp8mmVtH0wnpZO5W2R4A3PKEmB6j8nE+NfnudJOStKbFXg2GZdZJe35lfQdgLmnNv6xBUoI6M9y8p4zZkoeOBwKXzD3xZ4rhvCE81yYYSezPHUVj0Tb5qyPG05yAVzfiQcW2SVwgJGDDMNE3PtF8NEmFSnB+Z65pzr+dZzNoWv12P80XkFxNX8oK8OVj1a3MpUfLqKOe322SqfJirjXSIITV9e/3MZzwpvBr8bDluitPWdEve8X2bw3Rq+R3yrgXRvc3ynG3cVqgKq4y7s0ZaP8VVmcEmSM0du0HSD9oJKk63KHrZxs77XSXsA5Iy7E5aqXYZUZwXFcZjJtNYCD5H2+evV94DtFhvt2YY2tFLKxx6luf3qHKKTyay68p7H8UnNNzljqLWqQddLODx9ugEJ6r41ZjYXeEz2xI5Skz1RlbN+3/xRm3Bf33CTF9bf35eycLiDlmLsbfILJYFKZW59pcR9jWkPiVbD8lUdopuSVTTGvmLEUw4Zw4dox7vuNKJ7qbjE3rvUEeohT9fVXVlTO6I+bRCV1pUehDYnNkyz78FYnffTLDilJT63ZjTi2YlouMmM6/jaiGH/nZxlbARAIwoCuXpQfLwsl6aKcS7PNQcrPWvEugozG1S3TkyxL6VO8UdpJSTpP3Z96xbDEYOOnF5lMJwzgeaDIm93Oiptd9QqQ8tdflfMdoPZjRzTAXDUAJsQ+4trS5/fSTuKZoyb+/QaZnmgyHQqD2Q3u9hGob2+V11+JZ8kF25AX9HNXHqTXC+nJYP80Zqsrk+MntLeLDM8iGu9+FmnuG0JbKK6UujevnjpBB8p4fwN4urlyvP5qRl8r/Yf7RJ6kf8iSrOjNQmcGdB1v+z+fbdzqr0i50Go7xf39HAHpJzfZ4hgGuNUlxU+jfVG45AnWLZazScgPK1DWnhqjcZeZcdmXk7Src/E28AV6c8S7uP+7933K+nfUAB4Cx4G3Zluc5wGNTX7fR4jYoUZB+qlOflWGsnaPzpIsDEiXjt6D47ZMcAP4vkyvjumh9V9wbWh1hLJDTtobDznujhIGe8H7DaBOQCf/ErjifwErKDMucgRzRTQuDajelk98dUOrU2eAPMUwuFpc1TO2A1OwuTo9Qwz1U+k33B09fntIdau1CTPMqvVqWR1aHXR/p3hyO0NWSePUPMCA1Qd5ufVrDDI7Fvd+JTNufuIVY9Az3LuKFlrt+ADSLM3stZObuHfeVZ0J0IBKaLxP+g13Ro/GxS2y6rZXrTsfWl3FxqHVEYoZ+yfxUFID1EDK0fZvIVnd/C82Z64+An021nxHcFZvaD602k4xY+uxtHJbUoBqAD8i3yXybrjhKB6578qSbN4TMt0IDzX+fJMfWXfbKLrqVHHDCCyukjL2cJ4H0jkq38QhJSbZ2dI3nwecfSz1kFNN/gB6QJ74bV5vfb7nO0Dfo1/Ayut1tpk92v8iXMC+zk9tmmhjGLjuWXIc1j+lt0wh/A+QEaaWxNLv4wAAAABJRU5ErkJggg==" InformativeScreenshot="078ad81599c508af1e9260acc6da759d.jpg" Reference="Rf9Bbat9okOwmFkeBjH5UQ/BybLDkdibECXTH7KhI34uQ" Selector="&lt;html app='chrome.exe' title='Home - Workday' /&gt;" Title="Home - Workday" Url="https://wd5.myworkday.com/uipath/d/home.htmld" />
+      </uix:NApplicationCard.TargetApp>
+    </uix:NApplicationCard>
+  </Sequence>
+</Activity>

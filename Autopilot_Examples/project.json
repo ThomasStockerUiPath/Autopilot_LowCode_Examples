@@ -1,0 +1,249 @@
+{
+  "name": "Autopilot_Examples",
+  "projectId": "8419b7ae-86c9-4c43-8aa1-2d73fa6a91f8",
+  "description": "Test Automation Project",
+  "main": "Main.xaml",
+  "dependencies": {
+    "UiPath.System.Activities": "[23.12.0-alpha.4717855]",
+    "UiPath.Testing.Activities": "[23.10.0]",
+    "UiPath.UIAutomation.Activities": "[23.10.3]"
+  },
+  "webServices": [],
+  "entitiesStores": [],
+  "schemaVersion": "4.0",
+  "studioVersion": "23.12.0.0",
+  "projectVersion": "1.0.0",
+  "runtimeOptions": {
+    "autoDispose": false,
+    "netFrameworkLazyLoading": false,
+    "isPausable": true,
+    "isAttended": false,
+    "requiresUserInteraction": true,
+    "supportsPersistence": false,
+    "workflowSerialization": "DataContract",
+    "excludedLoggedData": [
+      "Private:*",
+      "*password*"
+    ],
+    "executionType": "Workflow",
+    "readyForPiP": false,
+    "startsInPiP": false,
+    "mustRestoreAllDependencies": true,
+    "pipType": "ChildSession"
+  },
+  "designOptions": {
+    "projectProfile": "Developement",
+    "outputType": "Tests",
+    "libraryOptions": {
+      "includeOriginalXaml": false,
+      "privateWorkflows": []
+    },
+    "processOptions": {
+      "ignoredFiles": []
+    },
+    "fileInfoCollection": [
+      {
+        "editingStatus": "InProgress",
+        "testCaseId": "ae3cf0bf-973d-4873-84f1-1d1f2aa8aaf2",
+        "testCaseType": "TestCase",
+        "fileName": "TestCase.xaml"
+      },
+      {
+        "editingStatus": "InProgress",
+        "testCaseId": "547636bd-775a-451d-8e19-275b167d3dc8",
+        "testCaseType": "TestCase",
+        "executionTemplateInvokeIsolated": false,
+        "fileName": "UiBank\\Login.xaml"
+      },
+      {
+        "editingStatus": "InProgress",
+        "testCaseId": "0dcb0b06-781e-4481-9eac-6c2954c50b4c",
+        "testCaseType": "TestCase",
+        "executionTemplateInvokeIsolated": false,
+        "fileName": "UiBank\\Logout.xaml"
+      },
+      {
+        "editingStatus": "InProgress",
+        "testCaseId": "97a10e15-17a4-4867-b257-f93177867f79",
+        "testCaseType": "TestCase",
+        "executionTemplateInvokeIsolated": false,
+        "fileName": "UiBank\\OpenApplyForLoan.xaml"
+      },
+      {
+        "editingStatus": "InProgress",
+        "testCaseId": "945652e6-7677-4f95-b12f-cb135f68b693",
+        "testCaseType": "TestCase",
+        "executionTemplateInvokeIsolated": false,
+        "fileName": "UiBank\\FillInLoanApplication.xaml"
+      },
+      {
+        "editingStatus": "InProgress",
+        "testCaseId": "a056dbf0-1ea0-4224-9596-c3dd04e6f9d0",
+        "testCaseType": "TestCase",
+        "executionTemplateInvokeIsolated": false,
+        "fileName": "UiBank\\Email.xaml"
+      },
+      {
+        "editingStatus": "InProgress",
+        "testCaseId": "033080bb-fd68-468a-a406-874fd436c859",
+        "testCaseType": "TestCase",
+        "executionTemplateInvokeIsolated": false,
+        "fileName": "UiBank\\VerifyLoanRate.xaml"
+      },
+      {
+        "editingStatus": "InProgress",
+        "testCaseId": "0829eb20-cf0c-4b10-8fab-cda70af6ed30",
+        "testCaseType": "TestCase",
+        "executionTemplateInvokeIsolated": false,
+        "fileName": "UiBank\\VerifyQuoteId.xaml"
+      },
+      {
+        "editingStatus": "InProgress",
+        "testCaseId": "976ad2c5-4d4e-46d4-97cc-e0c90c846c80",
+        "testCaseType": "TestCase",
+        "executionTemplateInvokeIsolated": false,
+        "fileName": "UiBank\\VerifyAcceptanceMessage.xaml"
+      },
+      {
+        "editingStatus": "InProgress",
+        "testCaseId": "26b67efb-03f9-4c9c-8bd3-2b245aa7d838",
+        "testCaseType": "TestCase",
+        "executionTemplateInvokeIsolated": false,
+        "fileName": "UiBank\\CheckLoanStatus.xaml"
+      },
+      {
+        "editingStatus": "InProgress",
+        "testCaseId": "dd4ddcaf-2ad9-4d6e-a4d8-65e357d540c4",
+        "testCaseType": "TestCase",
+        "fileName": "AdminApp\\Create User.xaml"
+      },
+      {
+        "editingStatus": "InProgress",
+        "testCaseId": "89e3ae1b-e046-4fa5-905b-972a80fc3b78",
+        "testCaseType": "TestCase",
+        "fileName": "AdminApp\\Delete User.xaml"
+      },
+      {
+        "editingStatus": "InProgress",
+        "testCaseId": "630af620-da8e-4636-95ee-c76187650276",
+        "testCaseType": "TestCase",
+        "fileName": "AdminApp\\Find User.xaml"
+      },
+      {
+        "editingStatus": "InProgress",
+        "testCaseId": "a4645400-e82c-40e0-a4df-5c02834e1678",
+        "testCaseType": "TestCase",
+        "fileName": "AdminApp\\Login.xaml"
+      },
+      {
+        "editingStatus": "InProgress",
+        "testCaseId": "dd7f2a94-4f1f-4ac9-85ba-06c7f33110bd",
+        "testCaseType": "TestCase",
+        "fileName": "AdminApp\\Verify Account Balance.xaml"
+      },
+      {
+        "editingStatus": "InProgress",
+        "testCaseId": "ba31c9bb-d367-4c69-878a-81489395f6f0",
+        "testCaseType": "TestCase",
+        "fileName": "AdminApp\\Verify Quote.xaml"
+      },
+      {
+        "editingStatus": "InProgress",
+        "testCaseId": "89bad075-6d94-4732-af37-f4673f36cf37",
+        "testCaseType": "TestCase",
+        "executionTemplateInvokeIsolated": false,
+        "fileName": "SFDC\\VerifyLoggedOnUser.xaml"
+      },
+      {
+        "editingStatus": "InProgress",
+        "testCaseId": "073659f6-70af-41a0-a5bb-6281e8121db1",
+        "testCaseType": "TestCase",
+        "executionTemplateInvokeIsolated": false,
+        "fileName": "SFDC\\VerifyAccountExists.xaml"
+      },
+      {
+        "editingStatus": "InProgress",
+        "testCaseId": "7d688ed9-a259-4bcf-a26e-b93fbfb5b97a",
+        "testCaseType": "TestCase",
+        "executionTemplateInvokeIsolated": false,
+        "fileName": "SFDC\\VerifyContactExists.xaml"
+      },
+      {
+        "editingStatus": "InProgress",
+        "testCaseId": "d9a34fa8-8a3b-4bb3-ad31-5adb4e99cbe4",
+        "testCaseType": "TestCase",
+        "executionTemplateInvokeIsolated": false,
+        "fileName": "SFDC\\OpenSupportPortal.xaml"
+      },
+      {
+        "editingStatus": "InProgress",
+        "testCaseId": "f4416458-bfc2-47f4-b234-a82b3749aa65",
+        "testCaseType": "TestCase",
+        "executionTemplateInvokeIsolated": false,
+        "fileName": "SFDC\\LookupSupportCase.xaml"
+      },
+      {
+        "editingStatus": "InProgress",
+        "testCaseId": "dcd59e0b-f884-4bfc-b28f-fbdd32ec63c5",
+        "testCaseType": "TestCase",
+        "executionTemplateInvokeIsolated": false,
+        "fileName": "SFDC\\VerifyCaseStatus.xaml"
+      },
+      {
+        "editingStatus": "InProgress",
+        "testCaseId": "af619b1d-8a8e-4097-aeec-225ffb72033d",
+        "testCaseType": "TestCase",
+        "executionTemplateInvokeIsolated": false,
+        "fileName": "SFDC\\VerifyCasePriority.xaml"
+      },
+      {
+        "editingStatus": "InProgress",
+        "testCaseId": "4d9d517d-384b-44b7-9382-0b4855be1b56",
+        "testCaseType": "TestCase",
+        "executionTemplateInvokeIsolated": false,
+        "fileName": "SFDC\\VerifyNewLeads.xaml"
+      },
+      {
+        "editingStatus": "InProgress",
+        "testCaseId": "1d2b6100-1e83-4e2a-9db1-156d25fce58a",
+        "testCaseType": "TestCase",
+        "executionTemplateInvokeIsolated": false,
+        "fileName": "Workday\\Login.xaml"
+      },
+      {
+        "editingStatus": "InProgress",
+        "testCaseId": "313e7ab3-42af-4e89-ae27-c2fa646d7f77",
+        "testCaseType": "TestCase",
+        "executionTemplateInvokeIsolated": false,
+        "fileName": "Workday\\OpenContactInformation.xaml"
+      },
+      {
+        "editingStatus": "InProgress",
+        "testCaseId": "780e4f5f-77b7-4e5a-b63b-08cb6051d3a2",
+        "testCaseType": "TestCase",
+        "executionTemplateInvokeIsolated": false,
+        "fileName": "Workday\\Verify Addresse.xaml"
+      },
+      {
+        "editingStatus": "InProgress",
+        "testCaseId": "638c5177-6052-46a6-9de3-ca9bbaa649c5",
+        "testCaseType": "TestCase",
+        "executionTemplateInvokeIsolated": false,
+        "fileName": "Workday\\BookAbsence.xaml"
+      },
+      {
+        "editingStatus": "InProgress",
+        "testCaseId": "f2e4ed9b-1653-4116-86f5-1e6baad88144",
+        "testCaseType": "TestCase",
+        "executionTemplateInvokeIsolated": false,
+        "fileName": "Workday\\VerifyAbsence.xaml"
+      }
+    ],
+    "saveToCloud": false
+  },
+  "expressionLanguage": "CSharp",
+  "isTemplate": false,
+  "templateProjectData": {},
+  "publishData": {},
+  "targetFramework": "Windows"
+}
