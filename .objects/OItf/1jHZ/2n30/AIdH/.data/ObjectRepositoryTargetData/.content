@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="utf-16"?>
-<ObjectRepositoryTargetData ContentHash="SEu4unZTF0OBERIohhPeMQ" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
-  <ObjectRepositoryTargetData.Data>
-    <TargetAnchorable x:Key="TargetAnchorable" DesignTimeRectangle="172, 100, 23, 23" DesignTimeScaleFactor="1" ElementType="Button" FriendlyName="'WindowsForms10.BUTTON.a…'" FullSelectorArgument="&lt;wnd ctrlname='btn_Settings' /&gt;" FuzzySelectorArgument="&lt;wnd ctrlname='btn_Settings' /&gt;" Guid="5d14259d-067c-4e23-b5a7-314ea4023aef" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAABsAAAAbCAYAAACN1PRVAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAGsSURBVEhL5ZQ7i8JQEIX3F6bQSvCFWmhhFLUSW3sLFSysrWys1EILWxG0EsTCXzLLNzByk92FXFZlHxcOuZM5yWGeb/LC80/E5vP5w+GeD2K32+1h+F1izWZTyuWyBEHwqd+Ft9h2u5X9fn+3c7mcPqvVqpxOJ73jh2ccg5fYcrmUbDYrxWJRWq2WFAoFmU6n6kMgk8lIqVTSSOHBd7/3EptMJjIYDPR+OBzkfD5H/C7gwXffeYmBfD4fsY/Ho8xmM9ntdpH3cR7wErter5oes8fjsVQqFU1lt9uVer1+98GDbzZILEbXUZPVaqU2ESE0Go00ijAMNW1WQ3jw+c7+kViMotsdkDp+bOnq9Xqy2WykVqtFeO53icWYI9rb2p4akbpGo6FCqVRKFouF9Pt99cND2J2/xGKAOSI1ZlMjUkdECKXT6XuHwrO5M3iJAebItUklERCROwpxHvASIzXx2n0FeJZyg5cYK4iWZmBpDO7WnZfLRTqdjkY0HA7VF19ZXmKAFWSbgTmyGrbbbVmv13rHH19VwFssjqdu/e/gZ4k9Gu6JiD37/FUxkXeS4hdesCGTrwAAAABJRU5ErkJggg==" ScopeSelectorArgument="&lt;wnd app='uibankadmin.exe' ctrlname='Login' /&gt;" SearchSteps="Selector, FuzzySelector, Image" Version="V2" Visibility="Interactive">
-      <imageRef attrName="InformativeScreenshot" originalValue="b6f02bcacc6862115589e57034a82bf9.png" xmlns="">06qbJTYN3qkahLe9uapPNbg</imageRef>
-    </TargetAnchorable>
-  </ObjectRepositoryTargetData.Data>
-</ObjectRepositoryTargetData>

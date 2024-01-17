@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="utf-16"?>
-<ObjectRepositoryTargetData ContentHash="CZKCcKT-REKwxRaeHvBraA" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
-  <ObjectRepositoryTargetData.Data>
-    <TargetAnchorable x:Key="TargetAnchorable" DesignTimeRectangle="1062, 308, 100, 22" DesignTimeScaleFactor="1" ElementType="Cell" FriendlyName="'80'" FullSelectorArgument="&lt;wnd ctrlname='MainPanel' /&gt;&lt;wnd ctrlname='UC_Accounts' /&gt;&lt;wnd ctrlname='gbAccounts' /&gt;&lt;wnd ctrlname='gridAccounts' /&gt;&lt;ctrl name='DataGridView' role='table' /&gt;&lt;ctrl name='Row 0' role='row' /&gt;&lt;ctrl name='Balance Row 0' role='cell' /&gt;" FuzzySelectorArgument="&lt;wnd ctrlname='MainPanel' /&gt;&lt;wnd ctrlname='UC_Accounts' /&gt;&lt;wnd ctrlname='gbAccounts' /&gt;&lt;wnd ctrlname='gridAccounts' /&gt;&lt;ctrl name='DataGridView' role='table' /&gt;&lt;ctrl name='Row 0' role='row' /&gt;&lt;ctrl name='Balance Row 0' role='cell' automationid='' /&gt;" Guid="8dcc367f-2b95-4277-bc9a-4076da90a734" ScopeSelectorArgument="&lt;wnd app='uibankadmin.exe' ctrlname='Form1' /&gt;" SearchSteps="Selector, FuzzySelector" Version="V2" Visibility="Interactive">
-      <imageRef attrName="InformativeScreenshot" originalValue="bdee68d012df6e38d4ee591298dfc56d.png" xmlns="">0SSN9e7d-tEuhehpxc7uSaQ</imageRef>
-    </TargetAnchorable>
-  </ObjectRepositoryTargetData.Data>
-</ObjectRepositoryTargetData>

@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="utf-16"?>
-<ObjectRepositoryTargetData ContentHash="Q7iseNz5EUKA78-EejUhNw" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
-  <ObjectRepositoryTargetData.Data>
-    <TargetAnchorable x:Key="TargetAnchorable" DesignTimeRectangle="280, 100, 57, 23" DesignTimeScaleFactor="1" ElementType="Button" FriendlyName="'Cancel'" FullSelectorArgument="&lt;wnd ctrlname='btnCancel' /&gt;" FuzzySelectorArgument="&lt;wnd ctrlname='btnCancel' check:text='Cancel' /&gt;" Guid="48524d83-2ded-43e4-9176-8416b1446d19" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAD0AAAAbCAYAAADPl4fCAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAEeSURBVFhH7ZWBEYMgDEXZKdtkmazCAg7BKE6SJha82FLoXfWwQO7+qTEgjyToeECb0KPYAXpZlm5l7Q16XdfuNKHFJvSE7kinQQdCBufYqQAYfcjGnapADEAccu8KOgU6EAgosQ/RFzyjA6b0fJXaQQcmyezlgDk1g6592Juyl+yjF982BplQKsT6NV6rBGx8bBMZs/t1rG7ybaGtUqxeLZBuzDaHVo1jpASa2uSlmuw8t4SW9ygLfmZOs5RZbA1C/Wn8LtkEX/n2B/0OXezpmClTolm4r6CRfc7fBrp0eus19t8Wh+VMF8vb+mN8S2jV4T8tC039av2gZV6E1nsBzR5kxt/8IPtDTWixCT2hO1IVuldZO0CPYhN6DGN+AE362GazuovDAAAAAElFTkSuQmCC" ScopeSelectorArgument="&lt;wnd app='uibankadmin.exe' ctrlname='Login' /&gt;" SearchSteps="Selector, FuzzySelector, Image" Version="V2" Visibility="Interactive">
-      <imageRef attrName="InformativeScreenshot" originalValue="a8d4a4f1417ed3fc860b65e041797e89.png" xmlns="">0WJCTy0E2fk6y4MTSKmqLWA</imageRef>
-    </TargetAnchorable>
-  </ObjectRepositoryTargetData.Data>
-</ObjectRepositoryTargetData>

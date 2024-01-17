@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="utf-16"?>
-<ObjectRepositoryTargetData ContentHash="FOH1d-mbukywbcUXnGnOUg" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
-  <ObjectRepositoryTargetData.Data>
-    <TargetAnchorable x:Key="TargetAnchorable" DesignTimeRectangle="445, 184, 49, 15" DesignTimeScaleFactor="1" ElementType="InputBox" FriendlyName="'Edit'" FullSelectorArgument="&lt;wnd ctrlname='MainPanel' /&gt;&lt;wnd ctrlname='UC_Quotes' /&gt;&lt;wnd ctrlname='gbQuotes' /&gt;&lt;wnd ctrlname='panel1' /&gt;&lt;wnd ctrlname='txtTerm' /&gt;&lt;wnd aaname='Quote ID' cls='Edit' /&gt;" FuzzySelectorArgument="&lt;wnd ctrlname='MainPanel' /&gt;&lt;wnd ctrlname='UC_Quotes' /&gt;&lt;wnd ctrlname='gbQuotes' /&gt;&lt;wnd ctrlname='panel1' /&gt;&lt;wnd ctrlname='txtTerm' /&gt;&lt;wnd aaname='Quote ID' cls='Edit' /&gt;" Guid="9a0c2b6f-d2dc-4fbf-b0b0-40a0e7f839a8" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAADUAAAATCAYAAAAwE0VbAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAAtSURBVFhH7c8BDQAwEMSg+Td908GnOODtoFKKUopSilKKUopSilKKUopShu0DdfStJkmpK60AAAAASUVORK5CYII=" ScopeSelectorArgument="&lt;wnd app='uibankadmin.exe' ctrlname='Form1' /&gt;" SearchSteps="Selector, FuzzySelector, Image" Version="V2" Visibility="Interactive">
-      <imageRef attrName="InformativeScreenshot" originalValue="7da58763138e03a862b5b8df38eb28fe.png" xmlns="">0YOONlZx9OUy1Q9Z1UrcmnA</imageRef>
-    </TargetAnchorable>
-  </ObjectRepositoryTargetData.Data>
-</ObjectRepositoryTargetData>
